@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHT.CRM.DAL", "LHT.CRM.DAL\LHT.CRM.DAL.csproj", "{DF2E9471-2771-4971-B77C-540ACF430683}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHT.CRM.BLL", "LHT.CRM.BLL\LHT.CRM.BLL.csproj", "{5329BF87-A3EF-4CC3-BA6B-4B87BE53BE3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DF2E9471-2771-4971-B77C-540ACF430683}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF2E9471-2771-4971-B77C-540ACF430683}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF2E9471-2771-4971-B77C-540ACF430683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5329BF87-A3EF-4CC3-BA6B-4B87BE53BE3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5329BF87-A3EF-4CC3-BA6B-4B87BE53BE3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5329BF87-A3EF-4CC3-BA6B-4B87BE53BE3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5329BF87-A3EF-4CC3-BA6B-4B87BE53BE3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
