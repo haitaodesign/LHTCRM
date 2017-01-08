@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHT.CRM.BLL", "LHT.CRM.BLL\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHT.CRM.Model", "LHT.CRM.Model\LHT.CRM.Model.csproj", "{35761248-DE01-41C5-A6A4-3FEB0925E6C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHT.CRM.DALUnitTestProject", "LHT.CRM.DALUnitTestProject\LHT.CRM.DALUnitTestProject.csproj", "{0DD7E32D-054D-4578-A1DC-AF9306B2698A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{35761248-DE01-41C5-A6A4-3FEB0925E6C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35761248-DE01-41C5-A6A4-3FEB0925E6C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35761248-DE01-41C5-A6A4-3FEB0925E6C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DD7E32D-054D-4578-A1DC-AF9306B2698A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DD7E32D-054D-4578-A1DC-AF9306B2698A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DD7E32D-054D-4578-A1DC-AF9306B2698A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DD7E32D-054D-4578-A1DC-AF9306B2698A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
