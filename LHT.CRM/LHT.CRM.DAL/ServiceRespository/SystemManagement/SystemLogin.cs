@@ -17,26 +17,38 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
         {
         }
 
-
-
-        public void Add(DAL.SystemLogin login)
+        public List<Model.SystemLogin> GetAll()
         {
-            throw new NotImplementedException();
+            return _dbContext.SystemLogins.ToList();
+        }
+
+        public void Add(Model.SystemLogin login)
+        {
+            if(login != null)
+            {
+                _dbContext.SystemLogins.Add(login);
+            }
         }
 
         public void Delete(int loginId)
         {
-            throw new NotImplementedException();
+            var login = _dbContext.SystemLogins.Find(loginId);
+            if (login!=null)
+            {
+                _dbContext.SystemLogins.Remove(login);
+            }
         }
 
-        public List<DAL.SystemLogin> GetAll()
+        public void Update(Model.SystemLogin login)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Update(DAL.SystemLogin login)
-        {
-            throw new NotImplementedException();
+            var updatelogin = _dbContext.SystemLogins.Find(login.Id);
+            if (updatelogin != null)
+            {
+                updatelogin.LoginName = login.LoginName;
+                updatelogin.Password = login.Password;
+                updatelogin.IsLock = login.IsLock;
+                updatelogin.UserId = login.UserId;
+            }
         }
     }
 }
