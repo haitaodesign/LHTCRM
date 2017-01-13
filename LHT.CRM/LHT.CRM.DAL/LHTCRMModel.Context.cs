@@ -12,6 +12,7 @@ namespace LHT.CRM.DAL
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using LHT.CRM.Model;
     
     public partial class LHTCRMEntities : DbContext
     {
