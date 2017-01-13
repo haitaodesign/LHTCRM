@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IServiceRespository\ISystemManagement\ISystemLogin.cs" />
+    <Compile Include="IServiceRespository\ISystemManagement\ISystemRole.cs" />
+    <Compile Include="IServiceRespository\ISystemManagement\ISystemRoleAuthority.cs" />
     <Compile Include="IServiceRespository\ISystemManagement\ISystemUser.cs" />
     <Compile Include="LHTCRMBaseRespository.cs" />
     <Compile Include="LHTCRMModel.Context.cs">
