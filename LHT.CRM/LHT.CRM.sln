@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHT.CRM.DALUnitTestProject"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHT.CRM.App", "LHT.CRM.App\LHT.CRM.App.csproj", "{1F4B36A5-9F83-495B-8B5A-B5C4316EFA4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHT.CRM.Common", "LHT.CRM.Common\LHT.CRM.Common.csproj", "{B8800F11-335C-40AE-BD20-007AAE18C20A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1F4B36A5-9F83-495B-8B5A-B5C4316EFA4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F4B36A5-9F83-495B-8B5A-B5C4316EFA4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F4B36A5-9F83-495B-8B5A-B5C4316EFA4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8800F11-335C-40AE-BD20-007AAE18C20A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8800F11-335C-40AE-BD20-007AAE18C20A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8800F11-335C-40AE-BD20-007AAE18C20A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8800F11-335C-40AE-BD20-007AAE18C20A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
