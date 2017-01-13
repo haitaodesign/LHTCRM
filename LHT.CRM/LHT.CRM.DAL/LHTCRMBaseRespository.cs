@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace LHT.CRM.DAL
 {
+    /// <summary>
+    /// 封装DbContext，实现IDisposable接口，以实现自动释放DbContext的目的
+    /// </summary>
+    /// <typeparam name="TDbContext"></typeparam>
     public class LHTCRMBaseRespository<TDbContext>:IDisposable
         where TDbContext:DbContext
     {
@@ -17,6 +21,7 @@ namespace LHT.CRM.DAL
             _dbContext = context;
         }
 
+        #region "基类Respository需要调用的功能"
         public int SaveChanges()
         {
             if (_dbContext != null)
@@ -34,6 +39,8 @@ namespace LHT.CRM.DAL
             }
             return Task.FromResult(0);
         }
+        #endregion
+
 
 
 
