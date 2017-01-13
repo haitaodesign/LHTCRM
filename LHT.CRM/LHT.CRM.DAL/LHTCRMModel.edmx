@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LHTCRMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SystemLogin">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LoginName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsLock" Type="int" />
+          <Property Name="UserId" Type="int" />
+        </EntityType>
+        <EntityType Name="SystemRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SystemRoleAuthority">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleId" Type="int" />
+          <Property Name="SubId" Type="int" />
+          <Property Name="SubName" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsLock" Type="int" />
+        </EntityType>
+        <EntityType Name="SystemSubModule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TopId" Type="int" />
+        </EntityType>
+        <EntityType Name="SystemTopModule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TopName" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="SystemUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Sex" Type="nvarchar" MaxLength="2" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="30" />
+          <Property Name="QQ" Type="nvarchar" MaxLength="20" />
+          <Property Name="RoleId" Type="int" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK_SystemLogin_SystemUser">
+          <End Role="SystemUser" Type="Self.SystemUser" Multiplicity="0..1" />
+          <End Role="SystemLogin" Type="Self.SystemLogin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SystemLogin">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemRoleAuthority_SystemRole">
+          <End Role="SystemRole" Type="Self.SystemRole" Multiplicity="0..1" />
+          <End Role="SystemRoleAuthority" Type="Self.SystemRoleAuthority" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemRole">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SystemRoleAuthority">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemRoleAuthority_SystemSubModule">
+          <End Role="SystemSubModule" Type="Self.SystemSubModule" Multiplicity="0..1" />
+          <End Role="SystemRoleAuthority" Type="Self.SystemRoleAuthority" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemSubModule">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SystemRoleAuthority">
+              <PropertyRef Name="SubId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemSubModule_SystemTopModule">
+          <End Role="SystemTopModule" Type="Self.SystemTopModule" Multiplicity="0..1" />
+          <End Role="SystemSubModule" Type="Self.SystemSubModule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemTopModule">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SystemSubModule">
+              <PropertyRef Name="TopId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUser_SystemRole">
+          <End Role="SystemRole" Type="Self.SystemRole" Multiplicity="0..1" />
+          <End Role="SystemUser" Type="Self.SystemUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemRole">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SystemUser">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="LHTCRMModelStoreContainer">
+          <EntitySet Name="SystemLogin" EntityType="Self.SystemLogin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemRole" EntityType="Self.SystemRole" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemRoleAuthority" EntityType="Self.SystemRoleAuthority" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemSubModule" EntityType="Self.SystemSubModule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemTopModule" EntityType="Self.SystemTopModule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemUser" EntityType="Self.SystemUser" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_SystemLogin_SystemUser" Association="Self.FK_SystemLogin_SystemUser">
+            <End Role="SystemUser" EntitySet="SystemUser" />
+            <End Role="SystemLogin" EntitySet="SystemLogin" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemRoleAuthority_SystemRole" Association="Self.FK_SystemRoleAuthority_SystemRole">
+            <End Role="SystemRole" EntitySet="SystemRole" />
+            <End Role="SystemRoleAuthority" EntitySet="SystemRoleAuthority" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemRoleAuthority_SystemSubModule" Association="Self.FK_SystemRoleAuthority_SystemSubModule">
+            <End Role="SystemSubModule" EntitySet="SystemSubModule" />
+            <End Role="SystemRoleAuthority" EntitySet="SystemRoleAuthority" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemSubModule_SystemTopModule" Association="Self.FK_SystemSubModule_SystemTopModule">
+            <End Role="SystemTopModule" EntitySet="SystemTopModule" />
+            <End Role="SystemSubModule" EntitySet="SystemSubModule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUser_SystemRole" Association="Self.FK_SystemUser_SystemRole">
+            <End Role="SystemRole" EntitySet="SystemRole" />
+            <End Role="SystemUser" EntitySet="SystemUser" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LHTCRMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SystemLogin">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LoginName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsLock" Type="Int32" />
+          <Property Name="UserId" Type="Int32" />
+          <NavigationProperty Name="SystemUser" Relationship="Self.FK_SystemLogin_SystemUser" FromRole="SystemLogin" ToRole="SystemUser" />
+        </EntityType>
+        <EntityType Name="SystemRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SystemRoleAuthorities" Relationship="Self.FK_SystemRoleAuthority_SystemRole" FromRole="SystemRole" ToRole="SystemRoleAuthority" />
+          <NavigationProperty Name="SystemUsers" Relationship="Self.FK_SystemUser_SystemRole" FromRole="SystemRole" ToRole="SystemUser" />
+        </EntityType>
+        <EntityType Name="SystemRoleAuthority">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleId" Type="Int32" />
+          <Property Name="SubId" Type="Int32" />
+          <Property Name="SubName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsLock" Type="Int32" />
+          <NavigationProperty Name="SystemRole" Relationship="Self.FK_SystemRoleAuthority_SystemRole" FromRole="SystemRoleAuthority" ToRole="SystemRole" />
+          <NavigationProperty Name="SystemSubModule" Relationship="Self.FK_SystemRoleAuthority_SystemSubModule" FromRole="SystemRoleAuthority" ToRole="SystemSubModule" />
+        </EntityType>
+        <EntityType Name="SystemSubModule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TopId" Type="Int32" />
+          <NavigationProperty Name="SystemRoleAuthorities" Relationship="Self.FK_SystemRoleAuthority_SystemSubModule" FromRole="SystemSubModule" ToRole="SystemRoleAuthority" />
+          <NavigationProperty Name="SystemTopModule" Relationship="Self.FK_SystemSubModule_SystemTopModule" FromRole="SystemSubModule" ToRole="SystemTopModule" />
+        </EntityType>
+        <EntityType Name="SystemTopModule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TopName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SystemSubModules" Relationship="Self.FK_SystemSubModule_SystemTopModule" FromRole="SystemTopModule" ToRole="SystemSubModule" />
+        </EntityType>
+        <EntityType Name="SystemUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Sex" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="QQ" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="RoleId" Type="Int32" />
+          <Property Name="RoleName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SystemLogins" Relationship="Self.FK_SystemLogin_SystemUser" FromRole="SystemUser" ToRole="SystemLogin" />
+          <NavigationProperty Name="SystemRole" Relationship="Self.FK_SystemUser_SystemRole" FromRole="SystemUser" ToRole="SystemRole" />
+        </EntityType>
+        <Association Name="FK_SystemLogin_SystemUser">
+          <End Role="SystemUser" Type="Self.SystemUser" Multiplicity="0..1" />
+          <End Role="SystemLogin" Type="Self.SystemLogin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SystemLogin">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemRoleAuthority_SystemRole">
+          <End Role="SystemRole" Type="Self.SystemRole" Multiplicity="0..1" />
+          <End Role="SystemRoleAuthority" Type="Self.SystemRoleAuthority" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemRole">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SystemRoleAuthority">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUser_SystemRole">
+          <End Role="SystemRole" Type="Self.SystemRole" Multiplicity="0..1" />
+          <End Role="SystemUser" Type="Self.SystemUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemRole">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SystemUser">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemRoleAuthority_SystemSubModule">
+          <End Role="SystemSubModule" Type="Self.SystemSubModule" Multiplicity="0..1" />
+          <End Role="SystemRoleAuthority" Type="Self.SystemRoleAuthority" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemSubModule">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SystemRoleAuthority">
+              <PropertyRef Name="SubId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemSubModule_SystemTopModule">
+          <End Role="SystemTopModule" Type="Self.SystemTopModule" Multiplicity="0..1" />
+          <End Role="SystemSubModule" Type="Self.SystemSubModule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemTopModule">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SystemSubModule">
+              <PropertyRef Name="TopId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="LHTCRMEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SystemLogins" EntityType="Self.SystemLogin" />
+          <EntitySet Name="SystemRoles" EntityType="Self.SystemRole" />
+          <EntitySet Name="SystemRoleAuthorities" EntityType="Self.SystemRoleAuthority" />
+          <EntitySet Name="SystemSubModules" EntityType="Self.SystemSubModule" />
+          <EntitySet Name="SystemTopModules" EntityType="Self.SystemTopModule" />
+          <EntitySet Name="SystemUsers" EntityType="Self.SystemUser" />
+          <AssociationSet Name="FK_SystemLogin_SystemUser" Association="Self.FK_SystemLogin_SystemUser">
+            <End Role="SystemUser" EntitySet="SystemUsers" />
+            <End Role="SystemLogin" EntitySet="SystemLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemRoleAuthority_SystemRole" Association="Self.FK_SystemRoleAuthority_SystemRole">
+            <End Role="SystemRole" EntitySet="SystemRoles" />
+            <End Role="SystemRoleAuthority" EntitySet="SystemRoleAuthorities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUser_SystemRole" Association="Self.FK_SystemUser_SystemRole">
+            <End Role="SystemRole" EntitySet="SystemRoles" />
+            <End Role="SystemUser" EntitySet="SystemUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemRoleAuthority_SystemSubModule" Association="Self.FK_SystemRoleAuthority_SystemSubModule">
+            <End Role="SystemSubModule" EntitySet="SystemSubModules" />
+            <End Role="SystemRoleAuthority" EntitySet="SystemRoleAuthorities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemSubModule_SystemTopModule" Association="Self.FK_SystemSubModule_SystemTopModule">
+            <End Role="SystemTopModule" EntitySet="SystemTopModules" />
+            <End Role="SystemSubModule" EntitySet="SystemSubModules" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LHTCRMModelStoreContainer" CdmEntityContainer="LHTCRMEntities">
+          <EntitySetMapping Name="SystemLogins">
+            <EntityTypeMapping TypeName="LHTCRMModel.SystemLogin">
+              <MappingFragment StoreEntitySet="SystemLogin">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemRoles">
+            <EntityTypeMapping TypeName="LHTCRMModel.SystemRole">
+              <MappingFragment StoreEntitySet="SystemRole">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemRoleAuthorities">
+            <EntityTypeMapping TypeName="LHTCRMModel.SystemRoleAuthority">
+              <MappingFragment StoreEntitySet="SystemRoleAuthority">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="SubId" ColumnName="SubId" />
+                <ScalarProperty Name="SubName" ColumnName="SubName" />
+                <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemSubModules">
+            <EntityTypeMapping TypeName="LHTCRMModel.SystemSubModule">
+              <MappingFragment StoreEntitySet="SystemSubModule">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SubName" ColumnName="SubName" />
+                <ScalarProperty Name="TopId" ColumnName="TopId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemTopModules">
+            <EntityTypeMapping TypeName="LHTCRMModel.SystemTopModule">
+              <MappingFragment StoreEntitySet="SystemTopModule">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TopName" ColumnName="TopName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemUsers">
+            <EntityTypeMapping TypeName="LHTCRMModel.SystemUser">
+              <MappingFragment StoreEntitySet="SystemUser">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="QQ" ColumnName="QQ" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
