@@ -21,7 +21,7 @@ namespace LHT.CRM.Common.Encrypt
                 {
                     sBuilder.Append(data[i].ToString("x2"));
                 }
-                return sBuilder.ToString();
+                return sBuilder.ToString().Substring(2,22);
             }
         }
 
