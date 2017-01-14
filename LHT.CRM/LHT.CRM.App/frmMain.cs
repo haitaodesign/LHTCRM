@@ -25,21 +25,8 @@ namespace LHT.CRM.App
         }
 
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            
-            Button btn = new Button();
-            btn.Text = "添加一个按钮";
-            skinTabControl1.TabPages[this.skinTabControl1.TabPages.Count - 1].Controls.Add(btn);
-        }
+    
 
-        private void skinListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-        //窗体初始化时，通过UserId查找角色，找到角色对应的子模块权限，动态加载到顶级模块的下面
 
 
 
