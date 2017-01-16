@@ -17,15 +17,16 @@ namespace LHT.CRM.App
         {
             InitializeComponent();
         }
-
-        private void dmButtonCloseLight1_Click(object sender, EventArgs e)
+        private void dmButtonCloseLight2_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
 
-        private void dmButtonMinLight1_Click(object sender, EventArgs e)
+        private void dmButtonMinLight2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+
         }
     }
 }
