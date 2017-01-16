@@ -80,7 +80,7 @@
             this.dmTextBox1.Location = new System.Drawing.Point(116, 147);
             this.dmTextBox1.Name = "dmTextBox1";
             this.dmTextBox1.Size = new System.Drawing.Size(260, 27);
-            this.dmTextBox1.TabIndex = 5;
+            this.dmTextBox1.TabIndex = 1;
             this.dmTextBox1.WaterText = "请输入账号";
             // 
             // dmTextBox2
@@ -90,7 +90,7 @@
             this.dmTextBox2.Location = new System.Drawing.Point(116, 195);
             this.dmTextBox2.Name = "dmTextBox2";
             this.dmTextBox2.Size = new System.Drawing.Size(260, 27);
-            this.dmTextBox2.TabIndex = 6;
+            this.dmTextBox2.TabIndex = 2;
             this.dmTextBox2.UseSystemPasswordChar = true;
             this.dmTextBox2.WaterText = "请输入密码";
             // 
