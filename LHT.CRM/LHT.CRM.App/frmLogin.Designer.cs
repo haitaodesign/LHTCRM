@@ -28,93 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.lblLoginName = new CCWin.SkinControl.SkinLabel();
-            this.lblPassword = new CCWin.SkinControl.SkinLabel();
-            this.tbLoginName = new CCWin.SkinControl.SkinWaterTextBox();
-            this.tbPassword = new CCWin.SkinControl.SkinWaterTextBox();
-            this.skinButton1 = new CCWin.SkinControl.SkinButton();
+            this.metroTextBox1 = new DMSkin.Controls.MetroTextBox();
+            this.metroTextBox2 = new DMSkin.Controls.MetroTextBox();
+            this.dmButton1 = new DMSkin.Controls.DMButton();
+            this.dmButtonCloseLight1 = new DMSkin.Controls.DMButtonCloseLight();
+            this.dmButtonMinLight1 = new DMSkin.Controls.DMButtonMinLight();
             this.SuspendLayout();
             // 
-            // lblLoginName
+            // metroTextBox1
             // 
-            this.lblLoginName.AutoSize = true;
-            this.lblLoginName.BackColor = System.Drawing.Color.Transparent;
-            this.lblLoginName.BorderColor = System.Drawing.Color.White;
-            this.lblLoginName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblLoginName.Location = new System.Drawing.Point(56, 74);
-            this.lblLoginName.Name = "lblLoginName";
-            this.lblLoginName.Size = new System.Drawing.Size(39, 20);
-            this.lblLoginName.TabIndex = 0;
-            this.lblLoginName.Text = "账号";
+            this.metroTextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.metroTextBox1.IsPassWord = false;
+            this.metroTextBox1.Location = new System.Drawing.Point(116, 148);
+            this.metroTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextBox1.MaximumSize = new System.Drawing.Size(260, 38);
+            this.metroTextBox1.MinimumSize = new System.Drawing.Size(260, 38);
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.Size = new System.Drawing.Size(260, 38);
+            this.metroTextBox1.TabIndex = 0;
+            this.metroTextBox1.WaterText = "请输入账号";
             // 
-            // lblPassword
+            // metroTextBox2
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.BackColor = System.Drawing.Color.Transparent;
-            this.lblPassword.BorderColor = System.Drawing.Color.White;
-            this.lblPassword.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblPassword.Location = new System.Drawing.Point(60, 132);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(39, 20);
-            this.lblPassword.TabIndex = 1;
-            this.lblPassword.Text = "密码";
+            this.metroTextBox2.BackColor = System.Drawing.Color.Transparent;
+            this.metroTextBox2.IsPassWord = false;
+            this.metroTextBox2.Location = new System.Drawing.Point(116, 198);
+            this.metroTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextBox2.MaximumSize = new System.Drawing.Size(260, 38);
+            this.metroTextBox2.MinimumSize = new System.Drawing.Size(260, 38);
+            this.metroTextBox2.Name = "metroTextBox2";
+            this.metroTextBox2.Size = new System.Drawing.Size(260, 38);
+            this.metroTextBox2.TabIndex = 1;
+            this.metroTextBox2.WaterText = "请输入密码";
             // 
-            // tbLoginName
+            // dmButton1
             // 
-            this.tbLoginName.Location = new System.Drawing.Point(135, 74);
-            this.tbLoginName.Name = "tbLoginName";
-            this.tbLoginName.Size = new System.Drawing.Size(236, 25);
-            this.tbLoginName.TabIndex = 2;
-            this.tbLoginName.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.tbLoginName.WaterText = "";
+            this.dmButton1.BackColor = System.Drawing.Color.Transparent;
+            this.dmButton1.DM_DisabledColor = System.Drawing.Color.Empty;
+            this.dmButton1.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(160)))), ((int)(((byte)(230)))));
+            this.dmButton1.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
+            this.dmButton1.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(117)))), ((int)(((byte)(180)))));
+            this.dmButton1.DM_Radius = 5;
+            this.dmButton1.Image = null;
+            this.dmButton1.Location = new System.Drawing.Point(116, 242);
+            this.dmButton1.Name = "dmButton1";
+            this.dmButton1.Size = new System.Drawing.Size(260, 45);
+            this.dmButton1.TabIndex = 2;
+            this.dmButton1.Text = "登录";
+            this.dmButton1.UseVisualStyleBackColor = false;
             // 
-            // tbPassword
+            // dmButtonCloseLight1
             // 
-            this.tbPassword.Location = new System.Drawing.Point(135, 126);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(236, 25);
-            this.tbPassword.TabIndex = 3;
-            this.tbPassword.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.tbPassword.WaterText = "";
+            this.dmButtonCloseLight1.BackColor = System.Drawing.Color.Transparent;
+            this.dmButtonCloseLight1.Location = new System.Drawing.Point(459, 4);
+            this.dmButtonCloseLight1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dmButtonCloseLight1.MaximumSize = new System.Drawing.Size(40, 34);
+            this.dmButtonCloseLight1.MinimumSize = new System.Drawing.Size(40, 34);
+            this.dmButtonCloseLight1.Name = "dmButtonCloseLight1";
+            this.dmButtonCloseLight1.Size = new System.Drawing.Size(40, 34);
+            this.dmButtonCloseLight1.TabIndex = 3;
+            this.dmButtonCloseLight1.Click += new System.EventHandler(this.dmButtonCloseLight1_Click);
             // 
-            // skinButton1
+            // dmButtonMinLight1
             // 
-            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton1.DownBack = null;
-            this.skinButton1.Location = new System.Drawing.Point(135, 183);
-            this.skinButton1.MouseBack = null;
-            this.skinButton1.Name = "skinButton1";
-            this.skinButton1.NormlBack = null;
-            this.skinButton1.Size = new System.Drawing.Size(236, 23);
-            this.skinButton1.TabIndex = 4;
-            this.skinButton1.Text = "登录";
-            this.skinButton1.UseVisualStyleBackColor = false;
+            this.dmButtonMinLight1.BackColor = System.Drawing.Color.Transparent;
+            this.dmButtonMinLight1.Location = new System.Drawing.Point(418, 2);
+            this.dmButtonMinLight1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dmButtonMinLight1.Name = "dmButtonMinLight1";
+            this.dmButtonMinLight1.Size = new System.Drawing.Size(40, 34);
+            this.dmButtonMinLight1.TabIndex = 4;
+            this.dmButtonMinLight1.Click += new System.EventHandler(this.dmButtonMinLight1_Click);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 302);
-            this.Controls.Add(this.skinButton1);
-            this.Controls.Add(this.tbPassword);
-            this.Controls.Add(this.tbLoginName);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.lblLoginName);
+            this.BackColor = System.Drawing.Color.White;
+            this.CaptionBackColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(117)))), ((int)(((byte)(180)))));
+            this.CaptionBackColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(117)))), ((int)(((byte)(180)))));
+            this.CaptionFont = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.CaptionHeight = 100;
+            this.ClientSize = new System.Drawing.Size(500, 300);
+            this.ControlBox = false;
+            this.Controls.Add(this.dmButtonMinLight1);
+            this.Controls.Add(this.dmButtonCloseLight1);
+            this.Controls.Add(this.dmButton1);
+            this.Controls.Add(this.metroTextBox2);
+            this.Controls.Add(this.metroTextBox1);
+            this.EffectWidth = 4;
+            this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximumSize = new System.Drawing.Size(500, 300);
+            this.MinimumSize = new System.Drawing.Size(500, 300);
             this.Name = "frmLogin";
-            this.Text = "用户登录";
+            this.Radius = 0;
+            this.ShadowColor = System.Drawing.Color.LightGray;
+            this.ShowBorder = false;
+            this.ShowDrawIcon = false;
+            this.Text = "欢迎登录LHTCRM";
+            this.TitleCenter = true;
+            this.TitleColor = System.Drawing.Color.White;
+            this.TitleOffset = new System.Drawing.Point(50, 0);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private CCWin.SkinControl.SkinLabel lblLoginName;
-        private CCWin.SkinControl.SkinLabel lblPassword;
-        private CCWin.SkinControl.SkinWaterTextBox tbLoginName;
-        private CCWin.SkinControl.SkinWaterTextBox tbPassword;
-        private CCWin.SkinControl.SkinButton skinButton1;
+        private DMSkin.Controls.MetroTextBox metroTextBox1;
+        private DMSkin.Controls.MetroTextBox metroTextBox2;
+        private DMSkin.Controls.DMButton dmButton1;
+        private DMSkin.Controls.DMButtonCloseLight dmButtonCloseLight1;
+        private DMSkin.Controls.DMButtonMinLight dmButtonMinLight1;
     }
 }

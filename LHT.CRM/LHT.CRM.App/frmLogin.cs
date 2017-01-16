@@ -7,14 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CCWin;
 
 namespace LHT.CRM.App
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin : Skin_VS
     {
         public frmLogin()
         {
             InitializeComponent();
+        }
+
+        private void dmButtonCloseLight1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dmButtonMinLight1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
