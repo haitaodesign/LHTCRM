@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBConnection.cs" />
     <Compile Include="IServiceRespository\ISystemManagement\ISystemLogin.cs" />
     <Compile Include="IServiceRespository\ISystemManagement\ISystemRole.cs" />
     <Compile Include="IServiceRespository\ISystemManagement\ISystemRoleAuthority.cs" />
