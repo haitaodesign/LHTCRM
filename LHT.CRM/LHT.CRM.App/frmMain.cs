@@ -13,10 +13,7 @@ namespace LHT.CRM.App
 {
     public partial class frmMain : Skin_VS
     {
-        #region “定义系统全局字段”
-        public static string loginName;
-        public static int userId;
-        #endregion
+        
 
 
         public frmMain()
