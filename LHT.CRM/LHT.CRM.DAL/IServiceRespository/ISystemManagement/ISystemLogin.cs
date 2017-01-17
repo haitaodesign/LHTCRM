@@ -11,6 +11,8 @@ namespace LHT.CRM.DAL.IServiceRespository.ISystemManagement
     {
         List<SystemLogin> GetAll();
 
+        SystemLogin GetModel(string loginName);
+
         void Add(SystemLogin login);
 
         void Delete(int loginId);

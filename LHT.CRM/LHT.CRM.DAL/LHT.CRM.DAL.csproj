@@ -68,7 +68,7 @@
       <DependentUpon>LHTCRMModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceRespository\SystemManagement\SystemLogin.cs" />
+    <Compile Include="ServiceRespository\SystemManagement\SystemLoginService.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="LHTCRMModel.edmx">

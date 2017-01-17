@@ -4,16 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LHT.CRM.Model;
 
 namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
 {
-    public class SystemLogin : LHTCRMBaseRespository<LHTCRMEntities>, ISystemLogin
+    public class SystemLoginService : LHTCRMBaseRespository<LHTCRMEntities>, ISystemLogin
     {
-        public SystemLogin(LHTCRMEntities context) : base(context)
+        public SystemLoginService(LHTCRMEntities context) : base(context)
         {
         }
 
-        public SystemLogin():base(new LHTCRMEntities())
+        public SystemLoginService() : base(new LHTCRMEntities())
         {
         }
 
@@ -24,7 +25,7 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
 
         public void Add(Model.SystemLogin login)
         {
-            if(login != null)
+            if (login != null)
             {
                 _dbContext.SystemLogins.Add(login);
             }
@@ -33,7 +34,7 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
         public void Delete(int loginId)
         {
             var login = _dbContext.SystemLogins.Find(loginId);
-            if (login!=null)
+            if (login != null)
             {
                 _dbContext.SystemLogins.Remove(login);
             }
@@ -50,5 +51,22 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
                 updatelogin.UserId = login.UserId;
             }
         }
+
+        public SystemLogin GetModel(string loginName)
+        {
+            SystemLogin sl = new SystemLogin();
+            try
+            {
+                sl = _dbContext.SystemLogins.Single(l => l.LoginName == loginName);
+                return sl;
+            }
+            catch
+            {
+                return null;
+            }
+            
+        }
+
+
     }
 }

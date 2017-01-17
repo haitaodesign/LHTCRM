@@ -38,7 +38,16 @@
     <Reference Include="DMSkin">
       <HintPath>D:\迅雷下载\DMSkin-B316\DMSkin-B316\DMSkin.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
@@ -84,6 +93,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -102,6 +112,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SystemSetting\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LHT.CRM.BLL\LHT.CRM.BLL.csproj">
+      <Project>{5329bf87-a3ef-4cc3-ba6b-4b87be53be3e}</Project>
+      <Name>LHT.CRM.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LHT.CRM.Common\LHT.CRM.Common.csproj">
+      <Project>{b8800f11-335c-40ae-bd20-007aae18c20a}</Project>
+      <Name>LHT.CRM.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
