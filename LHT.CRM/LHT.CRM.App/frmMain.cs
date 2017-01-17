@@ -13,21 +13,16 @@ namespace LHT.CRM.App
 {
     public partial class frmMain : Skin_VS
     {
-        
-
-
         public frmMain()
         {
             InitializeComponent();
         }
-
-
-    
-
-
-
-
-
-
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+        }
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

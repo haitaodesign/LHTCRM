@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.skinListBox1 = new CCWin.SkinControl.SkinListBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.skinPictureBox1 = new CCWin.SkinControl.SkinPictureBox();
-            this.skinPictureBox2 = new CCWin.SkinControl.SkinPictureBox();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.skinListBox1 = new CCWin.SkinControl.SkinListBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroLabel1 = new DMSkin.Metro.Controls.MetroLabel();
+            this.skinPictureBox2 = new CCWin.SkinControl.SkinPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.metroLabel1 = new DMSkin.Metro.Controls.MetroLabel();
             this.skinPictureBox3 = new CCWin.SkinControl.SkinPictureBox();
             this.skinPictureBox4 = new CCWin.SkinControl.SkinPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -48,14 +48,14 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox4)).BeginInit();
@@ -103,6 +103,27 @@
             this.splitContainer2.Size = new System.Drawing.Size(240, 913);
             this.splitContainer2.SplitterDistance = 80;
             this.splitContainer2.TabIndex = 8;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.skinPictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(240, 80);
+            this.panel1.TabIndex = 0;
+            // 
+            // skinPictureBox1
+            // 
+            this.skinPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.skinPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("skinPictureBox1.Image")));
+            this.skinPictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.skinPictureBox1.Name = "skinPictureBox1";
+            this.skinPictureBox1.Size = new System.Drawing.Size(240, 80);
+            this.skinPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.skinPictureBox1.TabIndex = 0;
+            this.skinPictureBox1.TabStop = false;
             // 
             // splitContainer3
             // 
@@ -157,39 +178,6 @@
             this.skinListBox1.Size = new System.Drawing.Size(240, 700);
             this.skinListBox1.TabIndex = 0;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.skinPictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(240, 80);
-            this.panel1.TabIndex = 0;
-            // 
-            // skinPictureBox1
-            // 
-            this.skinPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.skinPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("skinPictureBox1.Image")));
-            this.skinPictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.skinPictureBox1.Name = "skinPictureBox1";
-            this.skinPictureBox1.Size = new System.Drawing.Size(240, 80);
-            this.skinPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.skinPictureBox1.TabIndex = 0;
-            this.skinPictureBox1.TabStop = false;
-            // 
-            // skinPictureBox2
-            // 
-            this.skinPictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.skinPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("skinPictureBox2.Image")));
-            this.skinPictureBox2.Location = new System.Drawing.Point(10, 10);
-            this.skinPictureBox2.Margin = new System.Windows.Forms.Padding(10);
-            this.skinPictureBox2.Name = "skinPictureBox2";
-            this.skinPictureBox2.Size = new System.Drawing.Size(50, 42);
-            this.skinPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.skinPictureBox2.TabIndex = 0;
-            this.skinPictureBox2.TabStop = false;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -208,6 +196,26 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(240, 125);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // skinPictureBox2
+            // 
+            this.skinPictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.skinPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("skinPictureBox2.Image")));
+            this.skinPictureBox2.Location = new System.Drawing.Point(10, 10);
+            this.skinPictureBox2.Margin = new System.Windows.Forms.Padding(10);
+            this.skinPictureBox2.Name = "skinPictureBox2";
+            this.skinPictureBox2.Size = new System.Drawing.Size(50, 42);
+            this.skinPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.skinPictureBox2.TabIndex = 0;
+            this.skinPictureBox2.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.metroLabel1);
+            this.panel2.Location = new System.Drawing.Point(73, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(164, 56);
+            this.panel2.TabIndex = 1;
+            // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
@@ -221,14 +229,6 @@
             this.metroLabel1.Style = DMSkin.Metro.MetroColorStyle.Yellow;
             this.metroLabel1.TabIndex = 1;
             this.metroLabel1.Text = "李海涛";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.metroLabel1);
-            this.panel2.Location = new System.Drawing.Point(73, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(164, 56);
-            this.panel2.TabIndex = 1;
             // 
             // skinPictureBox3
             // 
@@ -275,6 +275,8 @@
             this.ShowDrawIcon = false;
             this.Text = "LHTCRM";
             this.TitleColor = System.Drawing.Color.White;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
@@ -282,14 +284,14 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox2)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox3)).EndInit();

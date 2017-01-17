@@ -32,8 +32,8 @@
             this.dmButton1 = new DMSkin.Controls.DMButton();
             this.dmButtonCloseLight1 = new DMSkin.Controls.DMButtonCloseLight();
             this.dmButtonMinLight1 = new DMSkin.Controls.DMButtonMinLight();
-            this.dmTextBox1 = new DMSkin.Controls.DMTextBox();
-            this.dmTextBox2 = new DMSkin.Controls.DMTextBox();
+            this.tbLoginName = new DMSkin.Controls.DMTextBox();
+            this.tbPassword = new DMSkin.Controls.DMTextBox();
             this.dmButtonCloseLight2 = new DMSkin.Controls.DMButtonCloseLight();
             this.dmButtonMinLight2 = new DMSkin.Controls.DMButtonMinLight();
             this.SuspendLayout();
@@ -53,6 +53,7 @@
             this.dmButton1.TabIndex = 0;
             this.dmButton1.Text = "登录";
             this.dmButton1.UseVisualStyleBackColor = false;
+            this.dmButton1.Click += new System.EventHandler(this.dmButton1_Click);
             // 
             // dmButtonCloseLight1
             // 
@@ -74,26 +75,26 @@
             this.dmButtonMinLight1.Size = new System.Drawing.Size(70, 68);
             this.dmButtonMinLight1.TabIndex = 4;
             // 
-            // dmTextBox1
+            // tbLoginName
             // 
-            this.dmTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dmTextBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dmTextBox1.Location = new System.Drawing.Point(116, 147);
-            this.dmTextBox1.Name = "dmTextBox1";
-            this.dmTextBox1.Size = new System.Drawing.Size(260, 27);
-            this.dmTextBox1.TabIndex = 1;
-            this.dmTextBox1.WaterText = "请输入账号";
+            this.tbLoginName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbLoginName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbLoginName.Location = new System.Drawing.Point(116, 147);
+            this.tbLoginName.Name = "tbLoginName";
+            this.tbLoginName.Size = new System.Drawing.Size(260, 27);
+            this.tbLoginName.TabIndex = 1;
+            this.tbLoginName.WaterText = "请输入账号";
             // 
-            // dmTextBox2
+            // tbPassword
             // 
-            this.dmTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dmTextBox2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dmTextBox2.Location = new System.Drawing.Point(116, 195);
-            this.dmTextBox2.Name = "dmTextBox2";
-            this.dmTextBox2.Size = new System.Drawing.Size(260, 27);
-            this.dmTextBox2.TabIndex = 2;
-            this.dmTextBox2.UseSystemPasswordChar = true;
-            this.dmTextBox2.WaterText = "请输入密码";
+            this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbPassword.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPassword.Location = new System.Drawing.Point(116, 195);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(260, 27);
+            this.tbPassword.TabIndex = 2;
+            this.tbPassword.UseSystemPasswordChar = true;
+            this.tbPassword.WaterText = "请输入密码";
             // 
             // dmButtonCloseLight2
             // 
@@ -131,8 +132,8 @@
             this.ControlBox = false;
             this.Controls.Add(this.dmButtonMinLight2);
             this.Controls.Add(this.dmButtonCloseLight2);
-            this.Controls.Add(this.dmTextBox2);
-            this.Controls.Add(this.dmTextBox1);
+            this.Controls.Add(this.tbPassword);
+            this.Controls.Add(this.tbLoginName);
             this.Controls.Add(this.dmButtonMinLight1);
             this.Controls.Add(this.dmButtonCloseLight1);
             this.Controls.Add(this.dmButton1);
@@ -150,6 +151,7 @@
             this.TitleCenter = true;
             this.TitleColor = System.Drawing.Color.White;
             this.TitleOffset = new System.Drawing.Point(50, 0);
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,8 +161,8 @@
         private DMSkin.Controls.DMButton dmButton1;
         private DMSkin.Controls.DMButtonCloseLight dmButtonCloseLight1;
         private DMSkin.Controls.DMButtonMinLight dmButtonMinLight1;
-        private DMSkin.Controls.DMTextBox dmTextBox1;
-        private DMSkin.Controls.DMTextBox dmTextBox2;
+        private DMSkin.Controls.DMTextBox tbLoginName;
+        private DMSkin.Controls.DMTextBox tbPassword;
         private DMSkin.Controls.DMButtonCloseLight dmButtonCloseLight2;
         private DMSkin.Controls.DMButtonMinLight dmButtonMinLight2;
     }
