@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LHT.CRM.App.Settings;
 
 namespace LHT.CRM.App
 {
@@ -18,6 +19,7 @@ namespace LHT.CRM.App
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMain());
             //Application.Run(new frmLogin());
+            //Application.Run(new frmSystemSetting());
         }
     }
 }

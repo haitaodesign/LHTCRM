@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CCWin;
+using LHT.CRM.App.Settings;
 
 namespace LHT.CRM.App
 {
@@ -65,7 +66,10 @@ namespace LHT.CRM.App
         {
             //向splitContainer1.Panel2添加系统设置窗体
 
-
+            frmSystemSetting fss = new frmSystemSetting();
+            fss.TopLevel = false;
+            splitContainer1.Panel2.Controls.Add(fss);
+            fss.Show();
         }
     }
 }
