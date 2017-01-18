@@ -111,7 +111,7 @@
     <Content Include="images\桌面灰.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="SystemSetting\" />
+    <Folder Include="Settings\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LHT.CRM.BLL\LHT.CRM.BLL.csproj">
