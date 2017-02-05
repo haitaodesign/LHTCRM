@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SystemManagement\SystemLoginLogic.cs" />
+    <Compile Include="SystemManagement\SystemRoleLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LHT.CRM.DAL\LHT.CRM.DAL.csproj">

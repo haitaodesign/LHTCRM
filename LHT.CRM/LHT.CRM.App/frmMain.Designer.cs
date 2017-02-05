@@ -31,14 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.skinPictureBox1 = new CCWin.SkinControl.SkinPictureBox();
-            this.skinListBox1 = new CCWin.SkinControl.SkinListBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.skinPictureBox2 = new CCWin.SkinControl.SkinPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.metroLabel1 = new DMSkin.Metro.Controls.MetroLabel();
             this.pbSettings = new CCWin.SkinControl.SkinPictureBox();
             this.skinPictureBox4 = new CCWin.SkinControl.SkinPictureBox();
+            this.skinPictureBox1 = new CCWin.SkinControl.SkinPictureBox();
+            this.skinListBox1 = new CCWin.SkinControl.SkinListBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.cmSettings = new DMSkin.Metro.Controls.MetroContextMenu(this.components);
             this.上次登录信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lOGO设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,23 +51,19 @@
             this.tsmiSystemSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.退出登录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tpSettings = new DMSkin.Metro.Components.MetroToolTip();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox4)).BeginInit();
-            this.cmSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.cmSettings.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -88,50 +88,22 @@
             this.splitContainer1.TabIndex = 6;
             this.splitContainer1.TabStop = false;
             // 
-            // skinPictureBox1
+            // tableLayoutPanel3
             // 
-            this.skinPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.skinPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("skinPictureBox1.Image")));
-            this.skinPictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.skinPictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.skinPictureBox1.Name = "skinPictureBox1";
-            this.skinPictureBox1.Size = new System.Drawing.Size(240, 80);
-            this.skinPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.skinPictureBox1.TabIndex = 0;
-            this.skinPictureBox1.TabStop = false;
-            // 
-            // skinListBox1
-            // 
-            this.skinListBox1.Back = null;
-            this.skinListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.skinListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinListBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.skinListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinListBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.skinListBox1.Font = new System.Drawing.Font("微软雅黑 Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinListBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.skinListBox1.FormattingEnabled = true;
-            this.skinListBox1.ItemBorderVisble = false;
-            this.skinListBox1.ItemGlassVisble = false;
-            this.skinListBox1.ItemHeight = 40;
-            this.skinListBox1.ItemRadius = 4;
-            this.skinListBox1.Items.AddRange(new CCWin.SkinControl.SkinListBoxItem[] {
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items1"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items2"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items3"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items4"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items5")))});
-            this.skinListBox1.Location = new System.Drawing.Point(0, 80);
-            this.skinListBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.skinListBox1.MouseColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(235)))));
-            this.skinListBox1.Name = "skinListBox1";
-            this.skinListBox1.RowBackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.skinListBox1.RowBackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.skinListBox1.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(215)))));
-            this.skinListBox1.Size = new System.Drawing.Size(240, 693);
-            this.skinListBox1.TabIndex = 0;
-            this.skinListBox1.Tag = "";
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel1, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.skinPictureBox1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.skinListBox1, 0, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(240, 913);
+            this.tableLayoutPanel3.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
@@ -216,62 +188,50 @@
             this.skinPictureBox4.TabIndex = 3;
             this.skinPictureBox4.TabStop = false;
             // 
-            // cmSettings
+            // skinPictureBox1
             // 
-            this.cmSettings.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmSettings.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.上次登录信息ToolStripMenuItem,
-            this.lOGO设置ToolStripMenuItem,
-            this.外观设置ToolStripMenuItem,
-            this.个人设置ToolStripMenuItem,
-            this.tsmiSystemSettings,
-            this.退出登录ToolStripMenuItem});
-            this.cmSettings.Name = "cmSettings";
-            this.cmSettings.Size = new System.Drawing.Size(175, 160);
-            this.cmSettings.Text = "设置菜单";
+            this.skinPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.skinPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("skinPictureBox1.Image")));
+            this.skinPictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.skinPictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.skinPictureBox1.Name = "skinPictureBox1";
+            this.skinPictureBox1.Size = new System.Drawing.Size(240, 80);
+            this.skinPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.skinPictureBox1.TabIndex = 0;
+            this.skinPictureBox1.TabStop = false;
             // 
-            // 上次登录信息ToolStripMenuItem
+            // skinListBox1
             // 
-            this.上次登录信息ToolStripMenuItem.Name = "上次登录信息ToolStripMenuItem";
-            this.上次登录信息ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
-            this.上次登录信息ToolStripMenuItem.Text = "上次登录信息";
-            // 
-            // lOGO设置ToolStripMenuItem
-            // 
-            this.lOGO设置ToolStripMenuItem.Name = "lOGO设置ToolStripMenuItem";
-            this.lOGO设置ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
-            this.lOGO设置ToolStripMenuItem.Text = "LOGO设置";
-            // 
-            // 外观设置ToolStripMenuItem
-            // 
-            this.外观设置ToolStripMenuItem.Name = "外观设置ToolStripMenuItem";
-            this.外观设置ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
-            this.外观设置ToolStripMenuItem.Text = "外观设置";
-            // 
-            // 个人设置ToolStripMenuItem
-            // 
-            this.个人设置ToolStripMenuItem.Name = "个人设置ToolStripMenuItem";
-            this.个人设置ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
-            this.个人设置ToolStripMenuItem.Text = "个人设置";
-            // 
-            // tsmiSystemSettings
-            // 
-            this.tsmiSystemSettings.Name = "tsmiSystemSettings";
-            this.tsmiSystemSettings.Size = new System.Drawing.Size(174, 26);
-            this.tsmiSystemSettings.Text = "系统设置";
-            this.tsmiSystemSettings.Click += new System.EventHandler(this.tsmiSystemSettings_Click);
-            // 
-            // 退出登录ToolStripMenuItem
-            // 
-            this.退出登录ToolStripMenuItem.Name = "退出登录ToolStripMenuItem";
-            this.退出登录ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
-            this.退出登录ToolStripMenuItem.Text = "退出登录";
-            // 
-            // tpSettings
-            // 
-            this.tpSettings.Style = DMSkin.Metro.MetroColorStyle.Default;
-            this.tpSettings.StyleManager = null;
-            this.tpSettings.Theme = DMSkin.Metro.MetroThemeStyle.Default;
+            this.skinListBox1.Back = null;
+            this.skinListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.skinListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.skinListBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.skinListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinListBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.skinListBox1.Font = new System.Drawing.Font("微软雅黑 Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinListBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.skinListBox1.FormattingEnabled = true;
+            this.skinListBox1.ItemBorderVisble = false;
+            this.skinListBox1.ItemGlassVisble = false;
+            this.skinListBox1.ItemHeight = 40;
+            this.skinListBox1.ItemRadius = 4;
+            this.skinListBox1.Items.AddRange(new CCWin.SkinControl.SkinListBoxItem[] {
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items"))),
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items1"))),
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items2"))),
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items3"))),
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items4"))),
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items5")))});
+            this.skinListBox1.Location = new System.Drawing.Point(0, 80);
+            this.skinListBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.skinListBox1.MouseColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(235)))));
+            this.skinListBox1.Name = "skinListBox1";
+            this.skinListBox1.RowBackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.skinListBox1.RowBackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.skinListBox1.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(215)))));
+            this.skinListBox1.Size = new System.Drawing.Size(240, 693);
+            this.skinListBox1.TabIndex = 0;
+            this.skinListBox1.Tag = "";
             // 
             // tableLayoutPanel2
             // 
@@ -310,22 +270,62 @@
             this.panel4.Size = new System.Drawing.Size(1020, 829);
             this.panel4.TabIndex = 1;
             // 
-            // tableLayoutPanel3
+            // cmSettings
             // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel1, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.skinPictureBox1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.skinListBox1, 0, 1);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 140F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(240, 913);
-            this.tableLayoutPanel3.TabIndex = 0;
+            this.cmSettings.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmSettings.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.上次登录信息ToolStripMenuItem,
+            this.lOGO设置ToolStripMenuItem,
+            this.外观设置ToolStripMenuItem,
+            this.个人设置ToolStripMenuItem,
+            this.tsmiSystemSettings,
+            this.退出登录ToolStripMenuItem});
+            this.cmSettings.Name = "cmSettings";
+            this.cmSettings.Size = new System.Drawing.Size(182, 188);
+            this.cmSettings.Text = "设置菜单";
+            // 
+            // 上次登录信息ToolStripMenuItem
+            // 
+            this.上次登录信息ToolStripMenuItem.Name = "上次登录信息ToolStripMenuItem";
+            this.上次登录信息ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.上次登录信息ToolStripMenuItem.Text = "上次登录信息";
+            // 
+            // lOGO设置ToolStripMenuItem
+            // 
+            this.lOGO设置ToolStripMenuItem.Name = "lOGO设置ToolStripMenuItem";
+            this.lOGO设置ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.lOGO设置ToolStripMenuItem.Text = "LOGO设置";
+            // 
+            // 外观设置ToolStripMenuItem
+            // 
+            this.外观设置ToolStripMenuItem.Name = "外观设置ToolStripMenuItem";
+            this.外观设置ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.外观设置ToolStripMenuItem.Text = "外观设置";
+            // 
+            // 个人设置ToolStripMenuItem
+            // 
+            this.个人设置ToolStripMenuItem.Name = "个人设置ToolStripMenuItem";
+            this.个人设置ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.个人设置ToolStripMenuItem.Text = "个人设置";
+            // 
+            // tsmiSystemSettings
+            // 
+            this.tsmiSystemSettings.Name = "tsmiSystemSettings";
+            this.tsmiSystemSettings.Size = new System.Drawing.Size(181, 26);
+            this.tsmiSystemSettings.Text = "系统设置";
+            this.tsmiSystemSettings.Click += new System.EventHandler(this.tsmiSystemSettings_Click);
+            // 
+            // 退出登录ToolStripMenuItem
+            // 
+            this.退出登录ToolStripMenuItem.Name = "退出登录ToolStripMenuItem";
+            this.退出登录ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.退出登录ToolStripMenuItem.Text = "退出登录";
+            // 
+            // tpSettings
+            // 
+            this.tpSettings.Style = DMSkin.Metro.MetroColorStyle.Default;
+            this.tpSettings.StyleManager = null;
+            this.tpSettings.Theme = DMSkin.Metro.MetroThemeStyle.Default;
             // 
             // frmMain
             // 
@@ -356,16 +356,16 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox4)).EndInit();
-            this.cmSettings.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
+            this.cmSettings.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

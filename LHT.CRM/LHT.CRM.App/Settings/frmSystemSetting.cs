@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LHT.CRM.BLL.SystemManagement;
 
 namespace LHT.CRM.App.Settings
 {
@@ -16,5 +17,27 @@ namespace LHT.CRM.App.Settings
         {
             InitializeComponent();
         }
+
+        private void frmSystemSetting_Load(object sender, EventArgs e)
+        {
+            //显示角色信息
+            SystemRoleLogic srl = new SystemRoleLogic();
+            dgvRoleSetting.DataSource = srl.GetAll();
+            dgvRoleSetting.Columns["SystemUsers"].Visible = false;
+            dgvRoleSetting.Columns["SystemRoleAuthorities"].Visible = false;
+        }
+
+
+        //显示角色列表
+
+        //每个角色对应不同的权限
+
+        //用户设置
+
+        //显示用户信息
+
+        //添加用户时设置默认的角色
+
+        //修改用户信息可以更改角色设置
     }
 }

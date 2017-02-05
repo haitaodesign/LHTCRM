@@ -18,7 +18,7 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
         {
         }
 
-        public List<Model.SystemLogin> GetAll()
+        public List<SystemLogin> GetAll()
         {
             return _dbContext.SystemLogins.ToList();
         }

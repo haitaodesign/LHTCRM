@@ -129,6 +129,10 @@
       <Project>{b8800f11-335c-40ae-bd20-007aae18c20a}</Project>
       <Name>LHT.CRM.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LHT.CRM.Model\LHT.CRM.Model.csproj">
+      <Project>{35761248-de01-41c5-a6a4-3feb0925e6c3}</Project>
+      <Name>LHT.CRM.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

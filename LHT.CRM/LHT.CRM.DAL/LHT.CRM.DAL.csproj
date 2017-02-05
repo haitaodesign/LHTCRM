@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceRespository\SystemManagement\SystemLoginService.cs" />
+    <Compile Include="ServiceRespository\SystemManagement\SystemRoleService.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="LHTCRMModel.edmx">

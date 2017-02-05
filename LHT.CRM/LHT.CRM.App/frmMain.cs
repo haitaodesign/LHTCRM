@@ -64,12 +64,16 @@ namespace LHT.CRM.App
 
         private void tsmiSystemSettings_Click(object sender, EventArgs e)
         {
+            panel4.Controls.Clear();
             //向splitContainer1.Panel2添加系统设置窗体
 
             frmSystemSetting fss = new frmSystemSetting();
             fss.TopLevel = false;
-            splitContainer1.Panel2.Controls.Add(fss);
+            fss.Dock = DockStyle.Fill;
+            panel4.Controls.Add(fss);
             fss.Show();
         }
+
+
     }
 }
