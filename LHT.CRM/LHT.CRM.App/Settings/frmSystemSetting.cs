@@ -29,7 +29,9 @@ namespace LHT.CRM.App.Settings
 
         private void btnCreateRole_Click(object sender, EventArgs e)
         {
-
+            //弹出新建角色窗体
+            frmCreateRole fcr = new frmCreateRole();
+            fcr.ShowDialog();
         }
 
 
