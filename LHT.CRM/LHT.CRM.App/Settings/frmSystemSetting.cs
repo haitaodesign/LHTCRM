@@ -27,6 +27,11 @@ namespace LHT.CRM.App.Settings
             dgvRoleSetting.Columns["SystemRoleAuthorities"].Visible = false;
         }
 
+        private void btnCreateRole_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         //显示角色列表
 

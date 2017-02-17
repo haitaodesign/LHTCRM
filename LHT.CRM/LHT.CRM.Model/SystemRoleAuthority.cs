@@ -20,7 +20,7 @@ namespace LHT.CRM.Model
         public string SubName { get; set; }
         public Nullable<int> IsLock { get; set; }
     
-        public virtual SystemRole SystemRole { get; set; }
         public virtual SystemSubModule SystemSubModule { get; set; }
+        public virtual SystemRole SystemRole { get; set; }
     }
 }

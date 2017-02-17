@@ -77,6 +77,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\frmCreateRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frmCreateRole.Designer.cs">
+      <DependentUpon>frmCreateRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings\frmSystemSetting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Settings\frmCreateRole.resx">
+      <DependentUpon>frmCreateRole.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Settings\frmSystemSetting.resx">
       <DependentUpon>frmSystemSetting.cs</DependentUpon>
     </EmbeddedResource>

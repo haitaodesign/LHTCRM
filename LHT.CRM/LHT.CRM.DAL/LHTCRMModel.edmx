@@ -21,6 +21,7 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="RoleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoleDescription" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="SystemRoleAuthority">
           <Key>
@@ -165,15 +166,6 @@
           <Property Name="UserId" Type="Int32" />
           <NavigationProperty Name="SystemUser" Relationship="Self.FK_SystemLogin_SystemUser" FromRole="SystemLogin" ToRole="SystemUser" />
         </EntityType>
-        <EntityType Name="SystemRole">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="SystemRoleAuthorities" Relationship="Self.FK_SystemRoleAuthority_SystemRole" FromRole="SystemRole" ToRole="SystemRoleAuthority" />
-          <NavigationProperty Name="SystemUsers" Relationship="Self.FK_SystemUser_SystemRole" FromRole="SystemRole" ToRole="SystemUser" />
-        </EntityType>
         <EntityType Name="SystemRoleAuthority">
           <Key>
             <PropertyRef Name="Id" />
@@ -183,8 +175,8 @@
           <Property Name="SubId" Type="Int32" />
           <Property Name="SubName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IsLock" Type="Int32" />
-          <NavigationProperty Name="SystemRole" Relationship="Self.FK_SystemRoleAuthority_SystemRole" FromRole="SystemRoleAuthority" ToRole="SystemRole" />
           <NavigationProperty Name="SystemSubModule" Relationship="Self.FK_SystemRoleAuthority_SystemSubModule" FromRole="SystemRoleAuthority" ToRole="SystemSubModule" />
+          <NavigationProperty Name="SystemRole" Relationship="LHTCRMModel.FK_SystemRoleAuthority_SystemRole" FromRole="SystemRoleAuthority" ToRole="SystemRole" />
         </EntityType>
         <EntityType Name="SystemSubModule">
           <Key>
@@ -218,8 +210,8 @@
           <Property Name="RoleId" Type="Int32" />
           <Property Name="RoleName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="SystemLogins" Relationship="Self.FK_SystemLogin_SystemUser" FromRole="SystemUser" ToRole="SystemLogin" />
-          <NavigationProperty Name="SystemRole" Relationship="Self.FK_SystemUser_SystemRole" FromRole="SystemUser" ToRole="SystemRole" />
           <Property Name="Picture" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SystemRole" Relationship="LHTCRMModel.FK_SystemUser_SystemRole" FromRole="SystemUser" ToRole="SystemRole" />
         </EntityType>
         <Association Name="FK_SystemLogin_SystemUser">
           <End Role="SystemUser" Type="Self.SystemUser" Multiplicity="0..1" />
@@ -230,30 +222,6 @@
             </Principal>
             <Dependent Role="SystemLogin">
               <PropertyRef Name="UserId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_SystemRoleAuthority_SystemRole">
-          <End Role="SystemRole" Type="Self.SystemRole" Multiplicity="0..1" />
-          <End Role="SystemRoleAuthority" Type="Self.SystemRoleAuthority" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SystemRole">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="SystemRoleAuthority">
-              <PropertyRef Name="RoleId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_SystemUser_SystemRole">
-          <End Role="SystemRole" Type="Self.SystemRole" Multiplicity="0..1" />
-          <End Role="SystemUser" Type="Self.SystemUser" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SystemRole">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="SystemUser">
-              <PropertyRef Name="RoleId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -283,7 +251,6 @@
         </Association>
         <EntityContainer Name="LHTCRMEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="SystemLogins" EntityType="Self.SystemLogin" />
-          <EntitySet Name="SystemRoles" EntityType="Self.SystemRole" />
           <EntitySet Name="SystemRoleAuthorities" EntityType="Self.SystemRoleAuthority" />
           <EntitySet Name="SystemSubModules" EntityType="Self.SystemSubModule" />
           <EntitySet Name="SystemTopModules" EntityType="Self.SystemTopModule" />
@@ -291,14 +258,6 @@
           <AssociationSet Name="FK_SystemLogin_SystemUser" Association="Self.FK_SystemLogin_SystemUser">
             <End Role="SystemUser" EntitySet="SystemUsers" />
             <End Role="SystemLogin" EntitySet="SystemLogins" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SystemRoleAuthority_SystemRole" Association="Self.FK_SystemRoleAuthority_SystemRole">
-            <End Role="SystemRole" EntitySet="SystemRoles" />
-            <End Role="SystemRoleAuthority" EntitySet="SystemRoleAuthorities" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SystemUser_SystemRole" Association="Self.FK_SystemUser_SystemRole">
-            <End Role="SystemRole" EntitySet="SystemRoles" />
-            <End Role="SystemUser" EntitySet="SystemUsers" />
           </AssociationSet>
           <AssociationSet Name="FK_SystemRoleAuthority_SystemSubModule" Association="Self.FK_SystemRoleAuthority_SystemSubModule">
             <End Role="SystemSubModule" EntitySet="SystemSubModules" />
@@ -308,7 +267,50 @@
             <End Role="SystemTopModule" EntitySet="SystemTopModules" />
             <End Role="SystemSubModule" EntitySet="SystemSubModules" />
           </AssociationSet>
+          <EntitySet Name="SystemRoles" EntityType="LHTCRMModel.SystemRole" />
+          <AssociationSet Name="FK_SystemRoleAuthority_SystemRole" Association="LHTCRMModel.FK_SystemRoleAuthority_SystemRole">
+            <End Role="SystemRole" EntitySet="SystemRoles" />
+            <End Role="SystemRoleAuthority" EntitySet="SystemRoleAuthorities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemUser_SystemRole" Association="LHTCRMModel.FK_SystemUser_SystemRole">
+            <End Role="SystemRole" EntitySet="SystemRoles" />
+            <End Role="SystemUser" EntitySet="SystemUsers" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="SystemRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoleDescription" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SystemRoleAuthorities" Relationship="LHTCRMModel.FK_SystemRoleAuthority_SystemRole" FromRole="SystemRole" ToRole="SystemRoleAuthority" />
+          <NavigationProperty Name="SystemUsers" Relationship="LHTCRMModel.FK_SystemUser_SystemRole" FromRole="SystemRole" ToRole="SystemUser" />
+        </EntityType>
+        <Association Name="FK_SystemRoleAuthority_SystemRole">
+          <End Type="LHTCRMModel.SystemRole" Role="SystemRole" Multiplicity="0..1" />
+          <End Type="LHTCRMModel.SystemRoleAuthority" Role="SystemRoleAuthority" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemRole">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SystemRoleAuthority">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemUser_SystemRole">
+          <End Type="LHTCRMModel.SystemRole" Role="SystemRole" Multiplicity="0..1" />
+          <End Type="LHTCRMModel.SystemUser" Role="SystemUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemRole">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SystemUser">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -323,14 +325,6 @@
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="IsLock" ColumnName="IsLock" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="SystemRoles">
-            <EntityTypeMapping TypeName="LHTCRMModel.SystemRole">
-              <MappingFragment StoreEntitySet="SystemRole">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -375,6 +369,15 @@
                 <ScalarProperty Name="QQ" ColumnName="QQ" />
                 <ScalarProperty Name="RoleId" ColumnName="RoleId" />
                 <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemRoles">
+            <EntityTypeMapping TypeName="LHTCRMModel.SystemRole">
+              <MappingFragment StoreEntitySet="SystemRole">
+                <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

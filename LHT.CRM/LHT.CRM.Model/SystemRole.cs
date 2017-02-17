@@ -23,6 +23,7 @@ namespace LHT.CRM.Model
     
         public int Id { get; set; }
         public string RoleName { get; set; }
+        public string RoleDescription { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SystemRoleAuthority> SystemRoleAuthorities { get; set; }
