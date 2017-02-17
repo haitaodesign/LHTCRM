@@ -77,7 +77,7 @@
             this.dmTextBox1.Size = new System.Drawing.Size(319, 101);
             this.dmTextBox1.TabIndex = 3;
             this.dmTextBox1.TabStop = false;
-            this.dmTextBox1.WaterText = "请输入角色名称";
+            this.dmTextBox1.WaterText = "请输入角色描述";
             // 
             // btnEnter
             // 
