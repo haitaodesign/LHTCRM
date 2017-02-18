@@ -17,10 +17,10 @@ namespace LHT.CRM.App
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmMain());
+            Application.Run(new frmMain());
             //Application.Run(new frmLogin());
             //Application.Run(new frmSystemSetting());
-            Application.Run(new frmCreateRole());
+            //Application.Run(new frmCreateRole());
         }
     }
 }

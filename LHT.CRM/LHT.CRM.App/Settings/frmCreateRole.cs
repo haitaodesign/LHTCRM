@@ -38,6 +38,9 @@ namespace LHT.CRM.App.Settings
                 {
                     this.Close();
                     //刷新数据列表
+                    frmSystemSetting fss;
+                    fss = (frmSystemSetting)this.Owner;
+                    fss.RefreshMethod();
                 }
             }
             else
