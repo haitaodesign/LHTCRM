@@ -16,11 +16,9 @@ namespace LHT.CRM.Model
     {
         public int Id { get; set; }
         public Nullable<int> RoleId { get; set; }
-        public Nullable<int> SubId { get; set; }
-        public string SubName { get; set; }
+        public string ModuleName { get; set; }
         public Nullable<int> IsLock { get; set; }
     
-        public virtual SystemSubModule SystemSubModule { get; set; }
         public virtual SystemRole SystemRole { get; set; }
     }
 }

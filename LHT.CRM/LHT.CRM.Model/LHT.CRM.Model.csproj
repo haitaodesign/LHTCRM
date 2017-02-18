@@ -49,16 +49,13 @@
     <Compile Include="SystemLogin.cs">
       <DependentUpon>LHTCRMModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="SystemModule.cs">
+      <DependentUpon>LHTCRMModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="SystemRole.cs">
       <DependentUpon>LHTCRMModel.tt</DependentUpon>
     </Compile>
     <Compile Include="SystemRoleAuthority.cs">
-      <DependentUpon>LHTCRMModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SystemSubModule.cs">
-      <DependentUpon>LHTCRMModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SystemTopModule.cs">
       <DependentUpon>LHTCRMModel.tt</DependentUpon>
     </Compile>
     <Compile Include="SystemUser.cs">

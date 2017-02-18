@@ -12,18 +12,9 @@ namespace LHT.CRM.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class SystemTopModule
+    public partial class SystemModule
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public SystemTopModule()
-        {
-            this.SystemSubModules = new HashSet<SystemSubModule>();
-        }
-    
         public int Id { get; set; }
         public string TopName { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SystemSubModule> SystemSubModules { get; set; }
     }
 }

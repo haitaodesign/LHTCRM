@@ -6,16 +6,13 @@
     <edmx:Diagrams>
       <Diagram DiagramId="3c6549c3c42c4285831ae8251eed0068" Name="Diagram1">
         <EntityTypeShape EntityType="LHTCRMModel.SystemLogin" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LHTCRMModel.SystemRoleAuthority" Width="2" PointX="3" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="LHTCRMModel.SystemSubModule" Width="1.875" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LHTCRMModel.SystemTopModule" Width="1.5" PointX="6" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="LHTCRMModel.SystemUser" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
         <AssociationConnector Association="LHTCRMModel.FK_SystemLogin_SystemUser" ManuallyRouted="false" />
-        <AssociationConnector Association="LHTCRMModel.FK_SystemRoleAuthority_SystemSubModule" ManuallyRouted="false" />
-        <AssociationConnector Association="LHTCRMModel.FK_SystemSubModule_SystemTopModule" ManuallyRouted="false" />
         <EntityTypeShape EntityType="LHTCRMModel.SystemRole" Width="1.5" PointX="0.75" PointY="5.125" />
-        <AssociationConnector Association="LHTCRMModel.FK_SystemRoleAuthority_SystemRole" />
         <AssociationConnector Association="LHTCRMModel.FK_SystemUser_SystemRole" />
+        <EntityTypeShape EntityType="LHTCRMModel.SystemModule" Width="1.5" PointX="2.375" PointY="2.25" />
+        <EntityTypeShape EntityType="LHTCRMModel.SystemRoleAuthority" Width="1.5" PointX="4.875" PointY="2.75" />
+        <AssociationConnector Association="LHTCRMModel.FK_SystemRoleAuthority_SystemRole" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
