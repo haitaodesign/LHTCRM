@@ -31,7 +31,7 @@
             this.lblRoleName = new DMSkin.Metro.Controls.MetroLabel();
             this.tbRoleName = new DMSkin.Controls.DMTextBox();
             this.metroLabel1 = new DMSkin.Metro.Controls.MetroLabel();
-            this.dmTextBox1 = new DMSkin.Controls.DMTextBox();
+            this.tbRoleDescription = new DMSkin.Controls.DMTextBox();
             this.btnEnter = new DMSkin.Controls.DMButton();
             this.btnCancel = new DMSkin.Controls.DMButton();
             this.SuspendLayout();
@@ -66,18 +66,18 @@
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "角色描述：";
             // 
-            // dmTextBox1
+            // tbRoleDescription
             // 
-            this.dmTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dmTextBox1.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dmTextBox1.Location = new System.Drawing.Point(221, 209);
-            this.dmTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.dmTextBox1.Multiline = true;
-            this.dmTextBox1.Name = "dmTextBox1";
-            this.dmTextBox1.Size = new System.Drawing.Size(319, 101);
-            this.dmTextBox1.TabIndex = 3;
-            this.dmTextBox1.TabStop = false;
-            this.dmTextBox1.WaterText = "请输入角色描述";
+            this.tbRoleDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbRoleDescription.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbRoleDescription.Location = new System.Drawing.Point(221, 209);
+            this.tbRoleDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.tbRoleDescription.Multiline = true;
+            this.tbRoleDescription.Name = "tbRoleDescription";
+            this.tbRoleDescription.Size = new System.Drawing.Size(319, 101);
+            this.tbRoleDescription.TabIndex = 3;
+            this.tbRoleDescription.TabStop = false;
+            this.tbRoleDescription.WaterText = "请输入角色描述";
             // 
             // btnEnter
             // 
@@ -128,7 +128,7 @@
             this.ClientSize = new System.Drawing.Size(700, 490);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEnter);
-            this.Controls.Add(this.dmTextBox1);
+            this.Controls.Add(this.tbRoleDescription);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.tbRoleName);
             this.Controls.Add(this.lblRoleName);
@@ -152,7 +152,7 @@
         private DMSkin.Metro.Controls.MetroLabel lblRoleName;
         private DMSkin.Controls.DMTextBox tbRoleName;
         private DMSkin.Metro.Controls.MetroLabel metroLabel1;
-        private DMSkin.Controls.DMTextBox dmTextBox1;
+        private DMSkin.Controls.DMTextBox tbRoleDescription;
         private DMSkin.Controls.DMButton btnEnter;
         private DMSkin.Controls.DMButton btnCancel;
     }
