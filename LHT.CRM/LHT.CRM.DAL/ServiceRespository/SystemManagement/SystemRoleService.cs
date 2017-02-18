@@ -21,7 +21,10 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
 
         public void Add(SystemRole role)
         {
-            throw new NotImplementedException();
+            if (role != null)
+            {
+                _dbContext.SystemRoles.Add(role);
+            }
         }
 
         public void Delete(int roleId)
