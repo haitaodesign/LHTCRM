@@ -10,7 +10,7 @@
         <AssociationConnector Association="LHTCRMModel.FK_SystemLogin_SystemUser" ManuallyRouted="false" />
         <EntityTypeShape EntityType="LHTCRMModel.SystemRole" Width="1.5" PointX="0.75" PointY="5.125" />
         <AssociationConnector Association="LHTCRMModel.FK_SystemUser_SystemRole" />
-        <EntityTypeShape EntityType="LHTCRMModel.SystemModule" Width="1.5" PointX="2.375" PointY="2.25" />
+        <EntityTypeShape EntityType="LHTCRMModel.SystemModule" Width="1.5" PointX="2.375" PointY="3.125" />
         <EntityTypeShape EntityType="LHTCRMModel.SystemRoleAuthority" Width="1.5" PointX="4.875" PointY="2.75" />
         <AssociationConnector Association="LHTCRMModel.FK_SystemRoleAuthority_SystemRole" />
       </Diagram>
