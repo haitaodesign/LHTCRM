@@ -73,6 +73,7 @@
             this.btnEnter.TabIndex = 5;
             this.btnEnter.Text = "确定";
             this.btnEnter.UseVisualStyleBackColor = false;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // btnCancel
             // 
@@ -116,7 +117,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 96);
+            this.label1.Location = new System.Drawing.Point(73, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 20);
             this.label1.TabIndex = 7;
@@ -125,7 +126,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(464, 96);
+            this.label2.Location = new System.Drawing.Point(464, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 20);
             this.label2.TabIndex = 8;

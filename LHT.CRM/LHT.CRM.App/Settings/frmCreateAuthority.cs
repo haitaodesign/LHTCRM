@@ -9,12 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CCWin;
 using LHT.CRM.BLL.SystemManagement;
+using LHT.CRM.Model;
 
 namespace LHT.CRM.App.Settings
 {
     public partial class frmCreateAuthority : Skin_VS
     {
+        SystemRoleAuthorityLogic sral = new SystemRoleAuthorityLogic();
+        SystemModuleLogic sml = new SystemModuleLogic();
         int roleId;
+        List<SystemRoleAuthority> getRoleModule;
+        List<SystemRoleAuthority> getAllAuthList;
+
         public frmCreateAuthority()
         {
             InitializeComponent();
@@ -28,8 +34,6 @@ namespace LHT.CRM.App.Settings
             fss = (frmSystemSetting)this.Owner;
             roleId=fss.currentRoleId;
             DislplayRoleModules();
-
-
         }
 
         private void btnAddModule_Click(object sender, EventArgs e)
@@ -69,7 +73,6 @@ namespace LHT.CRM.App.Settings
         /// </summary>
         public void DisplayAllModules()
         {
-            SystemModuleLogic sml = new SystemModuleLogic();
             foreach (var module in sml.GetAllModule())
             {
                 lbModuleList.Items.Add(module.TopName);
@@ -78,11 +81,43 @@ namespace LHT.CRM.App.Settings
 
         public void DislplayRoleModules()
         {
-            SystemRoleAuthorityLogic sral = new SystemRoleAuthorityLogic();
-            foreach (var item in sral.GetAuthList(roleId))
+            getRoleModule = sral.GetAuthList(roleId);
+            foreach (var item in getRoleModule)
             {
                 lbSelModuleList.Items.Add(item.ModuleName);
             }
+        }
+
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+
+
+            //获取角色权限列表，循坏更改信息
+            int count = lbSelModuleList.Items.Count;
+            getAllAuthList = sral.GetAllAuthList(roleId);
+            int countAuthList = getAllAuthList.Count;
+            SystemRoleAuthority sra = new SystemRoleAuthority();
+            if (count > 0)
+            {
+                for (int j = 0; j < countAuthList; j++)
+                {
+                    sra = getAllAuthList[j];
+                    sra.IsLock = 0;
+                    sral.UpdateRoleAuth(sra);
+                }
+                for (int i = 0; i < count; i++)
+                {
+                    string moduleName = lbSelModuleList.Items[i].ToString();
+                    //查询roleId和moduleName相同的对象，修改IsLock为1
+                    sra = sral.GetRoleIdAndModule(roleId, moduleName);
+                    sra.IsLock = 1;
+                    sral.UpdateRoleAuth(sra);
+                }
+            }
+            
+
+
+
         }
     }
 }

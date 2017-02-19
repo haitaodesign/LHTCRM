@@ -24,7 +24,7 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
 
         public List<SystemRoleAuthority> GetAll(int roleId)
         {
-            return _dbContext.SystemRoleAuthorities.Where(r => r.RoleId == roleId).ToList();
+            return _dbContext.SystemRoleAuthorities.Where(r => r.RoleId == roleId && r.IsLock==1).ToList();
         }
 
         public void Add(SystemRoleAuthority roleAuth)
@@ -39,7 +39,28 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
 
         public void Update(SystemRoleAuthority roleAuth)
         {
-            throw new NotImplementedException();
+            var role = _dbContext.SystemRoleAuthorities.Find(roleAuth.Id);
+            if (role != null)
+            {
+                role.RoleId = roleAuth.RoleId;
+                role.ModuleName = roleAuth.ModuleName;
+                role.IsLock = roleAuth.IsLock;
+            }
+        }
+
+        public List<SystemRoleAuthority> GetAllToRoleId(int roleId)
+        {
+            return _dbContext.SystemRoleAuthorities.Where(r => r.RoleId == roleId).ToList();
+        }
+
+        public SystemRoleAuthority GetRoleAuth(int Id)
+        {
+            return _dbContext.SystemRoleAuthorities.Single(r => r.Id == Id);
+        }
+
+        public SystemRoleAuthority GetRoleIdAndModule(int roleId,string moduleName)
+        {
+            return _dbContext.SystemRoleAuthorities.Single(r => r.RoleId == roleId && r.ModuleName == moduleName);
         }
     }
 }
