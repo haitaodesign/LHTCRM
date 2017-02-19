@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTabControl1 = new DMSkin.Metro.Controls.MetroTabControl();
             this.tpRoleSetting = new DMSkin.Metro.Controls.MetroTabPage();
+            this.btnAuthority = new DMSkin.Controls.DMButton();
+            this.btnDeleteRole = new DMSkin.Controls.DMButton();
             this.btnUpdateRole = new DMSkin.Controls.DMButton();
             this.btnCreateRole = new DMSkin.Controls.DMButton();
             this.dgvRoleSetting = new DMSkin.Metro.Controls.MetroGrid();
-            this.btnDeleteRole = new DMSkin.Controls.DMButton();
-            this.btnAuthority = new DMSkin.Controls.DMButton();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoleDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,6 +77,43 @@
             this.tpRoleSetting.VerticalScrollbarBarColor = true;
             this.tpRoleSetting.VerticalScrollbarDM_HighlightOnWheel = false;
             this.tpRoleSetting.VerticalScrollbarSize = 10;
+            // 
+            // btnAuthority
+            // 
+            this.btnAuthority.BackColor = System.Drawing.Color.Transparent;
+            this.btnAuthority.DM_DisabledColor = System.Drawing.Color.Empty;
+            this.btnAuthority.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnAuthority.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
+            this.btnAuthority.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
+            this.btnAuthority.DM_Radius = 5;
+            this.btnAuthority.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAuthority.ForeColor = System.Drawing.Color.White;
+            this.btnAuthority.Image = null;
+            this.btnAuthority.Location = new System.Drawing.Point(462, 22);
+            this.btnAuthority.Name = "btnAuthority";
+            this.btnAuthority.Size = new System.Drawing.Size(125, 45);
+            this.btnAuthority.TabIndex = 6;
+            this.btnAuthority.Text = "权限";
+            this.btnAuthority.UseVisualStyleBackColor = false;
+            this.btnAuthority.Click += new System.EventHandler(this.btnAuthority_Click);
+            // 
+            // btnDeleteRole
+            // 
+            this.btnDeleteRole.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteRole.DM_DisabledColor = System.Drawing.Color.Empty;
+            this.btnDeleteRole.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnDeleteRole.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
+            this.btnDeleteRole.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
+            this.btnDeleteRole.DM_Radius = 5;
+            this.btnDeleteRole.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDeleteRole.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteRole.Image = null;
+            this.btnDeleteRole.Location = new System.Drawing.Point(307, 23);
+            this.btnDeleteRole.Name = "btnDeleteRole";
+            this.btnDeleteRole.Size = new System.Drawing.Size(125, 45);
+            this.btnDeleteRole.TabIndex = 5;
+            this.btnDeleteRole.Text = "删除";
+            this.btnDeleteRole.UseVisualStyleBackColor = false;
             // 
             // btnUpdateRole
             // 
@@ -125,27 +162,27 @@
             this.dgvRoleSetting.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvRoleSetting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvRoleSetting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRoleSetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRoleSetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRoleSetting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvRoleSetting.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.RoleName,
             this.RoleDescription});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRoleSetting.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRoleSetting.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRoleSetting.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvRoleSetting.EnableHeadersVisualStyles = false;
             this.dgvRoleSetting.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -154,56 +191,21 @@
             this.dgvRoleSetting.Name = "dgvRoleSetting";
             this.dgvRoleSetting.ReadOnly = true;
             this.dgvRoleSetting.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRoleSetting.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRoleSetting.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvRoleSetting.RowHeadersVisible = false;
             this.dgvRoleSetting.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvRoleSetting.RowTemplate.Height = 27;
             this.dgvRoleSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRoleSetting.Size = new System.Drawing.Size(793, 570);
             this.dgvRoleSetting.TabIndex = 2;
-            // 
-            // btnDeleteRole
-            // 
-            this.btnDeleteRole.BackColor = System.Drawing.Color.Transparent;
-            this.btnDeleteRole.DM_DisabledColor = System.Drawing.Color.Empty;
-            this.btnDeleteRole.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnDeleteRole.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
-            this.btnDeleteRole.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
-            this.btnDeleteRole.DM_Radius = 5;
-            this.btnDeleteRole.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnDeleteRole.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteRole.Image = null;
-            this.btnDeleteRole.Location = new System.Drawing.Point(307, 23);
-            this.btnDeleteRole.Name = "btnDeleteRole";
-            this.btnDeleteRole.Size = new System.Drawing.Size(125, 45);
-            this.btnDeleteRole.TabIndex = 5;
-            this.btnDeleteRole.Text = "删除";
-            this.btnDeleteRole.UseVisualStyleBackColor = false;
-            // 
-            // btnAuthority
-            // 
-            this.btnAuthority.BackColor = System.Drawing.Color.Transparent;
-            this.btnAuthority.DM_DisabledColor = System.Drawing.Color.Empty;
-            this.btnAuthority.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnAuthority.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
-            this.btnAuthority.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
-            this.btnAuthority.DM_Radius = 5;
-            this.btnAuthority.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAuthority.ForeColor = System.Drawing.Color.White;
-            this.btnAuthority.Image = null;
-            this.btnAuthority.Location = new System.Drawing.Point(462, 22);
-            this.btnAuthority.Name = "btnAuthority";
-            this.btnAuthority.Size = new System.Drawing.Size(125, 45);
-            this.btnAuthority.TabIndex = 6;
-            this.btnAuthority.Text = "权限";
-            this.btnAuthority.UseVisualStyleBackColor = false;
+            this.dgvRoleSetting.Click += new System.EventHandler(this.dgvRoleSetting_Click);
             // 
             // Id
             // 

@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
     <Compile Include="IServiceRespository\ISystemManagement\ISystemLogin.cs" />
+    <Compile Include="IServiceRespository\ISystemManagement\ISystemModule.cs" />
     <Compile Include="IServiceRespository\ISystemManagement\ISystemRole.cs" />
     <Compile Include="IServiceRespository\ISystemManagement\ISystemRoleAuthority.cs" />
     <Compile Include="IServiceRespository\ISystemManagement\ISystemUser.cs" />
@@ -69,6 +70,8 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceRespository\SystemManagement\SystemLoginService.cs" />
+    <Compile Include="ServiceRespository\SystemManagement\SystemModuleService.cs" />
+    <Compile Include="ServiceRespository\SystemManagement\SystemRoleAuthorityService.cs" />
     <Compile Include="ServiceRespository\SystemManagement\SystemRoleService.cs" />
   </ItemGroup>
   <ItemGroup>

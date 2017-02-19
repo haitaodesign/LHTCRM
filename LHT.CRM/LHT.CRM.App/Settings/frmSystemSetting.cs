@@ -13,6 +13,8 @@ namespace LHT.CRM.App.Settings
 {
     public partial class frmSystemSetting : Form
     {
+        public int currentRoleId;
+
         public frmSystemSetting()
         {
             InitializeComponent();
@@ -61,6 +63,18 @@ namespace LHT.CRM.App.Settings
             dgvRoleSetting.DataSource = null;
             //重新加载
             DisplayRoleList();
+        }
+
+        private void btnAuthority_Click(object sender, EventArgs e)
+        {
+            frmCreateAuthority fca = new frmCreateAuthority();
+            fca.Owner = this;
+            fca.ShowDialog();
+        }
+
+        private void dgvRoleSetting_Click(object sender, EventArgs e)
+        {
+            currentRoleId = Convert.ToInt32(dgvRoleSetting.CurrentRow.Cells[0].Value.ToString());
         }
     }
 }

@@ -52,7 +52,7 @@
             this.tbRoleName.Location = new System.Drawing.Point(221, 115);
             this.tbRoleName.Margin = new System.Windows.Forms.Padding(4);
             this.tbRoleName.Name = "tbRoleName";
-            this.tbRoleName.Size = new System.Drawing.Size(319, 31);
+            this.tbRoleName.Size = new System.Drawing.Size(434, 31);
             this.tbRoleName.TabIndex = 1;
             this.tbRoleName.TabStop = false;
             this.tbRoleName.WaterText = "请输入角色名称";
@@ -74,7 +74,7 @@
             this.tbRoleDescription.Margin = new System.Windows.Forms.Padding(4);
             this.tbRoleDescription.Multiline = true;
             this.tbRoleDescription.Name = "tbRoleDescription";
-            this.tbRoleDescription.Size = new System.Drawing.Size(319, 101);
+            this.tbRoleDescription.Size = new System.Drawing.Size(434, 101);
             this.tbRoleDescription.TabIndex = 3;
             this.tbRoleDescription.TabStop = false;
             this.tbRoleDescription.WaterText = "请输入角色描述";
@@ -125,7 +125,7 @@
             this.BorderColor = System.Drawing.Color.White;
             this.CaptionBackColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(117)))), ((int)(((byte)(180)))));
             this.CaptionBackColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(117)))), ((int)(((byte)(180)))));
-            this.ClientSize = new System.Drawing.Size(700, 490);
+            this.ClientSize = new System.Drawing.Size(700, 500);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.tbRoleDescription);

@@ -21,6 +21,7 @@ namespace LHT.CRM.App
             //Application.Run(new frmLogin());
             //Application.Run(new frmSystemSetting());
             //Application.Run(new frmCreateRole());
+            //Application.Run(new frmCreateAuthority());
         }
     }
 }
