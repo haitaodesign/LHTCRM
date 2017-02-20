@@ -29,12 +29,19 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
 
         public void Add(SystemRoleAuthority roleAuth)
         {
-            throw new NotImplementedException();
+            if (roleAuth != null)
+            {
+                _dbContext.SystemRoleAuthorities.Add(roleAuth);
+            }
         }
 
         public void Delete(int roleAuthId)
         {
-            throw new NotImplementedException();
+            var roleAuth = _dbContext.SystemRoleAuthorities.Find(roleAuthId);
+            if (roleAuth != null)
+            {
+                _dbContext.SystemRoleAuthorities.Remove(roleAuth);
+            }
         }
 
         public void Update(SystemRoleAuthority roleAuth)

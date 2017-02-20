@@ -39,5 +39,35 @@ namespace LHT.CRM.BLL.SystemManagement
         {
             return sras.GetRoleIdAndModule(roleId, moduleName);
         }
+
+        public int AddRoleAuthority(SystemRoleAuthority roleAuth)
+        {
+            if (roleAuth != null)
+            {
+                sras.Add(roleAuth);
+                int result = sras.SaveChanges();
+                return result;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public int DeleteRoleAuthority(int Id)
+        {
+            
+            sras.Delete(Id);
+            int result=sras.SaveChanges();
+            if (result > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+
+        }
     }
 }

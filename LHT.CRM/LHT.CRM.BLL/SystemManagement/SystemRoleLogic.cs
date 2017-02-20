@@ -10,13 +10,14 @@ namespace LHT.CRM.BLL.SystemManagement
 {
     public class SystemRoleLogic
     {
+        SystemRoleService srs = new SystemRoleService();
+        SystemRole sr = new SystemRole();
         /// <summary>
         /// 返回角色列表信息
         /// </summary>
         /// <returns></returns>
         public List<SystemRole> GetAll()
         {
-            SystemRoleService srs = new SystemRoleService();
             List<SystemRole> list = srs.GetAll();
             return list;
         }
@@ -25,10 +26,8 @@ namespace LHT.CRM.BLL.SystemManagement
         {
             if (role != null)
             {
-                SystemRole sr = new SystemRole();
                 sr.RoleName = role.RoleName;
                 sr.RoleDescription = role.RoleDescription;
-                SystemRoleService srs = new SystemRoleService();
                 srs.Add(sr);
                 int result=srs.SaveChanges();
                 return result;
@@ -37,6 +36,12 @@ namespace LHT.CRM.BLL.SystemManagement
             {
                 return 0;
             }
+        }
+
+        public int RoleId()
+        {
+           sr= srs.LastSystemRole();
+            return sr.Id;
         }
 
     }

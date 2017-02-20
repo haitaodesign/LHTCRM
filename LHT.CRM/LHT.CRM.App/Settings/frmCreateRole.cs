@@ -15,6 +15,8 @@ namespace LHT.CRM.App.Settings
 {
     public partial class frmCreateRole : Skin_VS
     {
+        SystemModuleLogic sml = new SystemModuleLogic();
+        SystemRoleAuthorityLogic sral = new SystemRoleAuthorityLogic();
         public frmCreateRole()
         {
             InitializeComponent();
@@ -36,6 +38,27 @@ namespace LHT.CRM.App.Settings
                 SystemRoleLogic srl = new SystemRoleLogic();
                 if (srl.Add(sr) == 1)
                 {
+                    //返回最后一行记录
+
+
+                    //循环写入权限模块表，并将其属性IsLock设置为0
+                    //查询模块列表
+                    //写入数据库
+                    foreach (var item in sml.GetAllModule())
+                    {
+                        SystemRoleAuthority sra = new SystemRoleAuthority()
+                        {
+                            RoleId =srl.RoleId(),
+                            ModuleName = item.TopName,
+                            IsLock = 0
+                        };
+                        sral.AddRoleAuthority(sra);
+                    }
+
+
+
+
+
                     this.Close();
                     //刷新数据列表
                     frmSystemSetting fss;

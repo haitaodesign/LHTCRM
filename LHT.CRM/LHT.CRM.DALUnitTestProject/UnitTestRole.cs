@@ -21,5 +21,15 @@ namespace LHT.CRM.DALUnitTestProject
             int result = await srs.SaveChangesAsync();
             Assert.IsTrue(result==1);
         }
+
+        [TestMethod]
+        public void testLastRole()
+        {
+            SystemRoleService srs1 = new SystemRoleService();
+            SystemRole sr = new SystemRole();
+            sr=srs1.LastSystemRole();
+            Assert.IsTrue(sr != null);
+            Console.WriteLine(sr.RoleName+" "+sr.Id);
+        }
     }
 }

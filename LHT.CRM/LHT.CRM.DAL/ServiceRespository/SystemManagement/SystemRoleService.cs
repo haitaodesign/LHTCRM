@@ -19,6 +19,11 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
 
         }
 
+        public SystemRole LastSystemRole()
+        {
+            return _dbContext.SystemRoles.ToList().LastOrDefault();
+        }
+
         public void Add(SystemRole role)
         {
             if (role != null)
@@ -41,5 +46,6 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
         {
             throw new NotImplementedException();
         }
+
     }
 }
