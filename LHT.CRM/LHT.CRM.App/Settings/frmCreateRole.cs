@@ -17,6 +17,8 @@ namespace LHT.CRM.App.Settings
     {
         SystemModuleLogic sml = new SystemModuleLogic();
         SystemRoleAuthorityLogic sral = new SystemRoleAuthorityLogic();
+        SystemRoleLogic srl = new SystemRoleLogic();
+        SystemRole sr;
         public frmCreateRole()
         {
             InitializeComponent();
@@ -29,50 +31,71 @@ namespace LHT.CRM.App.Settings
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            //插入一条角色记录
-            if(tbRoleName.Text != string.Empty && tbRoleDescription.Text != string.Empty)
+            if (this.Text == "修改角色")
             {
-                SystemRole sr = new SystemRole();
                 sr.RoleName = tbRoleName.Text.Trim();
                 sr.RoleDescription = tbRoleDescription.Text.Trim();
-                SystemRoleLogic srl = new SystemRoleLogic();
-                if (srl.Add(sr) == 1)
+                //将数据保存到数据库中
+                if (srl.Update(sr)==1)
                 {
-                    //返回最后一行记录
-
-
-                    //循环写入权限模块表，并将其属性IsLock设置为0
-                    //查询模块列表
-                    //写入数据库
-                    foreach (var item in sml.GetAllModule())
-                    {
-                        SystemRoleAuthority sra = new SystemRoleAuthority()
-                        {
-                            RoleId =srl.RoleId(),
-                            ModuleName = item.TopName,
-                            IsLock = 0
-                        };
-                        sral.AddRoleAuthority(sra);
-                    }
-
-
-
-
-
-                    this.Close();
-                    //刷新数据列表
-                    frmSystemSetting fss;
-                    fss = (frmSystemSetting)this.Owner;
-                    fss.RefreshMethod();
+                    MessageBox.Show("修改成功", "提示", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("修改失败", "提示", MessageBoxButtons.OK);
                 }
             }
-            else
+            else if(this.Text=="新建角色")
             {
-                MessageBox.Show("请填写完整的角色信息","提示",MessageBoxButtons.OK);
-            }
-            
+                //插入一条角色记录
+                if (tbRoleName.Text != string.Empty && tbRoleDescription.Text != string.Empty)
+                {
+                    SystemRole sr = new SystemRole();
+                    sr.RoleName = tbRoleName.Text.Trim();
+                    sr.RoleDescription = tbRoleDescription.Text.Trim();
+                    if (srl.Add(sr) == 1)
+                    {
+                        //返回最后一行记录
 
-            //插入默认权限模块的记录
+
+                        //循环写入权限模块表，并将其属性IsLock设置为0
+                        //查询模块列表
+                        //写入数据库
+                        foreach (var item in sml.GetAllModule())
+                        {
+                            SystemRoleAuthority sra = new SystemRoleAuthority()
+                            {
+                                RoleId = srl.RoleId(),
+                                ModuleName = item.TopName,
+                                IsLock = 0
+                            };
+                            sral.AddRoleAuthority(sra);
+                        }
+                        
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("请填写完整的角色信息", "提示", MessageBoxButtons.OK);
+                }
+            }
+            //刷新数据列表
+            frmSystemSetting fss;
+            fss = (frmSystemSetting)this.Owner;
+            fss.RefreshMethod();
+            this.Close();
+        }
+
+        private void frmCreateRole_Load(object sender, EventArgs e)
+        {
+            if (this.Text == "修改角色")
+            {
+                frmSystemSetting fss;
+                fss = (frmSystemSetting)this.Owner;
+                sr = fss.GetRole();
+                tbRoleName.Text = sr.RoleName;
+                tbRoleDescription.Text = sr.RoleDescription;
+            }
         }
     }
 }

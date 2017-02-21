@@ -132,6 +132,7 @@
             this.btnUpdateRole.TabIndex = 4;
             this.btnUpdateRole.Text = "修改";
             this.btnUpdateRole.UseVisualStyleBackColor = false;
+            this.btnUpdateRole.Click += new System.EventHandler(this.btnUpdateRole_Click);
             // 
             // btnCreateRole
             // 
@@ -255,11 +256,11 @@
         private DMSkin.Metro.Controls.MetroTabPage tpRoleSetting;
         private DMSkin.Metro.Controls.MetroGrid dgvRoleSetting;
         private DMSkin.Controls.DMButton btnCreateRole;
-        private DMSkin.Controls.DMButton btnUpdateRole;
         private DMSkin.Controls.DMButton btnAuthority;
         private DMSkin.Controls.DMButton btnDeleteRole;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoleName;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoleDescription;
+        private DMSkin.Controls.DMButton btnUpdateRole;
     }
 }

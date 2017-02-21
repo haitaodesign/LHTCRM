@@ -44,7 +44,12 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
 
         public void Update(SystemRole role)
         {
-            throw new NotImplementedException();
+            var sRole = _dbContext.SystemRoles.Find(role.Id);
+            if (role != null)
+            {
+                sRole.RoleName = role.RoleName;
+                sRole.RoleDescription = role.RoleDescription;
+            }
         }
 
     }

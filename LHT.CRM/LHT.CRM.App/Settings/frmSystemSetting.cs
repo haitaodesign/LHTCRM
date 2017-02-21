@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LHT.CRM.BLL.SystemManagement;
+using LHT.CRM.Model;
 
 namespace LHT.CRM.App.Settings
 {
     public partial class frmSystemSetting : Form
     {
         public int currentRoleId;
+        SystemRole sr = new SystemRole();
+        
 
         public frmSystemSetting()
         {
@@ -75,6 +78,23 @@ namespace LHT.CRM.App.Settings
         private void dgvRoleSetting_Click(object sender, EventArgs e)
         {
             currentRoleId = Convert.ToInt32(dgvRoleSetting.CurrentRow.Cells[0].Value.ToString());
+        }
+
+        private void btnUpdateRole_Click(object sender, EventArgs e)
+        {
+            //将当前行的数据保存到一个临时对象中
+            sr.Id = Convert.ToInt32(dgvRoleSetting.CurrentRow.Cells[0].Value.ToString());
+            sr.RoleName = dgvRoleSetting.CurrentRow.Cells[1].Value.ToString();
+            sr.RoleDescription = dgvRoleSetting.CurrentRow.Cells[2].Value.ToString();
+            frmCreateRole fcr = new frmCreateRole();
+            fcr.Owner = this;
+            fcr.Text = "修改角色";
+            fcr.ShowDialog();
+        }
+
+        public SystemRole GetRole()
+        {
+            return sr;
         }
     }
 }

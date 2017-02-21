@@ -44,5 +44,17 @@ namespace LHT.CRM.BLL.SystemManagement
             return sr.Id;
         }
 
+        public int Update(SystemRole role)
+        {
+            if (role != null)
+            {
+                srs.Update(role);
+                return srs.SaveChanges();
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }

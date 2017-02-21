@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.lblRoleName = new DMSkin.Metro.Controls.MetroLabel();
+            this.btnEnter = new DMSkin.Controls.DMButton();
+            this.tbRoleDescription = new DMSkin.Controls.DMTextBox();
             this.tbRoleName = new DMSkin.Controls.DMTextBox();
             this.metroLabel1 = new DMSkin.Metro.Controls.MetroLabel();
-            this.tbRoleDescription = new DMSkin.Controls.DMTextBox();
-            this.btnEnter = new DMSkin.Controls.DMButton();
             this.btnCancel = new DMSkin.Controls.DMButton();
             this.SuspendLayout();
             // 
@@ -44,6 +44,38 @@
             this.lblRoleName.Size = new System.Drawing.Size(84, 20);
             this.lblRoleName.TabIndex = 0;
             this.lblRoleName.Text = "角色名称：";
+            // 
+            // btnEnter
+            // 
+            this.btnEnter.BackColor = System.Drawing.Color.Transparent;
+            this.btnEnter.DM_DisabledColor = System.Drawing.Color.Empty;
+            this.btnEnter.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnEnter.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
+            this.btnEnter.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
+            this.btnEnter.DM_Radius = 5;
+            this.btnEnter.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnEnter.ForeColor = System.Drawing.Color.White;
+            this.btnEnter.Image = null;
+            this.btnEnter.Location = new System.Drawing.Point(297, 413);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(125, 45);
+            this.btnEnter.TabIndex = 4;
+            this.btnEnter.Text = "确定";
+            this.btnEnter.UseVisualStyleBackColor = false;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
+            // 
+            // tbRoleDescription
+            // 
+            this.tbRoleDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbRoleDescription.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbRoleDescription.Location = new System.Drawing.Point(221, 209);
+            this.tbRoleDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.tbRoleDescription.Multiline = true;
+            this.tbRoleDescription.Name = "tbRoleDescription";
+            this.tbRoleDescription.Size = new System.Drawing.Size(434, 101);
+            this.tbRoleDescription.TabIndex = 3;
+            this.tbRoleDescription.TabStop = false;
+            this.tbRoleDescription.WaterText = "请输入角色描述";
             // 
             // tbRoleName
             // 
@@ -65,38 +97,6 @@
             this.metroLabel1.Size = new System.Drawing.Size(84, 20);
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "角色描述：";
-            // 
-            // tbRoleDescription
-            // 
-            this.tbRoleDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbRoleDescription.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbRoleDescription.Location = new System.Drawing.Point(221, 209);
-            this.tbRoleDescription.Margin = new System.Windows.Forms.Padding(4);
-            this.tbRoleDescription.Multiline = true;
-            this.tbRoleDescription.Name = "tbRoleDescription";
-            this.tbRoleDescription.Size = new System.Drawing.Size(434, 101);
-            this.tbRoleDescription.TabIndex = 3;
-            this.tbRoleDescription.TabStop = false;
-            this.tbRoleDescription.WaterText = "请输入角色描述";
-            // 
-            // btnEnter
-            // 
-            this.btnEnter.BackColor = System.Drawing.Color.Transparent;
-            this.btnEnter.DM_DisabledColor = System.Drawing.Color.Empty;
-            this.btnEnter.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnEnter.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
-            this.btnEnter.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
-            this.btnEnter.DM_Radius = 5;
-            this.btnEnter.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnEnter.ForeColor = System.Drawing.Color.White;
-            this.btnEnter.Image = null;
-            this.btnEnter.Location = new System.Drawing.Point(297, 413);
-            this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(125, 45);
-            this.btnEnter.TabIndex = 4;
-            this.btnEnter.Text = "确定";
-            this.btnEnter.UseVisualStyleBackColor = false;
-            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // btnCancel
             // 
@@ -142,6 +142,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "新建角色";
             this.TitleColor = System.Drawing.Color.White;
+            this.Load += new System.EventHandler(this.frmCreateRole_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,10 +151,10 @@
         #endregion
 
         private DMSkin.Metro.Controls.MetroLabel lblRoleName;
+        private DMSkin.Controls.DMButton btnEnter;
+        private DMSkin.Controls.DMTextBox tbRoleDescription;
         private DMSkin.Controls.DMTextBox tbRoleName;
         private DMSkin.Metro.Controls.MetroLabel metroLabel1;
-        private DMSkin.Controls.DMTextBox tbRoleDescription;
-        private DMSkin.Controls.DMButton btnEnter;
         private DMSkin.Controls.DMButton btnCancel;
     }
 }
