@@ -19,9 +19,10 @@ namespace LHT.CRM.App
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmMain());
             //Application.Run(new frmLogin());
-            Application.Run(new frmSystemSetting());
+            //Application.Run(new frmSystemSetting());
             //Application.Run(new frmCreateRole());
             //Application.Run(new frmCreateAuthority());
+            Application.Run(new frmCreateUser());
         }
     }
 }
