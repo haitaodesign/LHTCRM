@@ -34,7 +34,11 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
 
         public void Delete(int roleId)
         {
-            throw new NotImplementedException();
+            var role = _dbContext.SystemRoles.Find(roleId);
+            if (role != null)
+            {
+                _dbContext.SystemRoles.Remove(role);
+            }
         }
 
         public List<SystemRole> GetAll()

@@ -16,7 +16,8 @@ namespace LHT.CRM.App.Settings
     {
         public int currentRoleId;
         SystemRole sr = new SystemRole();
-        
+        SystemRoleLogic srl = new SystemRoleLogic();
+
 
         public frmSystemSetting()
         {
@@ -41,9 +42,7 @@ namespace LHT.CRM.App.Settings
         public void DisplayRoleList()
         {
             //显示角色信息
-            SystemRoleLogic srl = new SystemRoleLogic();
             dgvRoleSetting.DataSource = srl.GetAll();
-            dgvRoleSetting.Columns["SystemUsers"].Visible = false;
             dgvRoleSetting.Columns["SystemRoleAuthorities"].Visible = false;
         }
 
@@ -58,7 +57,7 @@ namespace LHT.CRM.App.Settings
 
         //修改用户信息可以更改角色设置
 
-        
+
         //刷新列表数据的方法
         public void RefreshMethod()
         {
@@ -95,6 +94,20 @@ namespace LHT.CRM.App.Settings
         public SystemRole GetRole()
         {
             return sr;
+        }
+
+        private void btnDeleteRole_Click(object sender, EventArgs e)
+        {
+            //获取当前角色Id，并根据Id删除模块权限表（使用数据库级联删除）
+            if (srl.Delete(currentRoleId)==1)
+            {
+                RefreshMethod();
+            }
+            else
+            {
+                MessageBox.Show("删除失败", "提示", MessageBoxButtons.OK);
+            }
+
         }
     }
 }

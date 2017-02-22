@@ -56,5 +56,19 @@ namespace LHT.CRM.BLL.SystemManagement
                 return 0;
             }
         }
+
+        public int Delete(int roleId)
+        {
+            srs.Delete(roleId);
+            int result = srs.SaveChanges();
+            if (result == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }

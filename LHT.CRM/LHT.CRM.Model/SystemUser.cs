@@ -22,17 +22,16 @@ namespace LHT.CRM.Model
     
         public int Id { get; set; }
         public string UserName { get; set; }
-        public Nullable<int> Age { get; set; }
         public string Sex { get; set; }
+        public Nullable<int> Age { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
         public string QQ { get; set; }
+        public string Picture { get; set; }
         public Nullable<int> RoleId { get; set; }
         public string RoleName { get; set; }
-        public string Picture { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SystemLogin> SystemLogins { get; set; }
-        public virtual SystemRole SystemRole { get; set; }
     }
 }

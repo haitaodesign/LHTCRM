@@ -17,7 +17,6 @@ namespace LHT.CRM.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SystemRole()
         {
-            this.SystemUsers = new HashSet<SystemUser>();
             this.SystemRoleAuthorities = new HashSet<SystemRoleAuthority>();
         }
     
@@ -25,8 +24,6 @@ namespace LHT.CRM.Model
         public string RoleName { get; set; }
         public string RoleDescription { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SystemUser> SystemUsers { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SystemRoleAuthority> SystemRoleAuthorities { get; set; }
     }

@@ -31,5 +31,15 @@ namespace LHT.CRM.DALUnitTestProject
             Assert.IsTrue(sr != null);
             Console.WriteLine(sr.RoleName+" "+sr.Id);
         }
+
+
+        [TestMethod]
+        public void DeleteRole()
+        {
+            SystemRoleService srsl = new SystemRoleService();
+            srsl.Delete(1);
+            int result = srsl.SaveChanges();
+            Assert.IsTrue(result == 1);
+        }
     }
 }
