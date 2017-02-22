@@ -14,20 +14,27 @@ namespace LHT.CRM.App.Settings
 {
     public partial class frmSystemSetting : Form
     {
+        #region 公共变量
         public int currentRoleId;
         SystemRole sr = new SystemRole();
         SystemRoleLogic srl = new SystemRoleLogic();
-
-
+        SystemUserLogic sul = new SystemUserLogic();
+        #endregion
         public frmSystemSetting()
         {
             InitializeComponent();
+            this.dgvRoleSetting.AutoGenerateColumns = false;
+            this.dgvUserSetting.AutoGenerateColumns = false;
         }
-
         private void frmSystemSetting_Load(object sender, EventArgs e)
         {
             DisplayRoleList();
+            DisplayUserList();
         }
+        #region 角色设置
+
+        #region 事件
+
 
         private void btnCreateRole_Click(object sender, EventArgs e)
         {
@@ -36,37 +43,6 @@ namespace LHT.CRM.App.Settings
             fcr.Owner = this;
             fcr.ShowDialog();
         }
-
-
-        //显示角色列表
-        public void DisplayRoleList()
-        {
-            //显示角色信息
-            dgvRoleSetting.DataSource = srl.GetAll();
-            dgvRoleSetting.Columns["SystemRoleAuthorities"].Visible = false;
-        }
-
-
-        //每个角色对应不同的权限
-
-        //用户设置
-
-        //显示用户信息
-
-        //添加用户时设置默认的角色
-
-        //修改用户信息可以更改角色设置
-
-
-        //刷新列表数据的方法
-        public void RefreshMethod()
-        {
-            //清除数据
-            dgvRoleSetting.DataSource = null;
-            //重新加载
-            DisplayRoleList();
-        }
-
         private void btnAuthority_Click(object sender, EventArgs e)
         {
             frmCreateAuthority fca = new frmCreateAuthority();
@@ -91,15 +67,10 @@ namespace LHT.CRM.App.Settings
             fcr.ShowDialog();
         }
 
-        public SystemRole GetRole()
-        {
-            return sr;
-        }
-
         private void btnDeleteRole_Click(object sender, EventArgs e)
         {
             //获取当前角色Id，并根据Id删除模块权限表（使用数据库级联删除）
-            if (srl.Delete(currentRoleId)==1)
+            if (srl.Delete(currentRoleId) == 1)
             {
                 RefreshMethod();
             }
@@ -109,5 +80,66 @@ namespace LHT.CRM.App.Settings
             }
 
         }
+        #endregion
+        #region 方法调用
+        //显示角色列表
+        public void DisplayRoleList()
+        {
+            //显示角色信息
+            dgvRoleSetting.DataSource = srl.GetAll();
+        }
+
+        public SystemRole GetRole()
+        {
+            return sr;
+        }
+
+        //刷新列表数据的方法
+        public void RefreshMethod()
+        {
+            //清除数据
+            dgvRoleSetting.DataSource = null;
+            //重新加载
+            DisplayRoleList();
+        }
+
+
+
+
+
+
+
+
+        #endregion
+
+        #endregion
+
+        #region “用户设置”
+
+        #region 事件
+
+        #endregion
+        #region 方法调用
+        /// <summary>
+        /// 初始化用户列表显示
+        /// </summary>
+        public void DisplayUserList()
+        {
+            //设置属性对应的字段
+
+            //填充数据
+            dgvUserSetting.DataSource = sul.GetAllUsers();
+        }
+
+        public void RefreshUserList()
+        {
+            dgvUserSetting.DataSource = null;
+            DisplayUserList();
+        }
+        #endregion
+
+        #endregion
+
+
     }
 }

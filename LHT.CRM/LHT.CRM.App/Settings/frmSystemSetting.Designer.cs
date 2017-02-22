@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,20 +44,37 @@
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoleDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tpUserSetting = new DMSkin.Metro.Controls.MetroTabPage();
+            this.dgvUserSetting = new DMSkin.Metro.Controls.MetroGrid();
+            this.btnaddrole = new DMSkin.Controls.DMButton();
+            this.btndeleteuser = new DMSkin.Controls.DMButton();
+            this.btnupdateuser = new DMSkin.Controls.DMButton();
+            this.btnadduser = new DMSkin.Controls.DMButton();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabControl1.SuspendLayout();
             this.tpRoleSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleSetting)).BeginInit();
+            this.tpUserSetting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserSetting)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.tpRoleSetting);
+            this.metroTabControl1.Controls.Add(this.tpUserSetting);
             this.metroTabControl1.DM_UseSelectable = true;
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Multiline = true;
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(801, 701);
             this.metroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.metroTabControl1.TabIndex = 0;
@@ -89,7 +109,7 @@
             this.btnAuthority.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnAuthority.ForeColor = System.Drawing.Color.White;
             this.btnAuthority.Image = null;
-            this.btnAuthority.Location = new System.Drawing.Point(462, 22);
+            this.btnAuthority.Location = new System.Drawing.Point(462, 23);
             this.btnAuthority.Name = "btnAuthority";
             this.btnAuthority.Size = new System.Drawing.Size(125, 45);
             this.btnAuthority.TabIndex = 6;
@@ -127,7 +147,7 @@
             this.btnUpdateRole.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnUpdateRole.ForeColor = System.Drawing.Color.White;
             this.btnUpdateRole.Image = null;
-            this.btnUpdateRole.Location = new System.Drawing.Point(152, 22);
+            this.btnUpdateRole.Location = new System.Drawing.Point(152, 23);
             this.btnUpdateRole.Name = "btnUpdateRole";
             this.btnUpdateRole.Size = new System.Drawing.Size(125, 45);
             this.btnUpdateRole.TabIndex = 4;
@@ -164,27 +184,27 @@
             this.dgvRoleSetting.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvRoleSetting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvRoleSetting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRoleSetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRoleSetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRoleSetting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvRoleSetting.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.RoleName,
             this.RoleDescription});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRoleSetting.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRoleSetting.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRoleSetting.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvRoleSetting.EnableHeadersVisualStyles = false;
             this.dgvRoleSetting.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -193,14 +213,14 @@
             this.dgvRoleSetting.Name = "dgvRoleSetting";
             this.dgvRoleSetting.ReadOnly = true;
             this.dgvRoleSetting.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRoleSetting.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRoleSetting.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvRoleSetting.RowHeadersVisible = false;
             this.dgvRoleSetting.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvRoleSetting.RowTemplate.Height = 27;
@@ -230,6 +250,212 @@
             this.RoleDescription.Name = "RoleDescription";
             this.RoleDescription.ReadOnly = true;
             // 
+            // tpUserSetting
+            // 
+            this.tpUserSetting.Controls.Add(this.dgvUserSetting);
+            this.tpUserSetting.Controls.Add(this.btnaddrole);
+            this.tpUserSetting.Controls.Add(this.btndeleteuser);
+            this.tpUserSetting.Controls.Add(this.btnupdateuser);
+            this.tpUserSetting.Controls.Add(this.btnadduser);
+            this.tpUserSetting.HorizontalScrollbarBarColor = true;
+            this.tpUserSetting.HorizontalScrollbarDM_HighlightOnWheel = false;
+            this.tpUserSetting.HorizontalScrollbarSize = 8;
+            this.tpUserSetting.Location = new System.Drawing.Point(4, 39);
+            this.tpUserSetting.Name = "tpUserSetting";
+            this.tpUserSetting.Size = new System.Drawing.Size(793, 658);
+            this.tpUserSetting.TabIndex = 1;
+            this.tpUserSetting.Text = "用户设置";
+            this.tpUserSetting.VerticalScrollbarBarColor = true;
+            this.tpUserSetting.VerticalScrollbarDM_HighlightOnWheel = false;
+            this.tpUserSetting.VerticalScrollbarSize = 10;
+            // 
+            // dgvUserSetting
+            // 
+            this.dgvUserSetting.AllowUserToAddRows = false;
+            this.dgvUserSetting.AllowUserToDeleteRows = false;
+            this.dgvUserSetting.AllowUserToResizeRows = false;
+            this.dgvUserSetting.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUserSetting.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvUserSetting.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvUserSetting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvUserSetting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUserSetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvUserSetting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvUserSetting.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUserSetting.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvUserSetting.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvUserSetting.EnableHeadersVisualStyles = false;
+            this.dgvUserSetting.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dgvUserSetting.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvUserSetting.Location = new System.Drawing.Point(0, 88);
+            this.dgvUserSetting.Name = "dgvUserSetting";
+            this.dgvUserSetting.ReadOnly = true;
+            this.dgvUserSetting.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUserSetting.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvUserSetting.RowHeadersVisible = false;
+            this.dgvUserSetting.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvUserSetting.RowTemplate.Height = 27;
+            this.dgvUserSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUserSetting.Size = new System.Drawing.Size(793, 570);
+            this.dgvUserSetting.TabIndex = 11;
+            // 
+            // btnaddrole
+            // 
+            this.btnaddrole.BackColor = System.Drawing.Color.Transparent;
+            this.btnaddrole.DM_DisabledColor = System.Drawing.Color.Empty;
+            this.btnaddrole.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnaddrole.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
+            this.btnaddrole.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
+            this.btnaddrole.DM_Radius = 5;
+            this.btnaddrole.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnaddrole.ForeColor = System.Drawing.Color.White;
+            this.btnaddrole.Image = null;
+            this.btnaddrole.Location = new System.Drawing.Point(462, 23);
+            this.btnaddrole.Name = "btnaddrole";
+            this.btnaddrole.Size = new System.Drawing.Size(125, 45);
+            this.btnaddrole.TabIndex = 10;
+            this.btnaddrole.Text = "角色";
+            this.btnaddrole.UseVisualStyleBackColor = false;
+            // 
+            // btndeleteuser
+            // 
+            this.btndeleteuser.BackColor = System.Drawing.Color.Transparent;
+            this.btndeleteuser.DM_DisabledColor = System.Drawing.Color.Empty;
+            this.btndeleteuser.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btndeleteuser.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
+            this.btndeleteuser.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
+            this.btndeleteuser.DM_Radius = 5;
+            this.btndeleteuser.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btndeleteuser.ForeColor = System.Drawing.Color.White;
+            this.btndeleteuser.Image = null;
+            this.btndeleteuser.Location = new System.Drawing.Point(307, 23);
+            this.btndeleteuser.Name = "btndeleteuser";
+            this.btndeleteuser.Size = new System.Drawing.Size(125, 45);
+            this.btndeleteuser.TabIndex = 9;
+            this.btndeleteuser.Text = "删除";
+            this.btndeleteuser.UseVisualStyleBackColor = false;
+            // 
+            // btnupdateuser
+            // 
+            this.btnupdateuser.BackColor = System.Drawing.Color.Transparent;
+            this.btnupdateuser.DM_DisabledColor = System.Drawing.Color.Empty;
+            this.btnupdateuser.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnupdateuser.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
+            this.btnupdateuser.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
+            this.btnupdateuser.DM_Radius = 5;
+            this.btnupdateuser.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnupdateuser.ForeColor = System.Drawing.Color.White;
+            this.btnupdateuser.Image = null;
+            this.btnupdateuser.Location = new System.Drawing.Point(152, 23);
+            this.btnupdateuser.Name = "btnupdateuser";
+            this.btnupdateuser.Size = new System.Drawing.Size(125, 45);
+            this.btnupdateuser.TabIndex = 8;
+            this.btnupdateuser.Text = "修改";
+            this.btnupdateuser.UseVisualStyleBackColor = false;
+            // 
+            // btnadduser
+            // 
+            this.btnadduser.BackColor = System.Drawing.Color.Transparent;
+            this.btnadduser.DM_DisabledColor = System.Drawing.Color.Empty;
+            this.btnadduser.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnadduser.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
+            this.btnadduser.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
+            this.btnadduser.DM_Radius = 5;
+            this.btnadduser.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnadduser.ForeColor = System.Drawing.Color.White;
+            this.btnadduser.Image = null;
+            this.btnadduser.Location = new System.Drawing.Point(-3, 23);
+            this.btnadduser.Name = "btnadduser";
+            this.btnadduser.Size = new System.Drawing.Size(125, 45);
+            this.btnadduser.TabIndex = 7;
+            this.btnadduser.Text = "新建";
+            this.btnadduser.UseVisualStyleBackColor = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "编号";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "UserName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "姓名";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Sex";
+            this.dataGridViewTextBoxColumn3.HeaderText = "性别";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Age";
+            this.Column1.HeaderText = "年龄";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Phone";
+            this.Column2.HeaderText = "电话";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Email";
+            this.Column3.HeaderText = "电子邮件";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "QQ";
+            this.Column4.HeaderText = "QQ";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "RoleName";
+            this.Column5.HeaderText = "角色";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
             // frmSystemSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -247,6 +473,8 @@
             this.metroTabControl1.ResumeLayout(false);
             this.tpRoleSetting.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleSetting)).EndInit();
+            this.tpUserSetting.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserSetting)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -263,5 +491,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RoleName;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoleDescription;
         private DMSkin.Controls.DMButton btnUpdateRole;
+        private DMSkin.Metro.Controls.MetroTabPage tpUserSetting;
+        private DMSkin.Metro.Controls.MetroGrid dgvUserSetting;
+        private DMSkin.Controls.DMButton btnaddrole;
+        private DMSkin.Controls.DMButton btndeleteuser;
+        private DMSkin.Controls.DMButton btnupdateuser;
+        private DMSkin.Controls.DMButton btnadduser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

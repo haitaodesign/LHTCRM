@@ -73,6 +73,7 @@
     <Compile Include="ServiceRespository\SystemManagement\SystemModuleService.cs" />
     <Compile Include="ServiceRespository\SystemManagement\SystemRoleAuthorityService.cs" />
     <Compile Include="ServiceRespository\SystemManagement\SystemRoleService.cs" />
+    <Compile Include="ServiceRespository\SystemManagement\SystemUserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="LHTCRMModel.edmx">
