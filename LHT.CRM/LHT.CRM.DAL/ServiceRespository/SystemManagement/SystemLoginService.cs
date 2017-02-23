@@ -23,7 +23,7 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
             return _dbContext.SystemLogins.ToList();
         }
 
-        public void Add(Model.SystemLogin login)
+        public void Add(SystemLogin login)
         {
             if (login != null)
             {

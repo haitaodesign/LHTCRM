@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbUserName = new DMSkin.Controls.MetroTextBox();
             this.metroLabel1 = new DMSkin.Metro.Controls.MetroLabel();
             this.metroLabel2 = new DMSkin.Metro.Controls.MetroLabel();
             this.cbSex = new DMSkin.Metro.Controls.MetroComboBox();
@@ -38,26 +37,17 @@
             this.metroLabel4 = new DMSkin.Metro.Controls.MetroLabel();
             this.tbEmail = new DMSkin.Controls.MetroTextBox();
             this.metroLabel5 = new DMSkin.Metro.Controls.MetroLabel();
-            this.metroTextBox1 = new DMSkin.Controls.MetroTextBox();
+            this.tbQQ = new DMSkin.Controls.MetroTextBox();
             this.metroLabel6 = new DMSkin.Metro.Controls.MetroLabel();
             this.metroLabel7 = new DMSkin.Metro.Controls.MetroLabel();
             this.cbRoleName = new DMSkin.Metro.Controls.MetroComboBox();
             this.btnCancel = new DMSkin.Controls.DMButton();
             this.btnEnter = new DMSkin.Controls.DMButton();
+            this.tbUserName = new DMSkin.Controls.MetroTextBox();
+            this.tbLoginName = new DMSkin.Controls.MetroTextBox();
+            this.metroLabel8 = new DMSkin.Metro.Controls.MetroLabel();
+            this.titlePromptInfo = new DMSkin.Metro.Controls.MetroTile();
             this.SuspendLayout();
-            // 
-            // tbUserName
-            // 
-            this.tbUserName.BackColor = System.Drawing.Color.Transparent;
-            this.tbUserName.IsPassWord = false;
-            this.tbUserName.Location = new System.Drawing.Point(253, 101);
-            this.tbUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbUserName.MaximumSize = new System.Drawing.Size(260, 38);
-            this.tbUserName.MinimumSize = new System.Drawing.Size(260, 38);
-            this.tbUserName.Name = "tbUserName";
-            this.tbUserName.Size = new System.Drawing.Size(260, 38);
-            this.tbUserName.TabIndex = 2;
-            this.tbUserName.WaterText = "请输入姓名";
             // 
             // metroLabel1
             // 
@@ -91,7 +81,7 @@
             this.cbSex.Location = new System.Drawing.Point(253, 173);
             this.cbSex.Name = "cbSex";
             this.cbSex.Size = new System.Drawing.Size(260, 30);
-            this.cbSex.TabIndex = 6;
+            this.cbSex.TabIndex = 1;
             // 
             // tbAge
             // 
@@ -103,7 +93,7 @@
             this.tbAge.MinimumSize = new System.Drawing.Size(260, 38);
             this.tbAge.Name = "tbAge";
             this.tbAge.Size = new System.Drawing.Size(260, 38);
-            this.tbAge.TabIndex = 7;
+            this.tbAge.TabIndex = 2;
             this.tbAge.WaterText = "请输入年龄";
             // 
             // metroLabel3
@@ -126,7 +116,7 @@
             this.tbPhone.MinimumSize = new System.Drawing.Size(260, 38);
             this.tbPhone.Name = "tbPhone";
             this.tbPhone.Size = new System.Drawing.Size(260, 38);
-            this.tbPhone.TabIndex = 9;
+            this.tbPhone.TabIndex = 3;
             this.tbPhone.WaterText = "请输入电话号码";
             // 
             // metroLabel4
@@ -149,7 +139,7 @@
             this.tbEmail.MinimumSize = new System.Drawing.Size(260, 38);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(260, 38);
-            this.tbEmail.TabIndex = 11;
+            this.tbEmail.TabIndex = 4;
             this.tbEmail.WaterText = "请输入电子邮件";
             // 
             // metroLabel5
@@ -162,18 +152,18 @@
             this.metroLabel5.TabIndex = 12;
             this.metroLabel5.Text = "电子邮件";
             // 
-            // metroTextBox1
+            // tbQQ
             // 
-            this.metroTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.metroTextBox1.IsPassWord = false;
-            this.metroTextBox1.Location = new System.Drawing.Point(253, 453);
-            this.metroTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroTextBox1.MaximumSize = new System.Drawing.Size(260, 38);
-            this.metroTextBox1.MinimumSize = new System.Drawing.Size(260, 38);
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(260, 38);
-            this.metroTextBox1.TabIndex = 13;
-            this.metroTextBox1.WaterText = "请输入QQ号码";
+            this.tbQQ.BackColor = System.Drawing.Color.Transparent;
+            this.tbQQ.IsPassWord = false;
+            this.tbQQ.Location = new System.Drawing.Point(253, 453);
+            this.tbQQ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbQQ.MaximumSize = new System.Drawing.Size(260, 38);
+            this.tbQQ.MinimumSize = new System.Drawing.Size(260, 38);
+            this.tbQQ.Name = "tbQQ";
+            this.tbQQ.Size = new System.Drawing.Size(260, 38);
+            this.tbQQ.TabIndex = 5;
+            this.tbQQ.WaterText = "请输入QQ号码";
             // 
             // metroLabel6
             // 
@@ -201,11 +191,12 @@
             this.cbRoleName.FormattingEnabled = true;
             this.cbRoleName.ItemHeight = 24;
             this.cbRoleName.Items.AddRange(new object[] {
-            "请选择用户角色"});
+            "请选择用户角色",
+            "达到"});
             this.cbRoleName.Location = new System.Drawing.Point(253, 529);
             this.cbRoleName.Name = "cbRoleName";
             this.cbRoleName.Size = new System.Drawing.Size(260, 30);
-            this.cbRoleName.TabIndex = 17;
+            this.cbRoleName.TabIndex = 6;
             // 
             // btnCancel
             // 
@@ -218,12 +209,13 @@
             this.btnCancel.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = null;
-            this.btnCancel.Location = new System.Drawing.Point(353, 591);
+            this.btnCancel.Location = new System.Drawing.Point(388, 678);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(125, 45);
             this.btnCancel.TabIndex = 19;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnEnter
             // 
@@ -236,12 +228,61 @@
             this.btnEnter.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnEnter.ForeColor = System.Drawing.Color.White;
             this.btnEnter.Image = null;
-            this.btnEnter.Location = new System.Drawing.Point(120, 591);
+            this.btnEnter.Location = new System.Drawing.Point(157, 678);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(125, 45);
             this.btnEnter.TabIndex = 18;
             this.btnEnter.Text = "确定";
             this.btnEnter.UseVisualStyleBackColor = false;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
+            // 
+            // tbUserName
+            // 
+            this.tbUserName.BackColor = System.Drawing.Color.Transparent;
+            this.tbUserName.IsPassWord = false;
+            this.tbUserName.Location = new System.Drawing.Point(253, 102);
+            this.tbUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbUserName.MaximumSize = new System.Drawing.Size(260, 38);
+            this.tbUserName.MinimumSize = new System.Drawing.Size(260, 38);
+            this.tbUserName.Name = "tbUserName";
+            this.tbUserName.Size = new System.Drawing.Size(260, 38);
+            this.tbUserName.TabIndex = 0;
+            this.tbUserName.WaterText = "请输入姓名";
+            // 
+            // tbLoginName
+            // 
+            this.tbLoginName.BackColor = System.Drawing.Color.Transparent;
+            this.tbLoginName.IsPassWord = false;
+            this.tbLoginName.Location = new System.Drawing.Point(253, 583);
+            this.tbLoginName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbLoginName.MaximumSize = new System.Drawing.Size(260, 38);
+            this.tbLoginName.MinimumSize = new System.Drawing.Size(260, 38);
+            this.tbLoginName.Name = "tbLoginName";
+            this.tbLoginName.Size = new System.Drawing.Size(260, 38);
+            this.tbLoginName.TabIndex = 7;
+            this.tbLoginName.WaterText = "请输入登录账号";
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.DM_FontSize = DMSkin.Metro.MetroLabelSize.Tall;
+            this.metroLabel8.Location = new System.Drawing.Point(76, 590);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(50, 25);
+            this.metroLabel8.TabIndex = 22;
+            this.metroLabel8.Text = "账号";
+            // 
+            // titlePromptInfo
+            // 
+            this.titlePromptInfo.ActiveControl = null;
+            this.titlePromptInfo.DM_UseSelectable = true;
+            this.titlePromptInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titlePromptInfo.Location = new System.Drawing.Point(8, 39);
+            this.titlePromptInfo.Name = "titlePromptInfo";
+            this.titlePromptInfo.Size = new System.Drawing.Size(626, 39);
+            this.titlePromptInfo.TabIndex = 23;
+            this.titlePromptInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.titlePromptInfo.Visible = false;
             // 
             // frmCreateUser
             // 
@@ -251,12 +292,16 @@
             this.BorderColor = System.Drawing.Color.White;
             this.CaptionBackColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(117)))), ((int)(((byte)(180)))));
             this.CaptionBackColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(117)))), ((int)(((byte)(180)))));
-            this.ClientSize = new System.Drawing.Size(684, 657);
+            this.ClientSize = new System.Drawing.Size(642, 751);
+            this.Controls.Add(this.titlePromptInfo);
+            this.Controls.Add(this.tbLoginName);
+            this.Controls.Add(this.metroLabel8);
+            this.Controls.Add(this.tbUserName);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.cbRoleName);
             this.Controls.Add(this.metroLabel7);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.tbQQ);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.metroLabel5);
@@ -266,7 +311,6 @@
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.cbSex);
             this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.tbUserName);
             this.Controls.Add(this.metroLabel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -281,8 +325,6 @@
         }
 
         #endregion
-
-        private DMSkin.Controls.MetroTextBox tbUserName;
         private DMSkin.Metro.Controls.MetroLabel metroLabel1;
         private DMSkin.Metro.Controls.MetroLabel metroLabel2;
         private DMSkin.Metro.Controls.MetroComboBox cbSex;
@@ -292,11 +334,15 @@
         private DMSkin.Metro.Controls.MetroLabel metroLabel4;
         private DMSkin.Controls.MetroTextBox tbEmail;
         private DMSkin.Metro.Controls.MetroLabel metroLabel5;
-        private DMSkin.Controls.MetroTextBox metroTextBox1;
+        private DMSkin.Controls.MetroTextBox tbQQ;
         private DMSkin.Metro.Controls.MetroLabel metroLabel6;
         private DMSkin.Metro.Controls.MetroLabel metroLabel7;
         private DMSkin.Metro.Controls.MetroComboBox cbRoleName;
         private DMSkin.Controls.DMButton btnCancel;
         private DMSkin.Controls.DMButton btnEnter;
+        private DMSkin.Controls.MetroTextBox tbUserName;
+        private DMSkin.Controls.MetroTextBox tbLoginName;
+        private DMSkin.Metro.Controls.MetroLabel metroLabel8;
+        private DMSkin.Metro.Controls.MetroTile titlePromptInfo;
     }
 }

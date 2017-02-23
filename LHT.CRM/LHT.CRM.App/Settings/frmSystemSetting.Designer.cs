@@ -46,10 +46,6 @@
             this.RoleDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tpUserSetting = new DMSkin.Metro.Controls.MetroTabPage();
             this.dgvUserSetting = new DMSkin.Metro.Controls.MetroGrid();
-            this.btnaddrole = new DMSkin.Controls.DMButton();
-            this.btndeleteuser = new DMSkin.Controls.DMButton();
-            this.btnupdateuser = new DMSkin.Controls.DMButton();
-            this.btnadduser = new DMSkin.Controls.DMButton();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +54,10 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnaddrole = new DMSkin.Controls.DMButton();
+            this.btndeleteuser = new DMSkin.Controls.DMButton();
+            this.btnupdateuser = new DMSkin.Controls.DMButton();
+            this.btnadduser = new DMSkin.Controls.DMButton();
             this.metroTabControl1.SuspendLayout();
             this.tpRoleSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleSetting)).BeginInit();
@@ -72,7 +72,6 @@
             this.metroTabControl1.DM_UseSelectable = true;
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.metroTabControl1.Multiline = true;
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(801, 701);
@@ -259,7 +258,7 @@
             this.tpUserSetting.Controls.Add(this.btnadduser);
             this.tpUserSetting.HorizontalScrollbarBarColor = true;
             this.tpUserSetting.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.tpUserSetting.HorizontalScrollbarSize = 8;
+            this.tpUserSetting.HorizontalScrollbarSize = 4;
             this.tpUserSetting.Location = new System.Drawing.Point(4, 39);
             this.tpUserSetting.Name = "tpUserSetting";
             this.tpUserSetting.Size = new System.Drawing.Size(793, 658);
@@ -327,6 +326,62 @@
             this.dgvUserSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUserSetting.Size = new System.Drawing.Size(793, 570);
             this.dgvUserSetting.TabIndex = 11;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "编号";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "UserName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "姓名";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Sex";
+            this.dataGridViewTextBoxColumn3.HeaderText = "性别";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Age";
+            this.Column1.HeaderText = "年龄";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Phone";
+            this.Column2.HeaderText = "电话";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Email";
+            this.Column3.HeaderText = "电子邮件";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "QQ";
+            this.Column4.HeaderText = "QQ";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "RoleName";
+            this.Column5.HeaderText = "角色";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // btnaddrole
             // 
@@ -399,62 +454,7 @@
             this.btnadduser.TabIndex = 7;
             this.btnadduser.Text = "新建";
             this.btnadduser.UseVisualStyleBackColor = false;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "编号";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "UserName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "姓名";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Sex";
-            this.dataGridViewTextBoxColumn3.HeaderText = "性别";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Age";
-            this.Column1.HeaderText = "年龄";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Phone";
-            this.Column2.HeaderText = "电话";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Email";
-            this.Column3.HeaderText = "电子邮件";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "QQ";
-            this.Column4.HeaderText = "QQ";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "RoleName";
-            this.Column5.HeaderText = "角色";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.btnadduser.Click += new System.EventHandler(this.btnadduser_Click);
             // 
             // frmSystemSetting
             // 

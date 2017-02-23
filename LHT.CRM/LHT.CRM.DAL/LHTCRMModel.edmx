@@ -53,6 +53,7 @@
           <Property Name="Picture" Type="nvarchar" MaxLength="200" />
           <Property Name="RoleId" Type="int" />
           <Property Name="RoleName" Type="nvarchar" MaxLength="20" />
+          <Property Name="LoginName" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_SystemLogin_SystemUser">
           <End Role="SystemUser" Type="Self.SystemUser" Multiplicity="0..1" />
@@ -166,6 +167,7 @@
           <Property Name="RoleId" Type="Int32" />
           <Property Name="RoleName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="SystemLogins" Relationship="LHTCRMModel.FK_SystemLogin_SystemUser" FromRole="SystemUser" ToRole="SystemLogin" />
+          <Property Name="LoginName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_SystemLogin_SystemUser">
           <End Type="LHTCRMModel.SystemUser" Role="SystemUser" Multiplicity="0..1" />
@@ -240,6 +242,7 @@
           <EntitySetMapping Name="SystemUsers">
             <EntityTypeMapping TypeName="LHTCRMModel.SystemUser">
               <MappingFragment StoreEntitySet="SystemUser">
+                <ScalarProperty Name="LoginName" ColumnName="LoginName" />
                 <ScalarProperty Name="RoleName" ColumnName="RoleName" />
                 <ScalarProperty Name="RoleId" ColumnName="RoleId" />
                 <ScalarProperty Name="Picture" ColumnName="Picture" />

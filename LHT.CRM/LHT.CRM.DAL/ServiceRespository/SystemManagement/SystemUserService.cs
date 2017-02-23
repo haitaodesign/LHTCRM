@@ -24,7 +24,10 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
 
         public void Add(SystemUser user)
         {
-            throw new NotImplementedException();
+            if (user != null)
+            {
+                _dbContext.SystemUsers.Add(user);
+            }
         }
 
         public void Delete(int userId)

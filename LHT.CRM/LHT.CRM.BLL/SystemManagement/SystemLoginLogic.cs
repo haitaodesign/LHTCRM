@@ -11,13 +11,13 @@ namespace LHT.CRM.BLL.SystemManagement
 {
     public class SystemLoginLogic
     {
-        SystemLoginService slogins = new SystemLoginService();
+        SystemLoginService sls = new SystemLoginService();
+        SystemLogin sl;
         //账号是否存在
         public bool IsExist(string loginName)
         {
-            SystemLogin slogin = new SystemLogin();
-            slogin = slogins.GetModel(loginName);
-            if (slogin != null)
+            sl = sls.GetModel(loginName);
+            if (sl != null)
             {
                 return true;
             }
@@ -27,11 +27,17 @@ namespace LHT.CRM.BLL.SystemManagement
             }
         }
 
-        //判断密码和账号是否匹配
+
+        /// <summary>
+        /// 判断密码和账号是否匹配
+        /// </summary>
+        /// <param name="loginname"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public bool LoginNameAndPasswordIsMatch(string loginname,string password)
         {
-            SystemLogin model = slogins.GetModel(loginname);
-            if (model.Password == password)
+            sl = sls.GetModel(loginname);
+            if (sl.Password == password)
             {
                 return true;
             }
@@ -40,5 +46,26 @@ namespace LHT.CRM.BLL.SystemManagement
                 return false;
             }
         }
+
+        /// <summary>
+        /// 添加一个账号
+        /// </summary>
+        /// <param name="sl"></param>
+        /// <returns></returns>
+        public int AddLogin(SystemLogin sl)
+        {
+            sls.Add(sl);
+            int reuslt = sls.SaveChanges();
+            if (reuslt != 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+
     }
 }

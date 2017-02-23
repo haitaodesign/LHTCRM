@@ -117,8 +117,13 @@ namespace LHT.CRM.App.Settings
         #region “用户设置”
 
         #region 事件
-
+        private void btnadduser_Click(object sender, EventArgs e)
+        {
+            CreateUserWindow();
+        }
         #endregion
+
+
         #region 方法调用
         /// <summary>
         /// 初始化用户列表显示
@@ -131,15 +136,28 @@ namespace LHT.CRM.App.Settings
             dgvUserSetting.DataSource = sul.GetAllUsers();
         }
 
+        /// <summary>
+        /// 刷新用户列表
+        /// </summary>
         public void RefreshUserList()
         {
             dgvUserSetting.DataSource = null;
             DisplayUserList();
         }
+
+        /// <summary>
+        /// 创建用户添加窗体
+        /// </summary>
+        public void CreateUserWindow()
+        {
+            frmCreateUser fcu = new frmCreateUser();
+            fcu.Owner = this;
+            fcu.ShowDialog();
+        }
         #endregion
 
         #endregion
 
-
+        
     }
 }
