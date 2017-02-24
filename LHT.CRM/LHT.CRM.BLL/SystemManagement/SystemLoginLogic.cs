@@ -76,11 +76,11 @@ namespace LHT.CRM.BLL.SystemManagement
         }
 
         /// <summary>
-        /// 修改密码
+        /// 修改
         /// </summary>
         /// <param name="sl"></param>
         /// <returns></returns>
-        public int ResetPassword(SystemLogin sl)
+        public int Update(SystemLogin sl)
         {
             sls.Update(sl);
             int result = sls.SaveChanges();
@@ -94,6 +94,15 @@ namespace LHT.CRM.BLL.SystemManagement
             }
         }
 
+        /// <summary>
+        /// 根据用户名返回一个实体
+        /// </summary>
+        /// <param name="loginname"></param>
+        /// <returns></returns>
+        public SystemLogin GetLoginModel(string loginname)
+        {
+            return sls.GetModel(loginname);
+        }
 
     }
 }

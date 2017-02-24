@@ -21,6 +21,7 @@ namespace LHT.CRM.App.Settings
         SystemRoleLogic srl = new SystemRoleLogic();
         SystemUserLogic sul = new SystemUserLogic();
         SystemLoginLogic sll = new SystemLoginLogic();
+        SystemLogin sl = new SystemLogin();
         #endregion
         public frmSystemSetting()
         {
@@ -164,6 +165,7 @@ namespace LHT.CRM.App.Settings
         /// </summary>
         public void DisplayLoginNameList()
         {
+            dgvAccountSetting.DataSource = null;
             dgvAccountSetting.DataSource = sll.GetAllLogin();
         }
 
@@ -176,13 +178,12 @@ namespace LHT.CRM.App.Settings
         {
             //将密码重置为123456
             string resetpassword = MD5Encrypt.GetMD5Hash("123456");
-            SystemLogin sl = new SystemLogin();
             sl.Id = Convert.ToInt32(dgvAccountSetting.CurrentRow.Cells[0].Value.ToString());
             sl.LoginName = dgvAccountSetting.CurrentRow.Cells[1].Value.ToString();
             sl.Password = resetpassword;
             sl.IsLock =Convert.ToInt32(dgvAccountSetting.CurrentRow.Cells[2].Value.ToString());
 
-            if (sll.ResetPassword(sl)==1)
+            if (sll.Update(sl)==1)
             {
                 MessageBox.Show("重置成功!", "提示", MessageBoxButtons.OK);
             }
@@ -192,5 +193,32 @@ namespace LHT.CRM.App.Settings
             }
 
         }
+
+        private void btnLockedAccount_Click(object sender, EventArgs e)
+        {
+            //判断当前账号是否启用，若启用，则提示是否禁用账户，如未启用，则提示是否启用
+            //获取当前选择的数据
+            string loginname= dgvAccountSetting.CurrentRow.Cells[1].Value.ToString();
+            sl = sll.GetLoginModel(loginname);
+            if (sl.IsLock == 1)
+            {
+                sl.IsLock = 0;
+                sll.Update(sl);
+                MessageBox.Show("账号已被禁用！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //刷新数据
+                DisplayLoginNameList();
+
+            }
+            else
+            {
+                sl.IsLock = 1;
+                sll.Update(sl);
+                MessageBox.Show("账号已启用！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DisplayLoginNameList();
+            }
+
+
+        }
+
     }
 }
