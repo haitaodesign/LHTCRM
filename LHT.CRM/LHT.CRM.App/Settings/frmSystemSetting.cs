@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LHT.CRM.BLL.SystemManagement;
 using LHT.CRM.Model;
+using LHT.CRM.Common.Encrypt;
 
 namespace LHT.CRM.App.Settings
 {
@@ -174,6 +175,21 @@ namespace LHT.CRM.App.Settings
         private void btnResetPassword_Click(object sender, EventArgs e)
         {
             //将密码重置为123456
+            string resetpassword = MD5Encrypt.GetMD5Hash("123456");
+            SystemLogin sl = new SystemLogin();
+            sl.Id = Convert.ToInt32(dgvAccountSetting.CurrentRow.Cells[0].Value.ToString());
+            sl.LoginName = dgvAccountSetting.CurrentRow.Cells[1].Value.ToString();
+            sl.Password = resetpassword;
+            sl.IsLock =Convert.ToInt32(dgvAccountSetting.CurrentRow.Cells[2].Value.ToString());
+
+            if (sll.ResetPassword(sl)==1)
+            {
+                MessageBox.Show("重置成功!", "提示", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("重置失败!", "提示", MessageBoxButtons.OK);
+            }
 
         }
     }

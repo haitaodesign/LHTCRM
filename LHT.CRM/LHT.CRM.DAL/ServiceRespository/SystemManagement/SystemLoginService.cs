@@ -40,7 +40,7 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
             }
         }
 
-        public void Update(Model.SystemLogin login)
+        public void Update(SystemLogin login)
         {
             var updatelogin = _dbContext.SystemLogins.Find(login.Id);
             if (updatelogin != null)

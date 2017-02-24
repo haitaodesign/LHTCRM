@@ -75,6 +75,25 @@ namespace LHT.CRM.BLL.SystemManagement
             return sls.GetAll();
         }
 
+        /// <summary>
+        /// 修改密码
+        /// </summary>
+        /// <param name="sl"></param>
+        /// <returns></returns>
+        public int ResetPassword(SystemLogin sl)
+        {
+            sls.Update(sl);
+            int result = sls.SaveChanges();
+            if (result != 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
 
     }
 }
