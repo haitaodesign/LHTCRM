@@ -19,17 +19,20 @@ namespace LHT.CRM.App.Settings
         SystemRole sr = new SystemRole();
         SystemRoleLogic srl = new SystemRoleLogic();
         SystemUserLogic sul = new SystemUserLogic();
+        SystemLoginLogic sll = new SystemLoginLogic();
         #endregion
         public frmSystemSetting()
         {
             InitializeComponent();
             this.dgvRoleSetting.AutoGenerateColumns = false;
             this.dgvUserSetting.AutoGenerateColumns = false;
+            this.dgvAccountSetting.AutoGenerateColumns = false;
         }
         private void frmSystemSetting_Load(object sender, EventArgs e)
         {
             DisplayRoleList();
             DisplayUserList();
+            DisplayLoginNameList();
         }
         #region 角色设置
 
@@ -154,10 +157,24 @@ namespace LHT.CRM.App.Settings
             fcu.Owner = this;
             fcu.ShowDialog();
         }
-        #endregion
+
+        /// <summary>
+        /// 显示账号列表
+        /// </summary>
+        public void DisplayLoginNameList()
+        {
+            dgvAccountSetting.DataSource = sll.GetAllLogin();
+        }
+
 
         #endregion
 
-        
+        #endregion
+
+        private void btnResetPassword_Click(object sender, EventArgs e)
+        {
+            //将密码重置为123456
+
+        }
     }
 }

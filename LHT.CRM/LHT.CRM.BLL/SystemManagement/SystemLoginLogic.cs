@@ -66,6 +66,15 @@ namespace LHT.CRM.BLL.SystemManagement
             }
         }
 
+        /// <summary>
+        /// 获得账号列表
+        /// </summary>
+        /// <returns></returns>
+        public List<SystemLogin> GetAllLogin()
+        {
+            return sls.GetAll();
+        }
+
 
     }
 }
