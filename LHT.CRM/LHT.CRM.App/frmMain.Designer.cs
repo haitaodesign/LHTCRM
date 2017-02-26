@@ -281,44 +281,44 @@
             this.tsmiSystemSettings,
             this.退出登录ToolStripMenuItem});
             this.cmSettings.Name = "cmSettings";
-            this.cmSettings.Size = new System.Drawing.Size(182, 188);
+            this.cmSettings.Size = new System.Drawing.Size(175, 160);
             this.cmSettings.Text = "设置菜单";
             // 
             // 上次登录信息ToolStripMenuItem
             // 
             this.上次登录信息ToolStripMenuItem.Name = "上次登录信息ToolStripMenuItem";
-            this.上次登录信息ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.上次登录信息ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.上次登录信息ToolStripMenuItem.Text = "上次登录信息";
             // 
             // lOGO设置ToolStripMenuItem
             // 
             this.lOGO设置ToolStripMenuItem.Name = "lOGO设置ToolStripMenuItem";
-            this.lOGO设置ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.lOGO设置ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.lOGO设置ToolStripMenuItem.Text = "LOGO设置";
             // 
             // 外观设置ToolStripMenuItem
             // 
             this.外观设置ToolStripMenuItem.Name = "外观设置ToolStripMenuItem";
-            this.外观设置ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.外观设置ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.外观设置ToolStripMenuItem.Text = "外观设置";
             // 
             // 个人设置ToolStripMenuItem
             // 
             this.个人设置ToolStripMenuItem.Name = "个人设置ToolStripMenuItem";
-            this.个人设置ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.个人设置ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.个人设置ToolStripMenuItem.Text = "个人设置";
             // 
             // tsmiSystemSettings
             // 
             this.tsmiSystemSettings.Name = "tsmiSystemSettings";
-            this.tsmiSystemSettings.Size = new System.Drawing.Size(181, 26);
+            this.tsmiSystemSettings.Size = new System.Drawing.Size(174, 26);
             this.tsmiSystemSettings.Text = "系统设置";
             this.tsmiSystemSettings.Click += new System.EventHandler(this.tsmiSystemSettings_Click);
             // 
             // 退出登录ToolStripMenuItem
             // 
             this.退出登录ToolStripMenuItem.Name = "退出登录ToolStripMenuItem";
-            this.退出登录ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.退出登录ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.退出登录ToolStripMenuItem.Text = "退出登录";
             // 
             // tpSettings
