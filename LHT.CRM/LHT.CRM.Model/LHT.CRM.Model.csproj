@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CRM_Contact.cs">
+      <DependentUpon>LHTCRMModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="CRM_Customer.cs">
       <DependentUpon>LHTCRMModel.tt</DependentUpon>
     </Compile>

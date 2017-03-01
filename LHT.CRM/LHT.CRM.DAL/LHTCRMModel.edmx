@@ -5,6 +5,25 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="LHTCRMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CRM_Contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CId" Type="int" />
+          <Property Name="CDate" Type="datetime" />
+          <Property Name="MId" Type="int" />
+          <Property Name="MDate" Type="datetime" />
+          <Property Name="CusId" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gender" Type="nchar" MaxLength="10" />
+          <Property Name="JiGuan" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeptName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Position" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="nchar" MaxLength="10" />
+          <Property Name="WX" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="CRM_Customer">
           <Key>
             <PropertyRef Name="Id" />
@@ -104,6 +123,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="LHTCRMModelStoreContainer">
+          <EntitySet Name="CRM_Contact" EntityType="Self.CRM_Contact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CRM_Customer" EntityType="Self.CRM_Customer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SystemLogin" EntityType="Self.SystemLogin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SystemModule" EntityType="Self.SystemModule" Schema="dbo" store:Type="Tables" />
@@ -138,6 +158,7 @@
             <End Role="SystemRoleAuthority" EntitySet="SystemRoleAuthorities" />
           </AssociationSet>
           <EntitySet Name="CRM_Customer" EntityType="LHTCRMModel.CRM_Customer" />
+          <EntitySet Name="CRM_Contact" EntityType="LHTCRMModel.CRM_Contact" />
         </EntityContainer>
         <EntityType Name="SystemLogin">
           <Key>
@@ -241,6 +262,25 @@
           <Property Name="Address" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="IsPublisCus" Type="Byte" />
         </EntityType>
+        <EntityType Name="CRM_Contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CId" Type="Int32" />
+          <Property Name="CDate" Type="DateTime" Precision="3" />
+          <Property Name="MId" Type="Int32" />
+          <Property Name="MDate" Type="DateTime" Precision="3" />
+          <Property Name="CusId" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="JiGuan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeptName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="WX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -317,6 +357,26 @@
                 <ScalarProperty Name="SaleId" ColumnName="SaleId" />
                 <ScalarProperty Name="CusName" ColumnName="CusName" />
                 <ScalarProperty Name="CusCode" ColumnName="CusCode" />
+                <ScalarProperty Name="MDate" ColumnName="MDate" />
+                <ScalarProperty Name="MId" ColumnName="MId" />
+                <ScalarProperty Name="CDate" ColumnName="CDate" />
+                <ScalarProperty Name="CId" ColumnName="CId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CRM_Contact">
+            <EntityTypeMapping TypeName="LHTCRMModel.CRM_Contact">
+              <MappingFragment StoreEntitySet="CRM_Contact">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="WX" ColumnName="WX" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+                <ScalarProperty Name="JiGuan" ColumnName="JiGuan" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CusId" ColumnName="CusId" />
                 <ScalarProperty Name="MDate" ColumnName="MDate" />
                 <ScalarProperty Name="MId" ColumnName="MId" />
                 <ScalarProperty Name="CDate" ColumnName="CDate" />
