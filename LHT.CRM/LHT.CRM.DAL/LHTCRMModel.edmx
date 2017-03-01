@@ -5,6 +5,28 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="LHTCRMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CRM_Customer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CId" Type="int" />
+          <Property Name="CDate" Type="datetime" />
+          <Property Name="MId" Type="int" />
+          <Property Name="MDate" Type="datetime" />
+          <Property Name="CusCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="CusName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SaleId" Type="int" />
+          <Property Name="Province" Type="nvarchar" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="BussinessType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Scale" Type="nvarchar" MaxLength="50" />
+          <Property Name="CusType" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="HomePage" Type="nvarchar" MaxLength="100" />
+          <Property Name="Address" Type="nchar" MaxLength="10" />
+          <Property Name="IsPublisCus" Type="tinyint" />
+        </EntityType>
         <EntityType Name="SystemLogin">
           <Key>
             <PropertyRef Name="Id" />
@@ -82,6 +104,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="LHTCRMModelStoreContainer">
+          <EntitySet Name="CRM_Customer" EntityType="Self.CRM_Customer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SystemLogin" EntityType="Self.SystemLogin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SystemModule" EntityType="Self.SystemModule" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SystemRole" EntityType="Self.SystemRole" Schema="dbo" store:Type="Tables" />
@@ -114,6 +137,7 @@
             <End Role="SystemRole" EntitySet="SystemRoles" />
             <End Role="SystemRoleAuthority" EntitySet="SystemRoleAuthorities" />
           </AssociationSet>
+          <EntitySet Name="CRM_Customer" EntityType="LHTCRMModel.CRM_Customer" />
         </EntityContainer>
         <EntityType Name="SystemLogin">
           <Key>
@@ -195,6 +219,28 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="CRM_Customer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CId" Type="Int32" />
+          <Property Name="CDate" Type="DateTime" Precision="3" />
+          <Property Name="MId" Type="Int32" />
+          <Property Name="MDate" Type="DateTime" Precision="3" />
+          <Property Name="CusCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CusName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SaleId" Type="Int32" />
+          <Property Name="Province" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BussinessType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Scale" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CusType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HomePage" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="IsPublisCus" Type="Byte" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -252,6 +298,29 @@
                 <ScalarProperty Name="Age" ColumnName="Age" />
                 <ScalarProperty Name="Sex" ColumnName="Sex" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CRM_Customer">
+            <EntityTypeMapping TypeName="LHTCRMModel.CRM_Customer">
+              <MappingFragment StoreEntitySet="CRM_Customer">
+                <ScalarProperty Name="IsPublisCus" ColumnName="IsPublisCus" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="HomePage" ColumnName="HomePage" />
+                <ScalarProperty Name="PhoneNum" ColumnName="PhoneNum" />
+                <ScalarProperty Name="CusType" ColumnName="CusType" />
+                <ScalarProperty Name="Scale" ColumnName="Scale" />
+                <ScalarProperty Name="BussinessType" ColumnName="BussinessType" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="SaleId" ColumnName="SaleId" />
+                <ScalarProperty Name="CusName" ColumnName="CusName" />
+                <ScalarProperty Name="CusCode" ColumnName="CusCode" />
+                <ScalarProperty Name="MDate" ColumnName="MDate" />
+                <ScalarProperty Name="MId" ColumnName="MId" />
+                <ScalarProperty Name="CDate" ColumnName="CDate" />
+                <ScalarProperty Name="CId" ColumnName="CId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

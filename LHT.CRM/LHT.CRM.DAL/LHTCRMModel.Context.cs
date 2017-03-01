@@ -31,5 +31,6 @@ namespace LHT.CRM.DAL
         public virtual DbSet<SystemRole> SystemRoles { get; set; }
         public virtual DbSet<SystemRoleAuthority> SystemRoleAuthorities { get; set; }
         public virtual DbSet<SystemUser> SystemUsers { get; set; }
+        public virtual DbSet<CRM_Customer> CRM_Customer { get; set; }
     }
 }
