@@ -46,6 +46,9 @@
     <Compile Include="CRM_Customer.cs">
       <DependentUpon>LHTCRMModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="CRM_Visit.cs">
+      <DependentUpon>LHTCRMModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="LHTCRMModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

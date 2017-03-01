@@ -13,7 +13,8 @@
         <AssociationConnector Association="LHTCRMModel.FK_SystemLogin_SystemUser" />
         <AssociationConnector Association="LHTCRMModel.FK_SystemRoleAuthority_SystemRole" />
         <EntityTypeShape EntityType="LHTCRMModel.CRM_Customer" Width="1.5" PointX="0.625" PointY="7.25" />
-        <EntityTypeShape EntityType="LHTCRMModel.CRM_Contact" Width="1.5" PointX="3.125" PointY="7.125" />
+        <EntityTypeShape EntityType="LHTCRMModel.CRM_Contact" Width="1.5" PointX="3.125" PointY="7.75" />
+        <EntityTypeShape EntityType="LHTCRMModel.CRM_Visit" Width="1.5" PointX="5.25" PointY="7.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

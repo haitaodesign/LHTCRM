@@ -46,6 +46,27 @@
           <Property Name="Address" Type="nchar" MaxLength="10" />
           <Property Name="IsPublisCus" Type="tinyint" />
         </EntityType>
+        <EntityType Name="CRM_Visit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CId" Type="int" />
+          <Property Name="CDate" Type="datetime" />
+          <Property Name="MId" Type="int" />
+          <Property Name="MDate" Type="datetime" />
+          <Property Name="CusId" Type="int" />
+          <Property Name="ConId" Type="int" />
+          <Property Name="VTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="VContent" Type="nvarchar" MaxLength="400" />
+          <Property Name="VType" Type="nvarchar" MaxLength="50" />
+          <Property Name="VPlanDate" Type="datetime" />
+          <Property Name="VCompleteDate" Type="datetime" />
+          <Property Name="VSuperiorDate" Type="datetime" />
+          <Property Name="VSuperiorSuggestion" Type="nvarchar" MaxLength="400" />
+          <Property Name="VSuperiorId" Type="int" />
+          <Property Name="VStatus" Type="bit" />
+        </EntityType>
         <EntityType Name="SystemLogin">
           <Key>
             <PropertyRef Name="Id" />
@@ -125,6 +146,7 @@
         <EntityContainer Name="LHTCRMModelStoreContainer">
           <EntitySet Name="CRM_Contact" EntityType="Self.CRM_Contact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CRM_Customer" EntityType="Self.CRM_Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CRM_Visit" EntityType="Self.CRM_Visit" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SystemLogin" EntityType="Self.SystemLogin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SystemModule" EntityType="Self.SystemModule" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SystemRole" EntityType="Self.SystemRole" Schema="dbo" store:Type="Tables" />
@@ -159,6 +181,7 @@
           </AssociationSet>
           <EntitySet Name="CRM_Customer" EntityType="LHTCRMModel.CRM_Customer" />
           <EntitySet Name="CRM_Contact" EntityType="LHTCRMModel.CRM_Contact" />
+          <EntitySet Name="CRM_Visit" EntityType="LHTCRMModel.CRM_Visit" />
         </EntityContainer>
         <EntityType Name="SystemLogin">
           <Key>
@@ -281,6 +304,27 @@
           <Property Name="WX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="CRM_Visit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CId" Type="Int32" />
+          <Property Name="CDate" Type="DateTime" Precision="3" />
+          <Property Name="MId" Type="Int32" />
+          <Property Name="MDate" Type="DateTime" Precision="3" />
+          <Property Name="CusId" Type="Int32" />
+          <Property Name="ConId" Type="Int32" />
+          <Property Name="VTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VContent" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="VType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VPlanDate" Type="DateTime" Precision="3" />
+          <Property Name="VCompleteDate" Type="DateTime" Precision="3" />
+          <Property Name="VSuperiorDate" Type="DateTime" Precision="3" />
+          <Property Name="VSuperiorSuggestion" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="VSuperiorId" Type="Int32" />
+          <Property Name="VStatus" Type="Boolean" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -376,6 +420,28 @@
                 <ScalarProperty Name="JiGuan" ColumnName="JiGuan" />
                 <ScalarProperty Name="Gender" ColumnName="Gender" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CusId" ColumnName="CusId" />
+                <ScalarProperty Name="MDate" ColumnName="MDate" />
+                <ScalarProperty Name="MId" ColumnName="MId" />
+                <ScalarProperty Name="CDate" ColumnName="CDate" />
+                <ScalarProperty Name="CId" ColumnName="CId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CRM_Visit">
+            <EntityTypeMapping TypeName="LHTCRMModel.CRM_Visit">
+              <MappingFragment StoreEntitySet="CRM_Visit">
+                <ScalarProperty Name="VStatus" ColumnName="VStatus" />
+                <ScalarProperty Name="VSuperiorId" ColumnName="VSuperiorId" />
+                <ScalarProperty Name="VSuperiorSuggestion" ColumnName="VSuperiorSuggestion" />
+                <ScalarProperty Name="VSuperiorDate" ColumnName="VSuperiorDate" />
+                <ScalarProperty Name="VCompleteDate" ColumnName="VCompleteDate" />
+                <ScalarProperty Name="VPlanDate" ColumnName="VPlanDate" />
+                <ScalarProperty Name="VType" ColumnName="VType" />
+                <ScalarProperty Name="VContent" ColumnName="VContent" />
+                <ScalarProperty Name="VTitle" ColumnName="VTitle" />
+                <ScalarProperty Name="ConId" ColumnName="ConId" />
                 <ScalarProperty Name="CusId" ColumnName="CusId" />
                 <ScalarProperty Name="MDate" ColumnName="MDate" />
                 <ScalarProperty Name="MId" ColumnName="MId" />
