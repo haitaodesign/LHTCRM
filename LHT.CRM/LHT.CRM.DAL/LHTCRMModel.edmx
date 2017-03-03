@@ -46,6 +46,22 @@
           <Property Name="Address" Type="nchar" MaxLength="10" />
           <Property Name="IsPublisCus" Type="tinyint" />
         </EntityType>
+        <EntityType Name="CRM_Target">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CId" Type="int" />
+          <Property Name="CDate" Type="datetime" />
+          <Property Name="MId" Type="int" />
+          <Property Name="MDate" Type="datetime" />
+          <Property Name="Period" Type="nvarchar" MaxLength="50" />
+          <Property Name="Target1" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Target2" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Target3" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Target4" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="UserId" Type="int" />
+        </EntityType>
         <EntityType Name="CRM_Visit">
           <Key>
             <PropertyRef Name="Id" />
@@ -146,6 +162,7 @@
         <EntityContainer Name="LHTCRMModelStoreContainer">
           <EntitySet Name="CRM_Contact" EntityType="Self.CRM_Contact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CRM_Customer" EntityType="Self.CRM_Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CRM_Target" EntityType="Self.CRM_Target" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CRM_Visit" EntityType="Self.CRM_Visit" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SystemLogin" EntityType="Self.SystemLogin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SystemModule" EntityType="Self.SystemModule" Schema="dbo" store:Type="Tables" />
@@ -182,6 +199,7 @@
           <EntitySet Name="CRM_Customer" EntityType="LHTCRMModel.CRM_Customer" />
           <EntitySet Name="CRM_Contact" EntityType="LHTCRMModel.CRM_Contact" />
           <EntitySet Name="CRM_Visit" EntityType="LHTCRMModel.CRM_Visit" />
+          <EntitySet Name="CRM_Target" EntityType="LHTCRMModel.CRM_Target" />
         </EntityContainer>
         <EntityType Name="SystemLogin">
           <Key>
@@ -325,6 +343,22 @@
           <Property Name="VSuperiorId" Type="Int32" />
           <Property Name="VStatus" Type="Boolean" />
         </EntityType>
+        <EntityType Name="CRM_Target">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CId" Type="Int32" />
+          <Property Name="CDate" Type="DateTime" Precision="3" />
+          <Property Name="MId" Type="Int32" />
+          <Property Name="MDate" Type="DateTime" Precision="3" />
+          <Property Name="Period" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Target1" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Target2" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Target3" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Target4" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="UserId" Type="Int32" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -443,6 +477,23 @@
                 <ScalarProperty Name="VTitle" ColumnName="VTitle" />
                 <ScalarProperty Name="ConId" ColumnName="ConId" />
                 <ScalarProperty Name="CusId" ColumnName="CusId" />
+                <ScalarProperty Name="MDate" ColumnName="MDate" />
+                <ScalarProperty Name="MId" ColumnName="MId" />
+                <ScalarProperty Name="CDate" ColumnName="CDate" />
+                <ScalarProperty Name="CId" ColumnName="CId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CRM_Target">
+            <EntityTypeMapping TypeName="LHTCRMModel.CRM_Target">
+              <MappingFragment StoreEntitySet="CRM_Target">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Target4" ColumnName="Target4" />
+                <ScalarProperty Name="Target3" ColumnName="Target3" />
+                <ScalarProperty Name="Target2" ColumnName="Target2" />
+                <ScalarProperty Name="Target1" ColumnName="Target1" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
                 <ScalarProperty Name="MDate" ColumnName="MDate" />
                 <ScalarProperty Name="MId" ColumnName="MId" />
                 <ScalarProperty Name="CDate" ColumnName="CDate" />
