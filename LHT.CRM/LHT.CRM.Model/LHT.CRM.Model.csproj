@@ -46,6 +46,9 @@
     <Compile Include="CRM_Customer.cs">
       <DependentUpon>LHTCRMModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="CRM_Product.cs">
+      <DependentUpon>LHTCRMModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="CRM_Target.cs">
       <DependentUpon>LHTCRMModel.tt</DependentUpon>
     </Compile>

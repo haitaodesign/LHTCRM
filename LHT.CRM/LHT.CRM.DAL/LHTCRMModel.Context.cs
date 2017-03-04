@@ -35,5 +35,6 @@ namespace LHT.CRM.DAL
         public virtual DbSet<CRM_Contact> CRM_Contact { get; set; }
         public virtual DbSet<CRM_Visit> CRM_Visit { get; set; }
         public virtual DbSet<CRM_Target> CRM_Target { get; set; }
+        public virtual DbSet<CRM_Product> CRM_Product { get; set; }
     }
 }
