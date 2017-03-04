@@ -52,6 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="IServiceRespository\ICRM\ICRM_Contact.cs" />
+    <Compile Include="IServiceRespository\ICRM\ICRM_Customer.cs" />
+    <Compile Include="IServiceRespository\ICRM\ICRM_Product.cs" />
+    <Compile Include="IServiceRespository\ICRM\ICRM_Target.cs" />
+    <Compile Include="IServiceRespository\ICRM\ICRM_Visit.cs" />
     <Compile Include="IServiceRespository\ISystemManagement\ISystemLogin.cs" />
     <Compile Include="IServiceRespository\ISystemManagement\ISystemModule.cs" />
     <Compile Include="IServiceRespository\ISystemManagement\ISystemRole.cs" />
