@@ -16,5 +16,10 @@ namespace LHT.CRM.App.CRM
         {
             InitializeComponent();
         }
+
+        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
