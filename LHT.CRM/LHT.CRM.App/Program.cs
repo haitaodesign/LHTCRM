@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LHT.CRM.App.Settings;
+using LHT.CRM.App.CRM;
 
 namespace LHT.CRM.App
 {
@@ -22,7 +23,7 @@ namespace LHT.CRM.App
             //Application.Run(new frmSystemSetting());
             //Application.Run(new frmCreateRole());
             //Application.Run(new frmCreateAuthority());
-            //Application.Run(new frmCreateUser());
+            //Application.Run(new frmCustomer());
         }
     }
 }

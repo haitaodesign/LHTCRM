@@ -39,10 +39,7 @@
             this.pbSettings = new CCWin.SkinControl.SkinPictureBox();
             this.skinPictureBox4 = new CCWin.SkinControl.SkinPictureBox();
             this.skinPictureBox1 = new CCWin.SkinControl.SkinPictureBox();
-            this.skinListBox1 = new CCWin.SkinControl.SkinListBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.lbNav = new CCWin.SkinControl.SkinListBox();
             this.cmSettings = new DMSkin.Metro.Controls.MetroContextMenu(this.components);
             this.上次登录信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lOGO设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +48,9 @@
             this.tsmiSystemSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.退出登录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tpSettings = new DMSkin.Metro.Components.MetroToolTip();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -62,8 +62,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
             this.cmSettings.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -94,7 +94,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel1, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.skinPictureBox1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.skinListBox1, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.lbNav, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -200,75 +200,38 @@
             this.skinPictureBox1.TabIndex = 0;
             this.skinPictureBox1.TabStop = false;
             // 
-            // skinListBox1
+            // lbNav
             // 
-            this.skinListBox1.Back = null;
-            this.skinListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.skinListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinListBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.skinListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinListBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.skinListBox1.Font = new System.Drawing.Font("微软雅黑 Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinListBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.skinListBox1.FormattingEnabled = true;
-            this.skinListBox1.ItemBorderVisble = false;
-            this.skinListBox1.ItemGlassVisble = false;
-            this.skinListBox1.ItemHeight = 40;
-            this.skinListBox1.ItemRadius = 4;
-            this.skinListBox1.Items.AddRange(new CCWin.SkinControl.SkinListBoxItem[] {
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items1"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items2"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items3"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items4"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("skinListBox1.Items5")))});
-            this.skinListBox1.Location = new System.Drawing.Point(0, 80);
-            this.skinListBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.skinListBox1.MouseColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(235)))));
-            this.skinListBox1.Name = "skinListBox1";
-            this.skinListBox1.RowBackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.skinListBox1.RowBackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.skinListBox1.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(215)))));
-            this.skinListBox1.Size = new System.Drawing.Size(240, 693);
-            this.skinListBox1.TabIndex = 0;
-            this.skinListBox1.Tag = "";
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(117)))), ((int)(((byte)(180)))));
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.panel3, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 1);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(1);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.23768F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1020, 913);
-            this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1020, 80);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 84);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1020, 829);
-            this.panel4.TabIndex = 1;
+            this.lbNav.Back = null;
+            this.lbNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.lbNav.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbNav.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbNav.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbNav.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.lbNav.Font = new System.Drawing.Font("微软雅黑 Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbNav.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbNav.FormattingEnabled = true;
+            this.lbNav.ItemBorderVisble = false;
+            this.lbNav.ItemGlassVisble = false;
+            this.lbNav.ItemHeight = 40;
+            this.lbNav.ItemRadius = 4;
+            this.lbNav.Items.AddRange(new CCWin.SkinControl.SkinListBoxItem[] {
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items"))),
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items1"))),
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items2"))),
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items3"))),
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items4"))),
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items5")))});
+            this.lbNav.Location = new System.Drawing.Point(0, 80);
+            this.lbNav.Margin = new System.Windows.Forms.Padding(0);
+            this.lbNav.MouseColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(235)))));
+            this.lbNav.Name = "lbNav";
+            this.lbNav.RowBackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.lbNav.RowBackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.lbNav.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(215)))));
+            this.lbNav.Size = new System.Drawing.Size(240, 693);
+            this.lbNav.TabIndex = 0;
+            this.lbNav.Tag = "";
             // 
             // cmSettings
             // 
@@ -327,6 +290,43 @@
             this.tpSettings.StyleManager = null;
             this.tpSettings.Theme = DMSkin.Metro.MetroThemeStyle.Default;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(117)))), ((int)(((byte)(180)))));
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.panel3, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(1);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.23768F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1020, 913);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 84);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1020, 829);
+            this.panel4.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1020, 80);
+            this.panel3.TabIndex = 0;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 35F);
@@ -364,8 +364,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.cmSettings.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -373,7 +373,7 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private CCWin.SkinControl.SkinListBox skinListBox1;
+        private CCWin.SkinControl.SkinListBox lbNav;
         private CCWin.SkinControl.SkinPictureBox skinPictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private CCWin.SkinControl.SkinPictureBox skinPictureBox2;
@@ -389,10 +389,10 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiSystemSettings;
         private System.Windows.Forms.ToolStripMenuItem 退出登录ToolStripMenuItem;
         private DMSkin.Metro.Components.MetroToolTip tpSettings;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }
 
