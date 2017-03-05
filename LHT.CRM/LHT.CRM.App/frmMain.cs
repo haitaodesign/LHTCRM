@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using CCWin;
 using LHT.CRM.App.Settings;
+using LHT.CRM.App.CRM;
 
 namespace LHT.CRM.App
 {
@@ -68,17 +69,21 @@ namespace LHT.CRM.App
         /// <param name="e"></param>
         private void tsmiSystemSettings_Click(object sender, EventArgs e)
         {
-            splitContainer1.Panel2.Controls.Clear();
+            panel3.Controls.Clear();
             //向splitContainer1.Panel2添加系统设置窗体
             frmSystemSetting fss = new frmSystemSetting();
             fss.TopLevel = false;
             fss.Dock = DockStyle.Fill;
-            splitContainer1.Panel2.Controls.Add(fss);
+            panel3.Controls.Add(fss);
             fss.Show();
         }
 
+
         #endregion
 
-        
+        private void lbNav_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

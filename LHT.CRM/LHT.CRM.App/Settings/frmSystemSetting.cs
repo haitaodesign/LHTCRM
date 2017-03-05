@@ -220,5 +220,9 @@ namespace LHT.CRM.App.Settings
 
         }
 
+        private void dgvRoleSetting_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
