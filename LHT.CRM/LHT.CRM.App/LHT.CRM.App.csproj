@@ -62,12 +62,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CRM\frmCustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CRM\frmCustomer.Designer.cs">
-      <DependentUpon>frmCustomer.cs</DependentUpon>
-    </Compile>
     <Compile Include="ErrorInfo.cs" />
     <Compile Include="frmFuncLib.cs" />
     <Compile Include="frmLogin.cs">
@@ -108,9 +102,6 @@
     <Compile Include="Settings\frmSystemSetting.Designer.cs">
       <DependentUpon>frmSystemSetting.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CRM\frmCustomer.resx">
-      <DependentUpon>frmCustomer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,7 +153,9 @@
     <Content Include="images\设置.png" />
     <Content Include="images\销售分析.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="CRM\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LHT.CRM.BLL\LHT.CRM.BLL.csproj">
       <Project>{5329bf87-a3ef-4cc3-ba6b-4b87be53be3e}</Project>

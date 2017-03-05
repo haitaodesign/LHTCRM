@@ -1,5 +1,4 @@
-﻿using LHT.CRM.App.CRM;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace LHT.CRM.App
@@ -19,7 +18,6 @@ namespace LHT.CRM.App
             //Application.Run(new frmSystemSetting());
             //Application.Run(new frmCreateRole());
             //Application.Run(new frmCreateAuthority());
-            Application.Run(new frmCustomer());
         }
     }
 }
