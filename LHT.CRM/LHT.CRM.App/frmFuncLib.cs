@@ -12,7 +12,7 @@ namespace LHT.CRM.App
         #region “定义系统全局字段”
         public static string userName;
         public static int userId=8;
-        public static string roleName="业务员";
+        public static string roleName="主管";
         #endregion
 
         #region "用户界面公共方法"

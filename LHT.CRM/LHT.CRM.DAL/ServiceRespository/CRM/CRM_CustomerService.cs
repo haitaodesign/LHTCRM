@@ -35,6 +35,12 @@ namespace LHT.CRM.DAL.ServiceRespository.CRM
             return _dbContext.CRM_Customer.ToList();
         }
 
+        public List<CRM_Customer> GetAll(int saleid)
+        {
+            return _dbContext.CRM_Customer.Where(r => r.SaleId == saleid).ToList();
+        }
+
+
         public void Update(CRM_Customer customer)
         {
             var updatecustomer = _dbContext.CRM_Customer.Find(customer.CusCode);

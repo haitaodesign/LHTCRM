@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CRM\CRM_CustomerLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SystemManagement\SystemLoginLogic.cs" />
     <Compile Include="SystemManagement\SystemModuleLogic.cs" />

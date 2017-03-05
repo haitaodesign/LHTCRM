@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LHT.CRM.BLL.CRM;
+
+
 
 namespace LHT.CRM.App.CRM
 {
     public partial class frmCustomer : Form
     {
+        CRM_CustomerLogic ccl = new CRM_CustomerLogic();
+        int saleid = frmFuncLib.userId;
+
         public frmCustomer()
         {
             InitializeComponent();
@@ -22,15 +28,15 @@ namespace LHT.CRM.App.CRM
             //客户信息加载时判断账号信息是主管还是业务员，主管加载全部信息，显示全部按钮可见
             //业务员只加载本人信息，不加载其他人的信息，
             //而且业务员没有删除客户信息的功能，只有新增和修改
-
+            this.dgvCusInfo.AutoGenerateColumns = false;
+            if (!IsRole())
+            {
+                btnShowAll.Visible = false;
+            }
 
             //获取所有的客户信息
-
-
-
-
             //根据SaleId返回客户信息，SaleId==UserId
-
+            LoadCusInfo();
 
 
 
@@ -42,11 +48,27 @@ namespace LHT.CRM.App.CRM
 
 
         #region “事件”
-
+        private void btnShowAll_Click(object sender, EventArgs e)
+        {
+            if (btnShowAll.Text == "显示全部")
+            {
+                ShowAllCusInfo();
+                btnShowAll.Text = "显示本人";
+            }
+            else if (btnShowAll.Text == "显示本人")
+            {
+                LoadCusInfo();
+                btnShowAll.Text = "显示全部";
+            }
+        }
         #endregion
 
 
         #region "方法"
+        /// <summary>
+        /// 判断角色？
+        /// </summary>
+        /// <returns></returns>
         public bool IsRole()
         {
             if (frmFuncLib.roleName == "业务员")
@@ -59,25 +81,31 @@ namespace LHT.CRM.App.CRM
             }
         }
 
+        /// <summary>
+        /// 根据销售员id显示客户信息
+        /// </summary>
         public void LoadCusInfo()
+        {
+            dgvCusInfo.DataSource = ccl.GetAll(saleid);
+        }
+
+        /// <summary>
+        /// 如果不是业务员，可以显示所有客户信息
+        /// </summary>
+        public void ShowAllCusInfo()
         {
             if (IsRole())
             {
-                //获得所有客户列表
-                
-
-            }
-            else
-            {
-                //根据userId返回客户信息列表
+                dgvCusInfo.DataSource = ccl.GetAll();
             }
         }
 
 
 
 
+
         #endregion
 
-
+        
     }
 }
