@@ -69,12 +69,12 @@ namespace LHT.CRM.App
         /// <param name="e"></param>
         private void tsmiSystemSettings_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
+            splitContainer1.Panel2.Controls.Clear();
             //向splitContainer1.Panel2添加系统设置窗体
             frmSystemSetting fss = new frmSystemSetting();
             fss.TopLevel = false;
             fss.Dock = DockStyle.Fill;
-            panel1.Controls.Add(fss);
+            splitContainer1.Panel2.Controls.Add(fss);
             fss.Show();
         }
 
@@ -82,12 +82,11 @@ namespace LHT.CRM.App
 
         private void lbNav_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
+            splitContainer1.Panel2.Controls.Clear();
             //向splitContainer1.Panel2添加系统设置窗体
             frmCustomer fss = new frmCustomer();
             fss.TopLevel = false;
-            fss.Dock = DockStyle.Fill;
-            panel1.Controls.Add(fss);
+            splitContainer1.Panel2.Controls.Add(fss);
             fss.Show();
         }
     }

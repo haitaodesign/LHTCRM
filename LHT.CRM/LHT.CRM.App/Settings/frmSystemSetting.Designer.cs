@@ -86,7 +86,7 @@
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(801, 701);
             this.metroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.metroTabControl1.TabIndex = 0;
@@ -476,7 +476,7 @@
             this.tbAccountSetting.Controls.Add(this.btnResetPassword);
             this.tbAccountSetting.HorizontalScrollbarBarColor = true;
             this.tbAccountSetting.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.tbAccountSetting.HorizontalScrollbarSize = 4;
+            this.tbAccountSetting.HorizontalScrollbarSize = 8;
             this.tbAccountSetting.Location = new System.Drawing.Point(4, 39);
             this.tbAccountSetting.Name = "tbAccountSetting";
             this.tbAccountSetting.Size = new System.Drawing.Size(793, 658);
