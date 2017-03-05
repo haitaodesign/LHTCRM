@@ -50,6 +50,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,41 +62,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CRM\frmContact.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CRM\frmContact.Designer.cs">
-      <DependentUpon>frmContact.cs</DependentUpon>
-    </Compile>
     <Compile Include="CRM\frmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CRM\frmCustomer.Designer.cs">
       <DependentUpon>frmCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CRM\frmPersonalDesktop.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CRM\frmPersonalDesktop.Designer.cs">
-      <DependentUpon>frmPersonalDesktop.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CRM\frmProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CRM\frmProduct.Designer.cs">
-      <DependentUpon>frmProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CRM\frmSale.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CRM\frmSale.Designer.cs">
-      <DependentUpon>frmSale.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CRM\frmVisit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CRM\frmVisit.Designer.cs">
-      <DependentUpon>frmVisit.cs</DependentUpon>
     </Compile>
     <Compile Include="ErrorInfo.cs" />
     <Compile Include="frmFuncLib.cs" />
@@ -137,23 +108,8 @@
     <Compile Include="Settings\frmSystemSetting.Designer.cs">
       <DependentUpon>frmSystemSetting.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CRM\frmContact.resx">
-      <DependentUpon>frmContact.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CRM\frmCustomer.resx">
       <DependentUpon>frmCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CRM\frmPersonalDesktop.resx">
-      <DependentUpon>frmPersonalDesktop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CRM\frmProduct.resx">
-      <DependentUpon>frmProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CRM\frmSale.resx">
-      <DependentUpon>frmSale.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CRM\frmVisit.resx">
-      <DependentUpon>frmVisit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

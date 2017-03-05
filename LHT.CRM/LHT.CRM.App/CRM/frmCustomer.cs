@@ -16,5 +16,40 @@ namespace LHT.CRM.App.CRM
         {
             InitializeComponent();
         }
+
+        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dmButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAuthority_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeleteRole_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdateRole_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCreateRole_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroDMButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

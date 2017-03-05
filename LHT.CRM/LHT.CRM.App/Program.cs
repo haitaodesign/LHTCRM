@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using LHT.CRM.App.CRM;
+using System;
 using System.Windows.Forms;
-using LHT.CRM.App.Settings;
 
 namespace LHT.CRM.App
 {
@@ -22,7 +19,7 @@ namespace LHT.CRM.App
             //Application.Run(new frmSystemSetting());
             //Application.Run(new frmCreateRole());
             //Application.Run(new frmCreateAuthority());
-            //Application.Run(new frmCreateUser());
+            Application.Run(new frmCustomer());
         }
     }
 }

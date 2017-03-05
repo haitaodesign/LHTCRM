@@ -517,7 +517,7 @@
         nbdD1P8B5ig+YRrxwaAAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="skinListBox1.Items" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="lbNav.Items" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAD5DU2tpbiwgVmVyc2lvbj0xNi4xLjE0LjIsIEN1bHR1cmU9bmV1
         dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAwDAAAAUVN5c3RlbS5EcmF3aW5nLCBWZXJzaW9uPTQuMC4w
@@ -540,7 +540,7 @@
         tW0JZhEWxf9P8Ef8v5pAUX4AWHbqS2R786wAAAAASUVORK5CYIIL
 </value>
   </data>
-  <data name="skinListBox1.Items1" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="lbNav.Items1" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAD5DU2tpbiwgVmVyc2lvbj0xNi4xLjE0LjIsIEN1bHR1cmU9bmV1
         dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAwDAAAAUVN5c3RlbS5EcmF3aW5nLCBWZXJzaW9uPTQuMC4w
@@ -557,7 +557,7 @@
         AABJRU5ErkJgggs=
 </value>
   </data>
-  <data name="skinListBox1.Items2" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="lbNav.Items2" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAD5DU2tpbiwgVmVyc2lvbj0xNi4xLjE0LjIsIEN1bHR1cmU9bmV1
         dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAwDAAAAUVN5c3RlbS5EcmF3aW5nLCBWZXJzaW9uPTQuMC4w
@@ -574,7 +574,7 @@
         /uKbGEUfNKbwy5QGLGAAAAAASUVORK5CYIIL
 </value>
   </data>
-  <data name="skinListBox1.Items3" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="lbNav.Items3" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAD5DU2tpbiwgVmVyc2lvbj0xNi4xLjE0LjIsIEN1bHR1cmU9bmV1
         dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAwDAAAAUVN5c3RlbS5EcmF3aW5nLCBWZXJzaW9uPTQuMC4w
@@ -590,7 +590,7 @@
         G3Dj83GiAAAAAElFTkSuQmCCCw==
 </value>
   </data>
-  <data name="skinListBox1.Items4" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="lbNav.Items4" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAD5DU2tpbiwgVmVyc2lvbj0xNi4xLjE0LjIsIEN1bHR1cmU9bmV1
         dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAwDAAAAUVN5c3RlbS5EcmF3aW5nLCBWZXJzaW9uPTQuMC4w
@@ -606,30 +606,21 @@
         0WC8i4bQSNtONDgZBEyDnL+KFFdpK3LuDex8NhtW8Ou9AAAAAElFTkSuQmCCCw==
 </value>
   </data>
-  <data name="skinListBox1.Items5" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="lbNav.Items5" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAD5DU2tpbiwgVmVyc2lvbj0xNi4xLjE0LjIsIEN1bHR1cmU9bmV1
         dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAwDAAAAUVN5c3RlbS5EcmF3aW5nLCBWZXJzaW9uPTQuMC4w
         LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49YjAzZjVmN2YxMWQ1MGEzYQUBAAAAIUND
         V2luLlNraW5Db250cm9sLlNraW5MaXN0Qm94SXRlbQMAAAAKYVhuM1laVWFaTQpDMzYzaGRWUnhPCkRQ
         SzNXaFppSlQBBAIVU3lzdGVtLkRyYXdpbmcuQml0bWFwAwAAAAIAAAAGBAAAAAbkuqflk4EJBQAAAAoF
-        BQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgMAAAAJBgAAAA8GAAAALgEAAAKJUE5H
-        DQoaCgAAAA1JSERSAAAAGAAAABgIBgAAAOB3PfgAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAA
-        ANhJREFUSEvtldsRgjAQRVOCpVgCJViCHViClGApdqAdaCfYgd6bmWV2w+Y1qF/cmfMBhHt4JYSV2YEz
-        2MetL4flD/AGE8hKDuBWYQQ6ulzISniyHuhxBxKvXHAlPYJSubCQtApaygUjaRVckn01riCmVcAreql9
-        NY4gpucdtErmcqZHwNQkppzpFTA5yaKc4ddBSQlOxjSpxC1fG0qeoFjOQVywSsgd8G6945oTMOEj0M/R
-        Q97BALzjKSabwMNkE3iY/FzAicaCErwIhhON67w3Rpj/A39ICB/Cf1VS6PMW0QAAAABJRU5ErkJgggs=
+        BQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgMAAAAJBgAAAA8GAAAAIQEAAAKJUE5H
+        DQoaCgAAAA1JSERSAAAAGAAAABgIBgAAAOB3PfgAAAAEZ0FNQQAAsY8L/GEFAAAA2ElEQVRIS+2V2xGC
+        MBBFU4KlWAIlWIIdWIKUYCl2oB1oJ9iB3puZZXbD5jWoX9yZ8wGEe3glhJXZgTPYx60vh+UP8AYTyEoO
+        4FZhBDq6XMhKeLIe6HEHEq9ccCU9glK5sJC0ClrKBSNpFVySfTWuIKZVwCt6qX01jiCm5x20SuZypkfA
+        1CSmnOkVMDnJopzh10FJCU7GNKnELV8bSp6gWM5BXLBKyB3wbr3jmhMw4SPQz9FD3sEAvOMpJpvAw2QT
+        eJj8XMCJxoISvAiGE43rvDdGmP8Df0gIH8J/VVLo8xbRAAAAAElFTkSuQmCCCw==
 </value>
   </data>
-  <metadata name="tableLayoutPanel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="panel3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="panel4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="cmSettings.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
