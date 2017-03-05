@@ -83,8 +83,8 @@
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel2);
-            this.splitContainer1.Panel2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.splitContainer1.Size = new System.Drawing.Size(1264, 914);
+            this.splitContainer1.Panel2.Font = new System.Drawing.Font("微软雅黑", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.splitContainer1.Size = new System.Drawing.Size(1044, 721);
             this.splitContainer1.SplitterDistance = 240;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 6;
@@ -105,7 +105,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 140F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(240, 914);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(240, 721);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -119,7 +119,7 @@
             this.tableLayoutPanel1.Controls.Add(this.pbSettings, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.skinPictureBox4, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 774);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 581);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -134,7 +134,7 @@
             this.skinPictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("skinPictureBox2.Image")));
             this.skinPictureBox2.Location = new System.Drawing.Point(10, 10);
-            this.skinPictureBox2.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.skinPictureBox2.Margin = new System.Windows.Forms.Padding(10);
             this.skinPictureBox2.Name = "skinPictureBox2";
             this.skinPictureBox2.Size = new System.Drawing.Size(50, 50);
             this.skinPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -171,7 +171,7 @@
             this.pbSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbSettings.Image = ((System.Drawing.Image)(resources.GetObject("pbSettings.Image")));
             this.pbSettings.Location = new System.Drawing.Point(10, 80);
-            this.pbSettings.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.pbSettings.Margin = new System.Windows.Forms.Padding(10);
             this.pbSettings.Name = "pbSettings";
             this.pbSettings.Size = new System.Drawing.Size(50, 50);
             this.pbSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -185,7 +185,7 @@
             this.skinPictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.skinPictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("skinPictureBox4.Image")));
             this.skinPictureBox4.Location = new System.Drawing.Point(80, 80);
-            this.skinPictureBox4.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.skinPictureBox4.Margin = new System.Windows.Forms.Padding(10);
             this.skinPictureBox4.Name = "skinPictureBox4";
             this.skinPictureBox4.Size = new System.Drawing.Size(50, 50);
             this.skinPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -233,7 +233,7 @@
             this.lbNav.RowBackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.lbNav.RowBackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.lbNav.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(215)))));
-            this.lbNav.Size = new System.Drawing.Size(240, 694);
+            this.lbNav.Size = new System.Drawing.Size(240, 501);
             this.lbNav.TabIndex = 0;
             this.lbNav.Tag = "";
             // 
@@ -303,33 +303,29 @@
             this.tableLayoutPanel2.Controls.Add(this.panel3, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 835F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1021, 914);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.957F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.043F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(801, 721);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1015, 71);
+            this.panel1.Size = new System.Drawing.Size(795, 73);
             this.panel1.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Font = new System.Drawing.Font("微软雅黑", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.panel3.Location = new System.Drawing.Point(3, 83);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Location = new System.Drawing.Point(3, 82);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1015, 827);
+            this.panel3.Size = new System.Drawing.Size(795, 636);
             this.panel3.TabIndex = 1;
             // 
             // frmMain
@@ -343,12 +339,12 @@
             this.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(117)))), ((int)(((byte)(180)))));
             this.CaptionBackColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(117)))), ((int)(((byte)(180)))));
             this.CaptionBackColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(117)))), ((int)(((byte)(180)))));
-            this.ClientSize = new System.Drawing.Size(1280, 961);
+            this.ClientSize = new System.Drawing.Size(1060, 768);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("微软雅黑 Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "frmMain";
             this.Shadow = false;
             this.ShowBorder = false;

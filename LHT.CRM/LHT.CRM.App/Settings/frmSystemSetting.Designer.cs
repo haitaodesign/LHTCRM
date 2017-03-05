@@ -87,7 +87,7 @@
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(801, 701);
+            this.metroTabControl1.Size = new System.Drawing.Size(795, 636);
             this.metroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.metroTabControl1.TabIndex = 0;
             // 
@@ -103,7 +103,7 @@
             this.tpRoleSetting.HorizontalScrollbarSize = 2;
             this.tpRoleSetting.Location = new System.Drawing.Point(4, 39);
             this.tpRoleSetting.Name = "tpRoleSetting";
-            this.tpRoleSetting.Size = new System.Drawing.Size(793, 658);
+            this.tpRoleSetting.Size = new System.Drawing.Size(787, 593);
             this.tpRoleSetting.TabIndex = 0;
             this.tpRoleSetting.Text = "角色设置";
             this.tpRoleSetting.VerticalScrollbarBarColor = true;
@@ -221,7 +221,7 @@
             this.dgvRoleSetting.EnableHeadersVisualStyles = false;
             this.dgvRoleSetting.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvRoleSetting.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvRoleSetting.Location = new System.Drawing.Point(0, 88);
+            this.dgvRoleSetting.Location = new System.Drawing.Point(0, 74);
             this.dgvRoleSetting.Name = "dgvRoleSetting";
             this.dgvRoleSetting.ReadOnly = true;
             this.dgvRoleSetting.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -237,7 +237,7 @@
             this.dgvRoleSetting.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvRoleSetting.RowTemplate.Height = 27;
             this.dgvRoleSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRoleSetting.Size = new System.Drawing.Size(793, 570);
+            this.dgvRoleSetting.Size = new System.Drawing.Size(787, 519);
             this.dgvRoleSetting.TabIndex = 2;
             this.dgvRoleSetting.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRoleSetting_CellContentClick);
             this.dgvRoleSetting.Click += new System.EventHandler(this.dgvRoleSetting_Click);
@@ -275,7 +275,7 @@
             this.tpUserSetting.HorizontalScrollbarSize = 2;
             this.tpUserSetting.Location = new System.Drawing.Point(4, 39);
             this.tpUserSetting.Name = "tpUserSetting";
-            this.tpUserSetting.Size = new System.Drawing.Size(793, 658);
+            this.tpUserSetting.Size = new System.Drawing.Size(787, 593);
             this.tpUserSetting.TabIndex = 1;
             this.tpUserSetting.Text = "用户设置";
             this.tpUserSetting.VerticalScrollbarBarColor = true;
@@ -322,7 +322,7 @@
             this.dgvUserSetting.EnableHeadersVisualStyles = false;
             this.dgvUserSetting.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvUserSetting.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvUserSetting.Location = new System.Drawing.Point(0, 88);
+            this.dgvUserSetting.Location = new System.Drawing.Point(0, 74);
             this.dgvUserSetting.Name = "dgvUserSetting";
             this.dgvUserSetting.ReadOnly = true;
             this.dgvUserSetting.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -338,7 +338,7 @@
             this.dgvUserSetting.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvUserSetting.RowTemplate.Height = 27;
             this.dgvUserSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUserSetting.Size = new System.Drawing.Size(793, 570);
+            this.dgvUserSetting.Size = new System.Drawing.Size(787, 519);
             this.dgvUserSetting.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn1
@@ -477,10 +477,10 @@
             this.tbAccountSetting.Controls.Add(this.btnResetPassword);
             this.tbAccountSetting.HorizontalScrollbarBarColor = true;
             this.tbAccountSetting.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.tbAccountSetting.HorizontalScrollbarSize = 6;
+            this.tbAccountSetting.HorizontalScrollbarSize = 4;
             this.tbAccountSetting.Location = new System.Drawing.Point(4, 39);
             this.tbAccountSetting.Name = "tbAccountSetting";
-            this.tbAccountSetting.Size = new System.Drawing.Size(793, 658);
+            this.tbAccountSetting.Size = new System.Drawing.Size(787, 593);
             this.tbAccountSetting.TabIndex = 2;
             this.tbAccountSetting.Text = "账号设置";
             this.tbAccountSetting.VerticalScrollbarBarColor = true;
@@ -505,7 +505,7 @@
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAccountSetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvAccountSetting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccountSetting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvAccountSetting.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column6,
             this.Column7,
@@ -538,7 +538,7 @@
             this.dgvAccountSetting.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvAccountSetting.RowTemplate.Height = 27;
             this.dgvAccountSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAccountSetting.Size = new System.Drawing.Size(793, 584);
+            this.dgvAccountSetting.Size = new System.Drawing.Size(787, 519);
             this.dgvAccountSetting.TabIndex = 11;
             // 
             // Column6
@@ -606,7 +606,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(801, 701);
+            this.ClientSize = new System.Drawing.Size(795, 636);
             this.Controls.Add(this.metroTabControl1);
             this.Font = new System.Drawing.Font("微软雅黑 Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

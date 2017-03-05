@@ -3,7 +3,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using CCWin;
 using LHT.CRM.App.Settings;
-using LHT.CRM.App.CRM;
 
 namespace LHT.CRM.App
 {
