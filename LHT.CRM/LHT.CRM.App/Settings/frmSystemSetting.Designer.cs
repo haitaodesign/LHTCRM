@@ -86,7 +86,7 @@
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(795, 636);
             this.metroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.metroTabControl1.TabIndex = 0;
@@ -191,6 +191,8 @@
             this.dgvRoleSetting.AllowUserToAddRows = false;
             this.dgvRoleSetting.AllowUserToDeleteRows = false;
             this.dgvRoleSetting.AllowUserToResizeRows = false;
+            this.dgvRoleSetting.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvRoleSetting.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRoleSetting.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvRoleSetting.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -217,7 +219,6 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRoleSetting.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvRoleSetting.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvRoleSetting.EnableHeadersVisualStyles = false;
             this.dgvRoleSetting.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvRoleSetting.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -237,7 +238,7 @@
             this.dgvRoleSetting.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvRoleSetting.RowTemplate.Height = 27;
             this.dgvRoleSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRoleSetting.Size = new System.Drawing.Size(787, 519);
+            this.dgvRoleSetting.Size = new System.Drawing.Size(793, 519);
             this.dgvRoleSetting.TabIndex = 2;
             this.dgvRoleSetting.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRoleSetting_CellContentClick);
             this.dgvRoleSetting.Click += new System.EventHandler(this.dgvRoleSetting_Click);
@@ -287,6 +288,8 @@
             this.dgvUserSetting.AllowUserToAddRows = false;
             this.dgvUserSetting.AllowUserToDeleteRows = false;
             this.dgvUserSetting.AllowUserToResizeRows = false;
+            this.dgvUserSetting.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUserSetting.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUserSetting.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvUserSetting.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -318,7 +321,6 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvUserSetting.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvUserSetting.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvUserSetting.EnableHeadersVisualStyles = false;
             this.dgvUserSetting.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvUserSetting.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -338,7 +340,7 @@
             this.dgvUserSetting.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvUserSetting.RowTemplate.Height = 27;
             this.dgvUserSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUserSetting.Size = new System.Drawing.Size(787, 519);
+            this.dgvUserSetting.Size = new System.Drawing.Size(791, 519);
             this.dgvUserSetting.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn1
@@ -492,6 +494,8 @@
             this.dgvAccountSetting.AllowUserToAddRows = false;
             this.dgvAccountSetting.AllowUserToDeleteRows = false;
             this.dgvAccountSetting.AllowUserToResizeRows = false;
+            this.dgvAccountSetting.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAccountSetting.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAccountSetting.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvAccountSetting.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -518,7 +522,6 @@
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAccountSetting.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvAccountSetting.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvAccountSetting.EnableHeadersVisualStyles = false;
             this.dgvAccountSetting.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvAccountSetting.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -538,7 +541,7 @@
             this.dgvAccountSetting.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvAccountSetting.RowTemplate.Height = 27;
             this.dgvAccountSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAccountSetting.Size = new System.Drawing.Size(787, 519);
+            this.dgvAccountSetting.Size = new System.Drawing.Size(791, 519);
             this.dgvAccountSetting.TabIndex = 11;
             // 
             // Column6

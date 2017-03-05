@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using CCWin;
 using LHT.CRM.App.Settings;
+using LHT.CRM.App.CRM;
 
 namespace LHT.CRM.App
 {
@@ -82,7 +83,18 @@ namespace LHT.CRM.App
 
         private void lbNav_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void lbNav_MouseClick(object sender, MouseEventArgs e)
+        {
+            panel3.Controls.Clear();
+            //向splitContainer1.Panel2添加系统设置窗体
+            frmCustomer fss = new frmCustomer();
+            fss.TopLevel = false;
+            fss.Dock = DockStyle.Fill;
+            panel3.Controls.Add(fss);
+            fss.Show();
         }
     }
 }

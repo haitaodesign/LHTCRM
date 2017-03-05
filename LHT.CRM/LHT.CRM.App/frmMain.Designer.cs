@@ -236,6 +236,7 @@
             this.lbNav.Size = new System.Drawing.Size(240, 501);
             this.lbNav.TabIndex = 0;
             this.lbNav.Tag = "";
+            this.lbNav.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbNav_MouseClick);
             // 
             // cmSettings
             // 
