@@ -104,8 +104,13 @@ namespace LHT.CRM.App.CRM
 
 
 
+
         #endregion
 
-        
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            frmCreateCustomer fcc = new frmCreateCustomer();
+            fcc.Show();
+        }
     }
 }
