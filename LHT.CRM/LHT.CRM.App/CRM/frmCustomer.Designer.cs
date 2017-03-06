@@ -71,7 +71,7 @@
             this.metroTabPage1.Controls.Add(this.btnShowAll);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
+            this.metroTabPage1.HorizontalScrollbarSize = 8;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 39);
             this.metroTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.metroTabPage1.Name = "metroTabPage1";
@@ -171,7 +171,7 @@
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(125, 45);
             this.btnCreate.TabIndex = 8;
-            this.btnCreate.Text = "新建";
+            this.btnCreate.Text = "添加";
             this.btnCreate.UseVisualStyleBackColor = false;
             // 
             // dgvCusInfo

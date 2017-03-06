@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CRM\frmCreateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\frmCreateCustomer.Designer.cs">
+      <DependentUpon>frmCreateCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRM\frmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     <Compile Include="Settings\frmSystemSetting.Designer.cs">
       <DependentUpon>frmSystemSetting.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CRM\frmCreateCustomer.resx">
+      <DependentUpon>frmCreateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRM\frmCustomer.resx">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </EmbeddedResource>
