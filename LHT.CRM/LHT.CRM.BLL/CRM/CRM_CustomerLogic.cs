@@ -31,6 +31,24 @@ namespace LHT.CRM.BLL.CRM
             return ccs.GetAll(saleid);
         }
 
+        /// <summary>
+        /// 添加一个客户
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <returns></returns>
+        public int AddCustomer(CRM_Customer customer)
+        {
+            ccs.Add(customer);
+            int result= ccs.SaveChanges();
+            if (result > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
 
 
     }

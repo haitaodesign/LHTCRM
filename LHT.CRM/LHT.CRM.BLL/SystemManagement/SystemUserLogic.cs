@@ -55,5 +55,16 @@ namespace LHT.CRM.BLL.SystemManagement
         }
 
 
+        /// <summary>
+        /// 根据业务员名字返回Id
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns></returns>
+        public int GetSaleId(string username)
+        {
+            list = sus.GetAll();
+            return list.Find(u => u.UserName == username).Id;
+        }
+
     }
 }
