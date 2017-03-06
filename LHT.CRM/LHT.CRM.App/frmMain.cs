@@ -88,13 +88,34 @@ namespace LHT.CRM.App
 
         private void lbNav_MouseClick(object sender, MouseEventArgs e)
         {
-            panel3.Controls.Clear();
-            //向splitContainer1.Panel2添加系统设置窗体
-            frmCustomer fss = new frmCustomer();
-            fss.TopLevel = false;
-            fss.Dock = DockStyle.Fill;
-            panel3.Controls.Add(fss);
-            fss.Show();
+            //获取当前点击的获得的值
+
+            var selectNavTxt = lbNav.SelectedItem.ToString();
+
+            if (selectNavTxt == "客户")
+            {
+                panel3.Controls.Clear();
+                //向splitContainer1.Panel2添加系统设置窗体
+                frmCustomer fss = new frmCustomer();
+                fss.TopLevel = false;
+                fss.Dock = DockStyle.Fill;
+                panel3.Controls.Add(fss);
+                fss.Show();
+            }else if (selectNavTxt == "联系人")
+            {
+
+            }else if (selectNavTxt == "拜访")
+            {
+
+            }else if (selectNavTxt == "销售")
+            {
+
+            }else if (selectNavTxt == "产品")
+            {
+
+            }
+
+            
         }
     }
 }

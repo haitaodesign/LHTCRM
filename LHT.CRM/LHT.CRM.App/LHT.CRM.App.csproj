@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CRM\frmContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\frmContact.Designer.cs">
+      <DependentUpon>frmContact.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRM\frmCreateCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
