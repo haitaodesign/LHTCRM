@@ -76,6 +76,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceRespository\CRM\CRM_ContactService.cs" />
     <Compile Include="ServiceRespository\CRM\CRM_CustomerService.cs" />
+    <Compile Include="ServiceRespository\CRM\CRM_TargetService.cs" />
     <Compile Include="ServiceRespository\SystemManagement\SystemLoginService.cs" />
     <Compile Include="ServiceRespository\SystemManagement\SystemModuleService.cs" />
     <Compile Include="ServiceRespository\SystemManagement\SystemRoleAuthorityService.cs" />
