@@ -72,7 +72,7 @@
             this.metroTabPage1.Controls.Add(this.btnShowAll);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 6;
+            this.metroTabPage1.HorizontalScrollbarSize = 4;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 39);
             this.metroTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.metroTabPage1.Name = "metroTabPage1";

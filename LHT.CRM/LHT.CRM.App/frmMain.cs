@@ -103,8 +103,15 @@ namespace LHT.CRM.App
                 fss.Show();
             }else if (selectNavTxt == "联系人")
             {
-
-            }else if (selectNavTxt == "拜访")
+                panel3.Controls.Clear();
+                //向splitContainer1.Panel2添加系统设置窗体
+                frmContact fss = new frmContact();
+                fss.TopLevel = false;
+                fss.Dock = DockStyle.Fill;
+                panel3.Controls.Add(fss);
+                fss.Show();
+            }
+            else if (selectNavTxt == "拜访")
             {
 
             }else if (selectNavTxt == "销售")
