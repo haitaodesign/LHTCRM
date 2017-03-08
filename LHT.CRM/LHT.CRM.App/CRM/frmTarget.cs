@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LHT.CRM.BLL.CRM;
 
 namespace LHT.CRM.App.CRM
 {
     public partial class frmTarget : Form
     {
+        CRM_TargetLogic ctl = new CRM_TargetLogic();
         public frmTarget()
         {
             InitializeComponent();
@@ -20,6 +22,7 @@ namespace LHT.CRM.App.CRM
         {
 
             this.dgvTargetInfo.AutoGenerateColumns = false;
+            LoadTargetList();
         }
 
 
@@ -33,7 +36,7 @@ namespace LHT.CRM.App.CRM
 
         public void LoadTargetList()
         {
-
+            this.dgvTargetInfo.DataSource = ctl.GetAll();
         }
 
         #endregion

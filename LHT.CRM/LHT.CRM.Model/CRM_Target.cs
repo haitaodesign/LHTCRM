@@ -24,6 +24,6 @@ namespace LHT.CRM.Model
         public Nullable<decimal> Target2 { get; set; }
         public Nullable<decimal> Target3 { get; set; }
         public Nullable<decimal> Target4 { get; set; }
-        public Nullable<int> UserId { get; set; }
+        public string UserName { get; set; }
     }
 }
