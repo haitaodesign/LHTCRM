@@ -16,11 +16,11 @@
           <Property Name="MDate" Type="datetime" />
           <Property Name="CusId" Type="int" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Gender" Type="nchar" MaxLength="10" />
-          <Property Name="JiGuan" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="10" />
+          <Property Name="JiGuan" Type="nvarchar" MaxLength="20" />
           <Property Name="DeptName" Type="nvarchar" MaxLength="50" />
           <Property Name="Position" Type="nvarchar" MaxLength="50" />
-          <Property Name="Mobile" Type="nchar" MaxLength="10" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="30" />
           <Property Name="WX" Type="nvarchar" MaxLength="50" />
           <Property Name="Email" Type="nvarchar" MaxLength="100" />
         </EntityType>
@@ -43,7 +43,7 @@
           <Property Name="CusType" Type="nvarchar" MaxLength="50" />
           <Property Name="PhoneNum" Type="nvarchar" MaxLength="50" />
           <Property Name="HomePage" Type="nvarchar" MaxLength="100" />
-          <Property Name="Address" Type="nchar" MaxLength="10" />
+          <Property Name="Address" Type="nvarchar" MaxLength="400" />
           <Property Name="IsPublisCus" Type="tinyint" />
         </EntityType>
         <EntityType Name="CRM_Product">
@@ -70,7 +70,7 @@
           <Property Name="CDate" Type="datetime" />
           <Property Name="MId" Type="int" />
           <Property Name="MDate" Type="datetime" />
-          <Property Name="Period" Type="nvarchar" MaxLength="50" />
+          <Property Name="Period" Type="nvarchar" MaxLength="30" />
           <Property Name="Target1" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Target2" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Target3" Type="decimal" Precision="18" Scale="2" />
@@ -317,7 +317,7 @@
           <Property Name="CusType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="PhoneNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="HomePage" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Address" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
           <Property Name="IsPublisCus" Type="Byte" />
         </EntityType>
         <EntityType Name="CRM_Contact">
@@ -331,11 +331,11 @@
           <Property Name="MDate" Type="DateTime" Precision="3" />
           <Property Name="CusId" Type="Int32" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="JiGuan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="JiGuan" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="DeptName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Mobile" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="WX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
@@ -369,7 +369,7 @@
           <Property Name="CDate" Type="DateTime" Precision="3" />
           <Property Name="MId" Type="Int32" />
           <Property Name="MDate" Type="DateTime" Precision="3" />
-          <Property Name="Period" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Period" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Target1" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="Target2" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="Target3" Type="Decimal" Precision="18" Scale="2" />
