@@ -72,10 +72,10 @@
           <Property Name="MDate" Type="datetime" />
           <Property Name="Period" Type="nvarchar" MaxLength="30" />
           <Property Name="Target1" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="Target2" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="Target3" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="Target4" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="UserId" Type="int" />
+          <Property Name="Target2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Target3" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Target4" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="CRM_Visit">
           <Key>
@@ -371,10 +371,11 @@
           <Property Name="MDate" Type="DateTime" Precision="3" />
           <Property Name="Period" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Target1" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="Target2" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="Target3" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="Target4" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Target2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Target3" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Target4" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="UserId" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="CRM_Product">
           <Key>
@@ -520,7 +521,7 @@
           <EntitySetMapping Name="CRM_Target">
             <EntityTypeMapping TypeName="LHTCRMModel.CRM_Target">
               <MappingFragment StoreEntitySet="CRM_Target">
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="Target4" ColumnName="Target4" />
                 <ScalarProperty Name="Target3" ColumnName="Target3" />
                 <ScalarProperty Name="Target2" ColumnName="Target2" />
