@@ -86,6 +86,12 @@
     <Compile Include="CRM\frmTarget.Designer.cs">
       <DependentUpon>frmTarget.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRM\frmVisit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\frmVisit.Designer.cs">
+      <DependentUpon>frmVisit.cs</DependentUpon>
+    </Compile>
     <Compile Include="ErrorInfo.cs" />
     <Compile Include="frmFuncLib.cs" />
     <Compile Include="frmLogin.cs">
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRM\frmTarget.resx">
       <DependentUpon>frmTarget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\frmVisit.resx">
+      <DependentUpon>frmVisit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

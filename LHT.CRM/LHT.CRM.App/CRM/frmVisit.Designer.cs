@@ -1,6 +1,6 @@
 ﻿namespace LHT.CRM.App.CRM
 {
-    partial class frmContact
+    partial class frmVisit
     {
         /// <summary>
         /// Required designer variable.
@@ -31,14 +31,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTabControl1 = new DMSkin.Metro.Controls.MetroTabControl();
-            this.tpContactInfo = new DMSkin.Metro.Controls.MetroTabPage();
+            this.metroTabPage1 = new DMSkin.Metro.Controls.MetroTabPage();
             this.btnExport = new DMSkin.Controls.DMButton();
             this.btnDelete = new DMSkin.Controls.DMButton();
             this.btnUpdate = new DMSkin.Controls.DMButton();
             this.btnCreate = new DMSkin.Controls.DMButton();
-            this.dgvContactInfo = new DMSkin.Metro.Controls.MetroGrid();
+            this.metroGrid1 = new DMSkin.Metro.Controls.MetroGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,42 +47,42 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabControl1.SuspendLayout();
-            this.tpContactInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvContactInfo)).BeginInit();
+            this.metroTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
             // 
-            this.metroTabControl1.Controls.Add(this.tpContactInfo);
+            this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.DM_UseSelectable = true;
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.metroTabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(795, 636);
             this.metroTabControl1.TabIndex = 0;
             // 
-            // tpContactInfo
+            // metroTabPage1
             // 
-            this.tpContactInfo.Controls.Add(this.btnExport);
-            this.tpContactInfo.Controls.Add(this.btnDelete);
-            this.tpContactInfo.Controls.Add(this.btnUpdate);
-            this.tpContactInfo.Controls.Add(this.btnCreate);
-            this.tpContactInfo.Controls.Add(this.dgvContactInfo);
-            this.tpContactInfo.HorizontalScrollbarBarColor = true;
-            this.tpContactInfo.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.tpContactInfo.HorizontalScrollbarSize = 10;
-            this.tpContactInfo.Location = new System.Drawing.Point(4, 39);
-            this.tpContactInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tpContactInfo.Name = "tpContactInfo";
-            this.tpContactInfo.Size = new System.Drawing.Size(787, 593);
-            this.tpContactInfo.TabIndex = 0;
-            this.tpContactInfo.Text = "联系人";
-            this.tpContactInfo.VerticalScrollbarBarColor = true;
-            this.tpContactInfo.VerticalScrollbarDM_HighlightOnWheel = false;
-            this.tpContactInfo.VerticalScrollbarSize = 10;
+            this.metroTabPage1.Controls.Add(this.metroGrid1);
+            this.metroTabPage1.Controls.Add(this.btnExport);
+            this.metroTabPage1.Controls.Add(this.btnDelete);
+            this.metroTabPage1.Controls.Add(this.btnUpdate);
+            this.metroTabPage1.Controls.Add(this.btnCreate);
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.HorizontalScrollbarDM_HighlightOnWheel = false;
+            this.metroTabPage1.HorizontalScrollbarSize = 10;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 39);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(787, 593);
+            this.metroTabPage1.TabIndex = 0;
+            this.metroTabPage1.Text = "拜访管理";
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.metroTabPage1.VerticalScrollbarDM_HighlightOnWheel = false;
+            this.metroTabPage1.VerticalScrollbarSize = 10;
             // 
             // btnExport
             // 
@@ -96,10 +95,10 @@
             this.btnExport.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnExport.ForeColor = System.Drawing.Color.White;
             this.btnExport.Image = null;
-            this.btnExport.Location = new System.Drawing.Point(466, 21);
+            this.btnExport.Location = new System.Drawing.Point(470, 14);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(125, 45);
-            this.btnExport.TabIndex = 20;
+            this.btnExport.TabIndex = 24;
             this.btnExport.Text = "导出";
             this.btnExport.UseVisualStyleBackColor = false;
             // 
@@ -114,10 +113,10 @@
             this.btnDelete.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = null;
-            this.btnDelete.Location = new System.Drawing.Point(311, 21);
+            this.btnDelete.Location = new System.Drawing.Point(315, 14);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(125, 45);
-            this.btnDelete.TabIndex = 19;
+            this.btnDelete.TabIndex = 23;
             this.btnDelete.Text = "删除";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
@@ -132,10 +131,10 @@
             this.btnUpdate.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Image = null;
-            this.btnUpdate.Location = new System.Drawing.Point(156, 21);
+            this.btnUpdate.Location = new System.Drawing.Point(160, 14);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(125, 45);
-            this.btnUpdate.TabIndex = 18;
+            this.btnUpdate.TabIndex = 22;
             this.btnUpdate.Text = "修改";
             this.btnUpdate.UseVisualStyleBackColor = false;
             // 
@@ -150,39 +149,35 @@
             this.btnCreate.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
             this.btnCreate.Image = null;
-            this.btnCreate.Location = new System.Drawing.Point(1, 21);
+            this.btnCreate.Location = new System.Drawing.Point(5, 14);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(125, 45);
-            this.btnCreate.TabIndex = 17;
+            this.btnCreate.TabIndex = 21;
             this.btnCreate.Text = "添加";
             this.btnCreate.UseVisualStyleBackColor = false;
             // 
-            // dgvContactInfo
+            // metroGrid1
             // 
-            this.dgvContactInfo.AllowUserToAddRows = false;
-            this.dgvContactInfo.AllowUserToDeleteRows = false;
-            this.dgvContactInfo.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvContactInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvContactInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.metroGrid1.AllowUserToAddRows = false;
+            this.metroGrid1.AllowUserToDeleteRows = false;
+            this.metroGrid1.AllowUserToResizeRows = false;
+            this.metroGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvContactInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvContactInfo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvContactInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvContactInfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvContactInfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvContactInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvContactInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvContactInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.metroGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.metroGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -191,116 +186,131 @@
             this.Column6,
             this.Column7,
             this.Column8,
-            this.Column9});
+            this.Column9,
+            this.Column10,
+            this.Column11});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.metroGrid1.EnableHeadersVisualStyles = false;
+            this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid1.Location = new System.Drawing.Point(-4, 65);
+            this.metroGrid1.Name = "metroGrid1";
+            this.metroGrid1.ReadOnly = true;
+            this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvContactInfo.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvContactInfo.EnableHeadersVisualStyles = false;
-            this.dgvContactInfo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dgvContactInfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvContactInfo.Location = new System.Drawing.Point(0, 73);
-            this.dgvContactInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvContactInfo.Name = "dgvContactInfo";
-            this.dgvContactInfo.ReadOnly = true;
-            this.dgvContactInfo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvContactInfo.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvContactInfo.RowHeadersVisible = false;
-            this.dgvContactInfo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvContactInfo.RowTemplate.Height = 27;
-            this.dgvContactInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvContactInfo.Size = new System.Drawing.Size(786, 524);
-            this.dgvContactInfo.TabIndex = 16;
-            this.dgvContactInfo.Theme = DMSkin.Metro.MetroThemeStyle.Light;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.metroGrid1.RowHeadersVisible = false;
+            this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.metroGrid1.RowTemplate.Height = 27;
+            this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.metroGrid1.Size = new System.Drawing.Size(791, 528);
+            this.metroGrid1.TabIndex = 25;
             // 
             // Column1
             // 
-            this.Column1.DataPropertyName = "Id";
-            this.Column1.HeaderText = "编号";
+            this.Column1.DataPropertyName = "CusCode";
+            this.Column1.HeaderText = "客户编码";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
-            this.Column2.DataPropertyName = "Name";
-            this.Column2.HeaderText = "姓名";
+            this.Column2.DataPropertyName = "CusName";
+            this.Column2.HeaderText = "客户名称";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "性别";
+            this.Column3.DataPropertyName = "Name";
+            this.Column3.HeaderText = "联系人";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
-            this.Column4.DataPropertyName = "JiGuan";
-            this.Column4.HeaderText = "籍贯";
+            this.Column4.DataPropertyName = "VTitle";
+            this.Column4.HeaderText = "拜访目的";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
-            this.Column5.DataPropertyName = "DeptName";
-            this.Column5.HeaderText = "部门";
+            this.Column5.DataPropertyName = "VContent";
+            this.Column5.HeaderText = "拜访内容";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
-            this.Column6.DataPropertyName = "Position";
-            this.Column6.HeaderText = "职位";
+            this.Column6.DataPropertyName = "VType";
+            this.Column6.HeaderText = "拜访类型";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
-            this.Column7.DataPropertyName = "Mobile";
-            this.Column7.HeaderText = "手机";
+            this.Column7.DataPropertyName = "VPlanDate";
+            this.Column7.HeaderText = "计划日期";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
             // Column8
             // 
-            this.Column8.DataPropertyName = "WX";
-            this.Column8.HeaderText = "微信号";
+            this.Column8.DataPropertyName = "VCompleteDate";
+            this.Column8.HeaderText = "完成日期";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             // 
             // Column9
             // 
-            this.Column9.DataPropertyName = "Email";
-            this.Column9.HeaderText = "电子邮件";
+            this.Column9.DataPropertyName = "VSuperiorDate";
+            this.Column9.HeaderText = "批示日期";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             // 
-            // frmContact
+            // Column10
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.Column10.DataPropertyName = "VSuperiorSuggestion";
+            this.Column10.HeaderText = "批示内容";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "VStatus";
+            this.Column11.HeaderText = "状态";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // frmVisit
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(795, 636);
             this.Controls.Add(this.metroTabControl1);
-            this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Font = new System.Drawing.Font("微软雅黑 Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmContact";
-            this.Text = "frmContact";
-            this.Load += new System.EventHandler(this.frmContact_Load);
+            this.Name = "frmVisit";
+            this.Text = "frmVisit";
             this.metroTabControl1.ResumeLayout(false);
-            this.tpContactInfo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvContactInfo)).EndInit();
+            this.metroTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -308,8 +318,8 @@
         #endregion
 
         private DMSkin.Metro.Controls.MetroTabControl metroTabControl1;
-        private DMSkin.Metro.Controls.MetroTabPage tpContactInfo;
-        private DMSkin.Metro.Controls.MetroGrid dgvContactInfo;
+        private DMSkin.Metro.Controls.MetroTabPage metroTabPage1;
+        private DMSkin.Metro.Controls.MetroGrid metroGrid1;
         private DMSkin.Controls.DMButton btnExport;
         private DMSkin.Controls.DMButton btnDelete;
         private DMSkin.Controls.DMButton btnUpdate;
@@ -323,5 +333,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
     }
 }
