@@ -30,36 +30,41 @@ namespace LHT.CRM.App.CRM
 
             LoadVistList();
 
-
         }
 
+        #region "方法"
         public void LoadVistList()
         {
             var showvisitlist = from visit in cvs.GetAll()
-                         join customer in ccusl.GetAll()
-                         on visit.CusId equals customer.Id
-                         join user in sul.GetAllUsers()
-                         on visit.VSuperiorId equals user.Id
-                         join contact in cconl.GetAll()
-                         on visit.ConId equals contact.Id
-                         select new
-                         {
-                             CusCode = customer.CusCode,
-                             CusName = customer.CusName,
-                             UserName = user.UserName,
-                             ContactName = contact.Name,
-                             VTitle = visit.VTitle,
-                             VContent = visit.VContent,
-                             VType = visit.VType,
-                             VPlanDate = visit.VPlanDate,
-                             VCompleteDate = visit.VCompleteDate,
-                             VSuperiorDate = visit.VSuperiorDate,
-                             VSuperiorSuggestion = visit.VSuperiorSuggestion,
-                             VStatus = visit.VStatus
+                                join customer in ccusl.GetAll()
+                                on visit.CusId equals customer.Id
+                                join user in sul.GetAllUsers()
+                                on visit.VSuperiorId equals user.Id
+                                join contact in cconl.GetAll()
+                                on visit.ConId equals contact.Id
+                                select new
+                                {
+                                    CusCode = customer.CusCode,
+                                    CusName = customer.CusName,
+                                    UserName = user.UserName,
+                                    ContactName = contact.Name,
+                                    VTitle = visit.VTitle,
+                                    VContent = visit.VContent,
+                                    VType = visit.VType,
+                                    VPlanDate = visit.VPlanDate,
+                                    VCompleteDate = visit.VCompleteDate,
+                                    VSuperiorDate = visit.VSuperiorDate,
+                                    VSuperiorSuggestion = visit.VSuperiorSuggestion,
+                                    VStatus = visit.VStatus
 
-                         };
+                                };
             this.dgvVisitInfo.DataSource = showvisitlist.ToList();
         }
+        #endregion
+
+        #region "事件"
+
+        #endregion
 
 
     }
