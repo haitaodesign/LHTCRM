@@ -15,6 +15,7 @@ namespace LHT.CRM.DALUnitTestProject
         CRM_VisitService cvs = new CRM_VisitService();
         SystemUserService sus = new SystemUserService();
         CRM_CustomerService ccs = new CRM_CustomerService();
+        CRM_ContactService ccons = new CRM_ContactService();
         /// <summary>
         /// 返回拜访管理的字段
         /// </summary>
@@ -77,16 +78,28 @@ namespace LHT.CRM.DALUnitTestProject
                          on visit.CusId equals customer.Id
                          join user in sus.GetAll()
                          on visit.VSuperiorId equals user.Id
+                         join contact in ccons.GetAll()
+                         on visit.ConId equals contact.Id
                          select new
                          {
                              CusCode = customer.CusCode,
                              CusName = customer.CusName,
-                             UserName = user.UserName
+                             UserName = user.UserName,
+                             ContactName=contact.Name,
+                             VTitle=visit.VTitle,
+                             VContent=visit.VContent,
+                             VType=visit.VType,
+                             VPlanDate=visit.VPlanDate,
+                             VCompleteDate=visit.VCompleteDate,
+                             VSuperiorDate=visit.VSuperiorDate,
+                             VSuperiorSuggestion=visit.VSuperiorSuggestion,
+                             VStatus=visit.VStatus
+
                          };
             Assert.IsNotNull(query3);
             foreach (var item in query3)
             {
-                Console.WriteLine(item.CusCode+"-"+item.CusName+"-"+item.UserName);
+                Console.WriteLine(item.CusCode+"-"+item.CusName+"-"+item.UserName+" "+item.VContent);
             }
         }
     }
