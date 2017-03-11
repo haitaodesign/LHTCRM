@@ -21,7 +21,7 @@ namespace LHT.CRM.Model
         public Nullable<System.DateTime> MDate { get; set; }
         public string Name { get; set; }
         public string Category { get; set; }
-        public Nullable<bool> Unit { get; set; }
+        public string Unit { get; set; }
         public Nullable<int> Quantity { get; set; }
         public string Introduction { get; set; }
     }

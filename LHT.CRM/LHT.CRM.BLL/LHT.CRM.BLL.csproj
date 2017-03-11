@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CRM\CRM_ContactLogic.cs" />
     <Compile Include="CRM\CRM_CustomerLogic.cs" />
+    <Compile Include="CRM\CRM_ProductLogic.cs" />
     <Compile Include="CRM\CRM_TargetLogic.cs" />
     <Compile Include="CRM\CRM_VisitLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

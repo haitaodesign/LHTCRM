@@ -57,7 +57,7 @@
           <Property Name="MDate" Type="datetime" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Category" Type="nvarchar" MaxLength="50" />
-          <Property Name="Unit" Type="bit" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="10" />
           <Property Name="Quantity" Type="int" />
           <Property Name="Introduction" Type="nvarchar" MaxLength="400" />
         </EntityType>
@@ -215,8 +215,8 @@
           <EntitySet Name="CRM_Customer" EntityType="LHTCRMModel.CRM_Customer" />
           <EntitySet Name="CRM_Contact" EntityType="LHTCRMModel.CRM_Contact" />
           <EntitySet Name="CRM_Visit" EntityType="LHTCRMModel.CRM_Visit" />
-          <EntitySet Name="CRM_Product" EntityType="LHTCRMModel.CRM_Product" />
           <EntitySet Name="CRM_Target" EntityType="LHTCRMModel.CRM_Target" />
+          <EntitySet Name="CRM_Product" EntityType="LHTCRMModel.CRM_Product" />
         </EntityContainer>
         <EntityType Name="SystemLogin">
           <Key>
@@ -360,21 +360,6 @@
           <Property Name="VSuperiorId" Type="Int32" />
           <Property Name="VStatus" Type="Boolean" />
         </EntityType>
-        <EntityType Name="CRM_Product">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CId" Type="Int32" />
-          <Property Name="CDate" Type="DateTime" Precision="3" />
-          <Property Name="MId" Type="Int32" />
-          <Property Name="MDate" Type="DateTime" Precision="3" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Unit" Type="Boolean" />
-          <Property Name="Quantity" Type="Int32" />
-          <Property Name="Introduction" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="CRM_Target">
           <Key>
             <PropertyRef Name="Id" />
@@ -390,6 +375,21 @@
           <Property Name="Target3" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="Target4" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CRM_Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CId" Type="Int32" />
+          <Property Name="CDate" Type="DateTime" Precision="3" />
+          <Property Name="MId" Type="Int32" />
+          <Property Name="MDate" Type="DateTime" Precision="3" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Unit" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="Introduction" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -517,22 +517,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="CRM_Product">
-            <EntityTypeMapping TypeName="LHTCRMModel.CRM_Product">
-              <MappingFragment StoreEntitySet="CRM_Product">
-                <ScalarProperty Name="Introduction" ColumnName="Introduction" />
-                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-                <ScalarProperty Name="Unit" ColumnName="Unit" />
-                <ScalarProperty Name="Category" ColumnName="Category" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="MDate" ColumnName="MDate" />
-                <ScalarProperty Name="MId" ColumnName="MId" />
-                <ScalarProperty Name="CDate" ColumnName="CDate" />
-                <ScalarProperty Name="CId" ColumnName="CId" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="CRM_Target">
             <EntityTypeMapping TypeName="LHTCRMModel.CRM_Target">
               <MappingFragment StoreEntitySet="CRM_Target">
@@ -542,6 +526,22 @@
                 <ScalarProperty Name="Target2" ColumnName="Target2" />
                 <ScalarProperty Name="Target1" ColumnName="Target1" />
                 <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="MDate" ColumnName="MDate" />
+                <ScalarProperty Name="MId" ColumnName="MId" />
+                <ScalarProperty Name="CDate" ColumnName="CDate" />
+                <ScalarProperty Name="CId" ColumnName="CId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CRM_Product">
+            <EntityTypeMapping TypeName="LHTCRMModel.CRM_Product">
+              <MappingFragment StoreEntitySet="CRM_Product">
+                <ScalarProperty Name="Introduction" ColumnName="Introduction" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="MDate" ColumnName="MDate" />
                 <ScalarProperty Name="MId" ColumnName="MId" />
                 <ScalarProperty Name="CDate" ColumnName="CDate" />
