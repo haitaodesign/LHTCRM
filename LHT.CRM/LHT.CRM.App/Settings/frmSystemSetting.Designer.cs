@@ -240,7 +240,6 @@
             this.dgvRoleSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRoleSetting.Size = new System.Drawing.Size(793, 519);
             this.dgvRoleSetting.TabIndex = 2;
-            this.dgvRoleSetting.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRoleSetting_CellContentClick);
             this.dgvRoleSetting.Click += new System.EventHandler(this.dgvRoleSetting_Click);
             // 
             // Id

@@ -177,7 +177,7 @@ namespace LHT.CRM.App.Settings
         private void btnResetPassword_Click(object sender, EventArgs e)
         {
             //将密码重置为123456
-            string resetpassword = MD5Encrypt.GetMD5Hash("123456");
+            string resetpassword = MD5Encrypt.GetMD5Hash("admin123456");
             sl.Id = Convert.ToInt32(dgvAccountSetting.CurrentRow.Cells[0].Value.ToString());
             sl.LoginName = dgvAccountSetting.CurrentRow.Cells[1].Value.ToString();
             sl.Password = resetpassword;
@@ -220,9 +220,6 @@ namespace LHT.CRM.App.Settings
 
         }
 
-        private void dgvRoleSetting_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
     }
 }
