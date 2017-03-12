@@ -36,6 +36,9 @@ namespace LHT.CRM.App.Settings
             DisplayUserList();
             DisplayLoginNameList();
         }
+
+
+
         #region 角色设置
 
         #region 事件
@@ -174,6 +177,8 @@ namespace LHT.CRM.App.Settings
 
         #endregion
 
+
+        #region "账号设置"
         private void btnResetPassword_Click(object sender, EventArgs e)
         {
             //将密码重置为123456
@@ -181,9 +186,9 @@ namespace LHT.CRM.App.Settings
             sl.Id = Convert.ToInt32(dgvAccountSetting.CurrentRow.Cells[0].Value.ToString());
             sl.LoginName = dgvAccountSetting.CurrentRow.Cells[1].Value.ToString();
             sl.Password = resetpassword;
-            sl.IsLock =Convert.ToInt32(dgvAccountSetting.CurrentRow.Cells[2].Value.ToString());
+            sl.IsLock = Convert.ToInt32(dgvAccountSetting.CurrentRow.Cells[2].Value.ToString());
 
-            if (sll.Update(sl)==1)
+            if (sll.Update(sl) == 1)
             {
                 MessageBox.Show("重置成功!", "提示", MessageBoxButtons.OK);
             }
@@ -198,7 +203,7 @@ namespace LHT.CRM.App.Settings
         {
             //判断当前账号是否启用，若启用，则提示是否禁用账户，如未启用，则提示是否启用
             //获取当前选择的数据
-            string loginname= dgvAccountSetting.CurrentRow.Cells[1].Value.ToString();
+            string loginname = dgvAccountSetting.CurrentRow.Cells[1].Value.ToString();
             sl = sll.GetLoginModel(loginname);
             if (sl.IsLock == 1)
             {
@@ -219,7 +224,9 @@ namespace LHT.CRM.App.Settings
 
 
         }
+        #endregion
 
-        
+
+
     }
 }
