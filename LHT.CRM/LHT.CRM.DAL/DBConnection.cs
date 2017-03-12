@@ -12,7 +12,7 @@ namespace LHT.CRM.DAL
         ///判断当前数据库能否正常连接
         /// </summary>
         /// <returns></returns>
-        public bool OpenDB()
+        public static bool OpenDB()
         {
             using (var context =new LHTCRMEntities())
             {

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LHT.CRM.DAL.ServiceRespository.SystemManagement;
 using LHT.CRM.Model;
+using LHT.CRM.DAL;
 
 
 namespace LHT.CRM.BLL.SystemManagement
@@ -102,6 +103,15 @@ namespace LHT.CRM.BLL.SystemManagement
         public SystemLogin GetLoginModel(string loginname)
         {
             return sls.GetModel(loginname);
+        }
+
+        /// <summary>
+        /// 登录之前先验证数据库是否能够连接，提示用户检查网络
+        /// </summary>
+        /// <returns></returns>
+        public bool IsConnection()
+        {
+            return DBConnection.OpenDB();
         }
 
     }

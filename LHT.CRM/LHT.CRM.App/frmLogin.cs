@@ -10,36 +10,37 @@ using System.Windows.Forms;
 using CCWin;
 using LHT.CRM.BLL.SystemManagement;
 using LHT.CRM.Common.Encrypt;
+using LHT.CRM.Model;
 
 namespace LHT.CRM.App
 {
     public partial class frmLogin : Skin_VS
     {
         SystemLoginLogic sll = new SystemLoginLogic();
+        SystemUserLogic sul = new SystemUserLogic();
         public frmLogin()
         {
             InitializeComponent();
         }
-        private void dmButtonCloseLight2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
-        private void dmButtonMinLight2_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-
-        }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            //检查网络连接是否正常
             
-
         }
 
+        #region "事件"
+        /// <summary>
+        /// 登录验证
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dmButton1_Click(object sender, EventArgs e)
         {
+            if (!IsConnection())
+            {
+                return;
+            }
             //验证
             //获取密码和账号值
             string loginname = tbLoginName.Text.Trim();
@@ -47,7 +48,7 @@ namespace LHT.CRM.App
             //首先判断账号是否为空
             if (loginname == string.Empty)
             {
-                MessageBox.Show("账号不能为空","提示",MessageBoxButtons.OK);
+                MessageBox.Show("账号不能为空", "提示", MessageBoxButtons.OK);
             }
             else
             {
@@ -70,6 +71,7 @@ namespace LHT.CRM.App
                         bool isMatch = sll.LoginNameAndPasswordIsMatch(loginname, MD5Encrypt.GetMD5Hash(password));
                         if (isMatch)
                         {
+                            GetUserInfo(loginname);
                             //显示主界面
                             frmMain main = new frmMain();
                             main.Show();
@@ -85,5 +87,51 @@ namespace LHT.CRM.App
                 }
             }
         }
+        private void dmButtonCloseLight2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dmButtonMinLight2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+        #endregion
+
+
+        #region "方法"
+        /// <summary>
+        /// 登录成功后获取用户信息，赋值到公共变量
+        /// </summary>
+        public void GetUserInfo(string loginname)
+        {
+            frmFuncLib.userId = sll.GetLoginModel(loginname).Id;
+            SystemUser su = sul.GetUserModel(frmFuncLib.userId);
+            frmFuncLib.userName = su.UserName;
+            frmFuncLib.roleId = (int)su.RoleId;
+            frmFuncLib.roleName = su.RoleName;
+        }
+
+
+
+        public bool IsConnection()
+        {
+            if (!sll.IsConnection())
+            {
+                MessageBox.Show("请检查网络是否正常或联系管理员数据库是否开启！", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        #endregion
+
+
+
+
+
     }
 }

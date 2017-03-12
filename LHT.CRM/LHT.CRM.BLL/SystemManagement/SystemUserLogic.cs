@@ -66,5 +66,16 @@ namespace LHT.CRM.BLL.SystemManagement
             return list.Find(u => u.UserName == username).Id;
         }
 
+
+        /// <summary>
+        /// 根据Id返回一个用户对象
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        public SystemUser GetUserModel(int Id)
+        {
+            list = sus.GetAll();
+            return list.Find(u => u.Id == Id);
+        }
     }
 }

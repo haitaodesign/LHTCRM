@@ -70,13 +70,9 @@ namespace LHT.CRM.App
         /// <param name="e"></param>
         private void tsmiSystemSettings_Click(object sender, EventArgs e)
         {
-            panel3.Controls.Clear();
             //向splitContainer1.Panel2添加系统设置窗体
             frmSystemSetting fss = new frmSystemSetting();
-            fss.TopLevel = false;
-            fss.Dock = DockStyle.Fill;
-            panel3.Controls.Add(fss);
-            fss.Show();
+            AddForm(fss, "系统设置");
         }
 
 
