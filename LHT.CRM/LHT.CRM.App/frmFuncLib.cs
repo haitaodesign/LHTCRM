@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace LHT.CRM.App
 {
@@ -11,14 +12,11 @@ namespace LHT.CRM.App
     {
         #region “定义系统全局字段”
         public static string userName;
-        public static int userId=8;
-        public static string roleName="主管";
+        public static int userId;
+        public static string roleName;
         #endregion
 
-        #region "用户界面公共方法"
-
-        //菜单栏调用对应窗体方法
-        #endregion
+        
 
         #region "登陆密码验证"
         /// <summary>

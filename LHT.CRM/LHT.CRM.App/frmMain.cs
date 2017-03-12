@@ -15,6 +15,7 @@ namespace LHT.CRM.App
         {
             InitializeComponent();
         }
+
         private void frmMain_Load(object sender, EventArgs e)
         {
             //首先加载个人桌面
@@ -22,7 +23,6 @@ namespace LHT.CRM.App
 
         }
         
-
 
 
         #region "主界面事件"
@@ -93,62 +93,34 @@ namespace LHT.CRM.App
 
             if (selectNavTxt == "客户")
             {
-                lblMenuTitle.Text = "客户管理";
-                panel3.Controls.Clear();
-                //向splitContainer1.Panel2添加系统设置窗体
-                frmCustomer fss = new frmCustomer();
-                fss.TopLevel = false;
-                fss.Dock = DockStyle.Fill;
-                panel3.Controls.Add(fss);
-                fss.Show();
+                frmCustomer fc = new frmCustomer();
+                AddForm(fc, "客户管理");
             }
             else if (selectNavTxt == "联系人")
             {
-                lblMenuTitle.Text = "联系人管理";
-                panel3.Controls.Clear();
-                //向splitContainer1.Panel2添加系统设置窗体
-                frmContact fss = new frmContact();
-                fss.TopLevel = false;
-                fss.Dock = DockStyle.Fill;
-                panel3.Controls.Add(fss);
-                fss.Show();
+                frmContact fcc= new frmContact();
+                AddForm(fcc, "联系人管理");
             }
             else if (selectNavTxt == "拜访")
             {
-                lblMenuTitle.Text = "拜访管理";
-                panel3.Controls.Clear();
-                //向splitContainer1.Panel2添加系统设置窗体
-                frmVisit fss = new frmVisit();
-                fss.TopLevel = false;
-                fss.Dock = DockStyle.Fill;
-                panel3.Controls.Add(fss);
-                fss.Show();
+                frmVisit fv = new frmVisit();
+                AddForm(fv, "拜访管理");
             }
             else if (selectNavTxt == "销售")
             {
-                lblMenuTitle.Text = "销售管理";
-                panel3.Controls.Clear();
-                //向splitContainer1.Panel2添加系统设置窗体
-                frmTarget fss = new frmTarget();
-                fss.TopLevel = false;
-                fss.Dock = DockStyle.Fill;
-                panel3.Controls.Add(fss);
-                fss.Show();
+                frmTarget ft = new frmTarget();
+                AddForm(ft, "销售管理");
             }
             else if (selectNavTxt == "产品")
             {
-                lblMenuTitle.Text = "产品管理";
-                panel3.Controls.Clear();
-                //向splitContainer1.Panel2添加系统设置窗体
-                frmProduct fss = new frmProduct();
-                fss.TopLevel = false;
-                fss.Dock = DockStyle.Fill;
-                panel3.Controls.Add(fss);
-                fss.Show();
+                frmProduct fp = new frmProduct();
+                AddForm(fp, "产品管理");
             }
             else if (selectNavTxt == "个人桌面")
             {
                 lblMenuTitle.Text = "个人桌面";
+                panel3.Controls.Clear();
+                //个人桌面待定
             }
 
 
@@ -157,7 +129,18 @@ namespace LHT.CRM.App
         #endregion
 
 
-
+        #region "方法"
+        public void AddForm(Form frm,string title)
+        {
+            lblMenuTitle.Text = title;
+            panel3.Controls.Clear();
+            //向splitContainer1.Panel2添加系统设置窗体
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            panel3.Controls.Add(frm);
+            frm.Show();
+        }
+        #endregion
 
     }
 }

@@ -42,6 +42,7 @@
             this.lbNav = new CCWin.SkinControl.SkinListBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblMenuTitle = new DMSkin.Metro.Controls.MetroLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cmSettings = new DMSkin.Metro.Controls.MetroContextMenu(this.components);
             this.上次登录信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +52,6 @@
             this.tsmiSystemSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.退出登录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tpSettings = new DMSkin.Metro.Components.MetroToolTip();
-            this.lblMenuTitle = new DMSkin.Metro.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -267,6 +267,20 @@
             this.panel1.Size = new System.Drawing.Size(795, 72);
             this.panel1.TabIndex = 0;
             // 
+            // lblMenuTitle
+            // 
+            this.lblMenuTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblMenuTitle.Location = new System.Drawing.Point(4, 3);
+            this.lblMenuTitle.Margin = new System.Windows.Forms.Padding(3);
+            this.lblMenuTitle.MaximumSize = new System.Drawing.Size(200, 200);
+            this.lblMenuTitle.MinimumSize = new System.Drawing.Size(200, 50);
+            this.lblMenuTitle.Name = "lblMenuTitle";
+            this.lblMenuTitle.Size = new System.Drawing.Size(200, 66);
+            this.lblMenuTitle.TabIndex = 0;
+            this.lblMenuTitle.Text = "个人桌面";
+            this.lblMenuTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -287,44 +301,44 @@
             this.tsmiSystemSettings,
             this.退出登录ToolStripMenuItem});
             this.cmSettings.Name = "cmSettings";
-            this.cmSettings.Size = new System.Drawing.Size(169, 148);
+            this.cmSettings.Size = new System.Drawing.Size(175, 160);
             this.cmSettings.Text = "设置菜单";
             // 
             // 上次登录信息ToolStripMenuItem
             // 
             this.上次登录信息ToolStripMenuItem.Name = "上次登录信息ToolStripMenuItem";
-            this.上次登录信息ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
+            this.上次登录信息ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.上次登录信息ToolStripMenuItem.Text = "上次登录信息";
             // 
             // lOGO设置ToolStripMenuItem
             // 
             this.lOGO设置ToolStripMenuItem.Name = "lOGO设置ToolStripMenuItem";
-            this.lOGO设置ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
+            this.lOGO设置ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.lOGO设置ToolStripMenuItem.Text = "LOGO设置";
             // 
             // 外观设置ToolStripMenuItem
             // 
             this.外观设置ToolStripMenuItem.Name = "外观设置ToolStripMenuItem";
-            this.外观设置ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
+            this.外观设置ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.外观设置ToolStripMenuItem.Text = "外观设置";
             // 
             // 个人设置ToolStripMenuItem
             // 
             this.个人设置ToolStripMenuItem.Name = "个人设置ToolStripMenuItem";
-            this.个人设置ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
+            this.个人设置ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.个人设置ToolStripMenuItem.Text = "个人设置";
             // 
             // tsmiSystemSettings
             // 
             this.tsmiSystemSettings.Name = "tsmiSystemSettings";
-            this.tsmiSystemSettings.Size = new System.Drawing.Size(168, 24);
+            this.tsmiSystemSettings.Size = new System.Drawing.Size(174, 26);
             this.tsmiSystemSettings.Text = "系统设置";
             this.tsmiSystemSettings.Click += new System.EventHandler(this.tsmiSystemSettings_Click);
             // 
             // 退出登录ToolStripMenuItem
             // 
             this.退出登录ToolStripMenuItem.Name = "退出登录ToolStripMenuItem";
-            this.退出登录ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
+            this.退出登录ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.退出登录ToolStripMenuItem.Text = "退出登录";
             // 
             // tpSettings
@@ -332,20 +346,6 @@
             this.tpSettings.Style = DMSkin.Metro.MetroColorStyle.Default;
             this.tpSettings.StyleManager = null;
             this.tpSettings.Theme = DMSkin.Metro.MetroThemeStyle.Default;
-            // 
-            // lblMenuTitle
-            // 
-            this.lblMenuTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblMenuTitle.Location = new System.Drawing.Point(4, 3);
-            this.lblMenuTitle.Margin = new System.Windows.Forms.Padding(3);
-            this.lblMenuTitle.MaximumSize = new System.Drawing.Size(200, 200);
-            this.lblMenuTitle.MinimumSize = new System.Drawing.Size(200, 50);
-            this.lblMenuTitle.Name = "lblMenuTitle";
-            this.lblMenuTitle.Size = new System.Drawing.Size(200, 66);
-            this.lblMenuTitle.TabIndex = 0;
-            this.lblMenuTitle.Text = "个人桌面";
-            this.lblMenuTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmMain
             // 
