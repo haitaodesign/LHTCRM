@@ -19,6 +19,7 @@ namespace LHT.CRM.App
         {
             //首先加载个人桌面
 
+
         }
         
 
@@ -79,13 +80,11 @@ namespace LHT.CRM.App
         }
 
 
-        #endregion
-
-        private void lbNav_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+        /// <summary>
+        /// 导航菜单
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbNav_MouseClick(object sender, MouseEventArgs e)
         {
             //获取当前点击的获得的值
@@ -94,6 +93,7 @@ namespace LHT.CRM.App
 
             if (selectNavTxt == "客户")
             {
+                lblMenuTitle.Text = "客户管理";
                 panel3.Controls.Clear();
                 //向splitContainer1.Panel2添加系统设置窗体
                 frmCustomer fss = new frmCustomer();
@@ -101,8 +101,10 @@ namespace LHT.CRM.App
                 fss.Dock = DockStyle.Fill;
                 panel3.Controls.Add(fss);
                 fss.Show();
-            }else if (selectNavTxt == "联系人")
+            }
+            else if (selectNavTxt == "联系人")
             {
+                lblMenuTitle.Text = "联系人管理";
                 panel3.Controls.Clear();
                 //向splitContainer1.Panel2添加系统设置窗体
                 frmContact fss = new frmContact();
@@ -113,6 +115,7 @@ namespace LHT.CRM.App
             }
             else if (selectNavTxt == "拜访")
             {
+                lblMenuTitle.Text = "拜访管理";
                 panel3.Controls.Clear();
                 //向splitContainer1.Panel2添加系统设置窗体
                 frmVisit fss = new frmVisit();
@@ -123,6 +126,7 @@ namespace LHT.CRM.App
             }
             else if (selectNavTxt == "销售")
             {
+                lblMenuTitle.Text = "销售管理";
                 panel3.Controls.Clear();
                 //向splitContainer1.Panel2添加系统设置窗体
                 frmTarget fss = new frmTarget();
@@ -133,6 +137,7 @@ namespace LHT.CRM.App
             }
             else if (selectNavTxt == "产品")
             {
+                lblMenuTitle.Text = "产品管理";
                 panel3.Controls.Clear();
                 //向splitContainer1.Panel2添加系统设置窗体
                 frmProduct fss = new frmProduct();
@@ -141,8 +146,18 @@ namespace LHT.CRM.App
                 panel3.Controls.Add(fss);
                 fss.Show();
             }
+            else if (selectNavTxt == "个人桌面")
+            {
+                lblMenuTitle.Text = "个人桌面";
+            }
 
-            
+
         }
+
+        #endregion
+
+
+
+
     }
 }
