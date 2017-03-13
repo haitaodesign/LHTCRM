@@ -179,6 +179,7 @@ namespace LHT.CRM.App.CRM
         }
 
 
+
         //查询返回有业务员名称的列表填充客户列表
         //客户表和用户表联查
 
@@ -192,6 +193,28 @@ namespace LHT.CRM.App.CRM
 
         #endregion
 
-        
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int currselectedid= Convert.ToInt32(this.dgvCusInfo.CurrentRow.Cells[0].Value.ToString());
+            int result=ccl.DeleteCustomer(currselectedid);
+            if (result == 1)
+            {
+                MessageBox.Show("删除成功！","提示",MessageBoxButtons.OK);
+                //刷新页面
+                if (btnShowAll.Text == "显示全部")
+                {
+                    ShowAllCusInfo();
+                }
+                else if (btnShowAll.Text == "显示本人")
+                {
+                    LoadCusInfo();
+                }
+            }
+            else
+            {
+                MessageBox.Show("删除失败！", "提示", MessageBoxButtons.OK);
+            }
+
+        }
     }
 }

@@ -71,7 +71,24 @@ namespace LHT.CRM.BLL.CRM
             }
         }
 
-
+        /// <summary>
+        /// 删除一条客户信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public int DeleteCustomer(int id)
+        {
+            ccs.Delete(id);
+            int result = ccs.SaveChanges();
+            if (result > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
 
 
     }
