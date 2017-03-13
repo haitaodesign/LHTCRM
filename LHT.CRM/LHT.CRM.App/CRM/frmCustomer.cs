@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LHT.CRM.BLL.CRM;
+using LHT.CRM.BLL.SystemManagement;
+using LHT.CRM.Model;
 
 
 
@@ -16,7 +18,10 @@ namespace LHT.CRM.App.CRM
     public partial class frmCustomer : Form
     {
         CRM_CustomerLogic ccl = new CRM_CustomerLogic();
+        SystemUserLogic sul = new SystemUserLogic();
         int saleid = frmFuncLib.userId;
+
+        CRM_Customer cc = new CRM_Customer();
 
         public frmCustomer()
         {
@@ -37,9 +42,6 @@ namespace LHT.CRM.App.CRM
             //获取所有的客户信息
             //根据SaleId返回客户信息，SaleId==UserId
             LoadCusInfo();
-
-
-
         }
 
 
@@ -48,6 +50,13 @@ namespace LHT.CRM.App.CRM
 
 
         #region “事件”
+
+
+        /// <summary>
+        /// 主管切换客户列表显示
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnShowAll_Click(object sender, EventArgs e)
         {
             if (btnShowAll.Text == "显示全部")
@@ -61,8 +70,37 @@ namespace LHT.CRM.App.CRM
                 btnShowAll.Text = "显示全部";
             }
         }
-        #endregion
 
+
+        /// <summary>
+        /// 新建客户窗体
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            frmCreateCustomer fcc = new frmCreateCustomer();
+            fcc.Show();
+        }
+
+
+
+
+        #endregion
+        /// <summary>
+        /// 修改客户信息
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            //获取选中的客户信息，新建修改信息窗体，填充修改数据，点击确认修改数据
+            //GetCRM_CustomerModel();
+            frmCreateCustomer fcc = new frmCreateCustomer();
+            fcc.Owner = this;
+            fcc.Text = "修改客户信息";
+            fcc.ShowDialog();
+        }
 
         #region "方法"
         /// <summary>
@@ -86,7 +124,26 @@ namespace LHT.CRM.App.CRM
         /// </summary>
         public void LoadCusInfo()
         {
-            dgvCusInfo.DataSource = ccl.GetAll(saleid);
+            var showCusList = from customer in ccl.GetAll(saleid)
+                              join user in sul.GetAllUsers()
+                              on customer.SaleId equals user.Id
+                              select new
+                              {
+                                  Id=customer.Id,
+                                  CusCode=customer.CusCode,
+                                  CusName=customer.CusName,
+                                  Province=customer.Province,
+                                  City=customer.City,
+                                  BussinessType = customer.BussinessType,
+                                  Scale=customer.Scale,
+                                  CusType=customer.CusType,
+                                  PhoneNum=customer.PhoneNum,
+                                  HomePage=customer.HomePage,
+                                  Address=customer.Address,
+                                  UserName=user.UserName,
+                                  SaleId=customer.SaleId
+                              };
+            dgvCusInfo.DataSource = showCusList.ToList();
         }
 
         /// <summary>
@@ -100,6 +157,34 @@ namespace LHT.CRM.App.CRM
             }
         }
 
+        /// <summary>
+        /// 返回一个客户对象实体，供修改页面使用
+        /// </summary>
+        /// <returns></returns>
+        public CRM_Customer GetCRM_CustomerModel()
+        {
+            cc.Id = Convert.ToInt32(this.dgvCusInfo.CurrentRow.Cells[0].Value.ToString());
+            cc.CusCode = this.dgvCusInfo.CurrentRow.Cells[1].Value.ToString();
+            cc.CusName = this.dgvCusInfo.CurrentRow.Cells[2].Value.ToString();
+            cc.Province = this.dgvCusInfo.CurrentRow.Cells[3].Value.ToString();
+            cc.City = this.dgvCusInfo.CurrentRow.Cells[4].Value.ToString();
+            cc.BussinessType = this.dgvCusInfo.CurrentRow.Cells[5].Value.ToString();
+            cc.Scale = this.dgvCusInfo.CurrentRow.Cells[6].Value.ToString();
+            cc.CusType = this.dgvCusInfo.CurrentRow.Cells[7].Value.ToString();
+            cc.PhoneNum = this.dgvCusInfo.CurrentRow.Cells[8].Value.ToString();
+            cc.HomePage = this.dgvCusInfo.CurrentRow.Cells[9].Value.ToString();
+            cc.Address = this.dgvCusInfo.CurrentRow.Cells[10].Value.ToString();
+            cc.SaleId = sul.GetSaleId(this.dgvCusInfo.CurrentRow.Cells[11].Value.ToString());
+            return cc;
+        }
+
+
+        //查询返回有业务员名称的列表填充客户列表
+        //客户表和用户表联查
+
+
+
+
 
 
 
@@ -107,10 +192,6 @@ namespace LHT.CRM.App.CRM
 
         #endregion
 
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-            frmCreateCustomer fcc = new frmCreateCustomer();
-            fcc.Show();
-        }
+        
     }
 }

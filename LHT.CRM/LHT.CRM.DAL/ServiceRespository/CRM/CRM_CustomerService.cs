@@ -43,7 +43,7 @@ namespace LHT.CRM.DAL.ServiceRespository.CRM
 
         public void Update(CRM_Customer customer)
         {
-            var updatecustomer = _dbContext.CRM_Customer.Find(customer.CusCode);
+            var updatecustomer = _dbContext.CRM_Customer.Find(customer.Id);
             if (updatecustomer != null)
             {
                 updatecustomer.MId = customer.MId;

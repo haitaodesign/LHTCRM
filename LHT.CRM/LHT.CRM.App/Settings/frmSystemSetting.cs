@@ -224,9 +224,13 @@ namespace LHT.CRM.App.Settings
 
 
         }
+
+
         #endregion
 
+        private void btnupdateuser_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

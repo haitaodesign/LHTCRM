@@ -39,6 +39,7 @@
             this.btnUpdate = new DMSkin.Controls.DMButton();
             this.btnCreate = new DMSkin.Controls.DMButton();
             this.dgvCusInfo = new DMSkin.Metro.Controls.MetroGrid();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoleDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +51,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCusInfo)).BeginInit();
@@ -72,7 +74,7 @@
             this.metroTabPage1.Controls.Add(this.btnShowAll);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 4;
+            this.metroTabPage1.HorizontalScrollbarSize = 2;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 39);
             this.metroTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.metroTabPage1.Name = "metroTabPage1";
@@ -156,6 +158,7 @@
             this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "修改";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnCreate
             // 
@@ -198,6 +201,7 @@
             this.dgvCusInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCusInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCusInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column9,
             this.Id,
             this.RoleName,
             this.RoleDescription,
@@ -208,7 +212,8 @@
             this.Column4,
             this.Column5,
             this.Column7,
-            this.Column8});
+            this.Column8,
+            this.Column10});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -238,6 +243,14 @@
             this.dgvCusInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCusInfo.Size = new System.Drawing.Size(795, 519);
             this.dgvCusInfo.TabIndex = 7;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "Id";
+            this.Column9.HeaderText = "序号";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Visible = false;
             // 
             // Id
             // 
@@ -316,6 +329,14 @@
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "SaleId";
+            this.Column10.HeaderText = "SaleId";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Visible = false;
+            // 
             // frmCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -351,6 +372,7 @@
         private DMSkin.Controls.DMButton btnUpdate;
         private DMSkin.Controls.DMButton btnCreate;
         private DMSkin.Metro.Controls.MetroGrid dgvCusInfo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoleName;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoleDescription;
@@ -362,5 +384,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
     }
 }

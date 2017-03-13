@@ -68,7 +68,7 @@
             this.metrotabcontrol.Dock = System.Windows.Forms.DockStyle.Top;
             this.metrotabcontrol.Location = new System.Drawing.Point(8, 39);
             this.metrotabcontrol.Name = "metrotabcontrol";
-            this.metrotabcontrol.SelectedIndex = 1;
+            this.metrotabcontrol.SelectedIndex = 0;
             this.metrotabcontrol.Size = new System.Drawing.Size(662, 468);
             this.metrotabcontrol.TabIndex = 0;
             // 
@@ -102,7 +102,8 @@
             this.cbUserName.ItemHeight = 24;
             this.cbUserName.Items.AddRange(new object[] {
             "李四",
-            "张三"});
+            "张三",
+            "彰武"});
             this.cbUserName.Location = new System.Drawing.Point(217, 307);
             this.cbUserName.Name = "cbUserName";
             this.cbUserName.Size = new System.Drawing.Size(260, 30);

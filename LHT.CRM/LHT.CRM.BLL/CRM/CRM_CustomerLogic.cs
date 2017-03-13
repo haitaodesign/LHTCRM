@@ -21,6 +21,8 @@ namespace LHT.CRM.BLL.CRM
             return ccs.GetAll();
         }
 
+
+
         /// <summary>
         /// 根据业务员id返回客户信息
         /// </summary>
@@ -49,6 +51,27 @@ namespace LHT.CRM.BLL.CRM
                 return 0;
             }
         }
+
+        /// <summary>
+        /// 修改客户信息
+        /// </summary>
+        /// <param name="custoemr"></param>
+        /// <returns></returns>
+        public int UpdateCustomer(CRM_Customer custoemr)
+        {
+            ccs.Update(custoemr);
+            int result = ccs.SaveChanges();
+            if (result > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+
 
 
     }
