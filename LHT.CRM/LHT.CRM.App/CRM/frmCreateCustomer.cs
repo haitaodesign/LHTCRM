@@ -176,9 +176,11 @@ namespace LHT.CRM.App.CRM
                     MessageBox.Show("修改失败！");
                 }
             }
+        }
 
-
-           
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
