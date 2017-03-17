@@ -74,7 +74,7 @@
             this.tpContactInfo.Controls.Add(this.dgvContactInfo);
             this.tpContactInfo.HorizontalScrollbarBarColor = true;
             this.tpContactInfo.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.tpContactInfo.HorizontalScrollbarSize = 10;
+            this.tpContactInfo.HorizontalScrollbarSize = 8;
             this.tpContactInfo.Location = new System.Drawing.Point(4, 39);
             this.tpContactInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpContactInfo.Name = "tpContactInfo";
@@ -83,7 +83,7 @@
             this.tpContactInfo.Text = "联系人";
             this.tpContactInfo.VerticalScrollbarBarColor = true;
             this.tpContactInfo.VerticalScrollbarDM_HighlightOnWheel = false;
-            this.tpContactInfo.VerticalScrollbarSize = 10;
+            this.tpContactInfo.VerticalScrollbarSize = 9;
             // 
             // btnExport
             // 
@@ -156,6 +156,7 @@
             this.btnCreate.TabIndex = 17;
             this.btnCreate.Text = "添加";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // dgvContactInfo
             // 
