@@ -29,7 +29,7 @@ namespace LHT.CRM.App.CRM
         #region "事件"
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            if (this.Text == "添加联系人信息")
+            if (this.Text == "添加联系人信")
             {
                 AddContact();
             }
@@ -47,12 +47,13 @@ namespace LHT.CRM.App.CRM
 
         private void frmCreateContact_Load(object sender, EventArgs e)
         {
-            frmContact fc;
-            fc = (frmContact)this.Owner;
+            
             //加载时，默认显示第一个tab
             metroTabControl1.TabPages[0].Select();
             if (this.Text == "修改联系人信息")
             {
+                frmContact fc;
+                fc = (frmContact)this.Owner;
                 cct = fc.GetCRM_ContactModel();
                 //加载到修改表单
                 LoadUpdateContact();
@@ -128,7 +129,6 @@ namespace LHT.CRM.App.CRM
             {
                 ccl.Add(GetCRM_ContactModel());
                 MessageBox.Show("添加成功！");
-                RefreshContactList();
                 this.Close();
             }
             else
@@ -146,7 +146,6 @@ namespace LHT.CRM.App.CRM
             {
                 ccl.Update(GetCRM_ContactModel());
                 MessageBox.Show("修改成功！");
-                RefreshContactList();
                 this.Close();
             }
             else

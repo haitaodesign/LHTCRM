@@ -25,6 +25,7 @@ namespace LHT.CRM.App.CRM
         private void frmContact_Load(object sender, EventArgs e)
         {
             this.dgvContactInfo.AutoGenerateColumns = false;
+            this.dgvContactInfo.ForeColor = Color.Black;
             LoadContactList();
         }
 
@@ -105,6 +106,13 @@ namespace LHT.CRM.App.CRM
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(this.dgvContactInfo.CurrentRow.Cells[0].Value);
+            if (id > 0)
+            {
+                ccl.Delete(id);
+                MessageBox.Show("删除成功！");
+            }
+
         }
     }
 }

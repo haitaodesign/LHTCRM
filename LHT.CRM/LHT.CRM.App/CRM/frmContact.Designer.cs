@@ -75,7 +75,7 @@
             this.tpContactInfo.Controls.Add(this.dgvContactInfo);
             this.tpContactInfo.HorizontalScrollbarBarColor = true;
             this.tpContactInfo.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.tpContactInfo.HorizontalScrollbarSize = 4;
+            this.tpContactInfo.HorizontalScrollbarSize = 3;
             this.tpContactInfo.Location = new System.Drawing.Point(4, 39);
             this.tpContactInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpContactInfo.Name = "tpContactInfo";
@@ -84,7 +84,7 @@
             this.tpContactInfo.Text = "联系人";
             this.tpContactInfo.VerticalScrollbarBarColor = true;
             this.tpContactInfo.VerticalScrollbarDM_HighlightOnWheel = false;
-            this.tpContactInfo.VerticalScrollbarSize = 7;
+            this.tpContactInfo.VerticalScrollbarSize = 6;
             // 
             // btnExport
             // 
@@ -200,11 +200,13 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvContactInfo.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvContactInfo.DM_UseCustomForeColor = true;
+            this.dgvContactInfo.DM_UseStyleColors = true;
             this.dgvContactInfo.EnableHeadersVisualStyles = false;
             this.dgvContactInfo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvContactInfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -222,7 +224,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvContactInfo.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvContactInfo.RowHeadersVisible = false;
-            this.dgvContactInfo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvContactInfo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgvContactInfo.RowTemplate.Height = 27;
             this.dgvContactInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvContactInfo.Size = new System.Drawing.Size(786, 524);
