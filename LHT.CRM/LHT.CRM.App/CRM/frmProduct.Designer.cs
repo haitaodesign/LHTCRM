@@ -69,7 +69,7 @@
             this.tpProductInfo.Controls.Add(this.btnCreate);
             this.tpProductInfo.HorizontalScrollbarBarColor = true;
             this.tpProductInfo.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.tpProductInfo.HorizontalScrollbarSize = 8;
+            this.tpProductInfo.HorizontalScrollbarSize = 6;
             this.tpProductInfo.Location = new System.Drawing.Point(4, 39);
             this.tpProductInfo.Name = "tpProductInfo";
             this.tpProductInfo.Size = new System.Drawing.Size(769, 546);
@@ -118,7 +118,7 @@
             this.dgvProductInfo.EnableHeadersVisualStyles = false;
             this.dgvProductInfo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvProductInfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvProductInfo.Location = new System.Drawing.Point(0, 12);
+            this.dgvProductInfo.Location = new System.Drawing.Point(0, 63);
             this.dgvProductInfo.Name = "dgvProductInfo";
             this.dgvProductInfo.ReadOnly = true;
             this.dgvProductInfo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -134,7 +134,7 @@
             this.dgvProductInfo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvProductInfo.RowTemplate.Height = 27;
             this.dgvProductInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductInfo.Size = new System.Drawing.Size(769, 534);
+            this.dgvProductInfo.Size = new System.Drawing.Size(769, 483);
             this.dgvProductInfo.TabIndex = 29;
             // 
             // Column1

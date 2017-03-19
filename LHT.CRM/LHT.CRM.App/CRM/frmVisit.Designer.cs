@@ -34,10 +34,6 @@
             this.metroTabControl1 = new DMSkin.Metro.Controls.MetroTabControl();
             this.metroTabPage1 = new DMSkin.Metro.Controls.MetroTabPage();
             this.dgvVisitInfo = new DMSkin.Metro.Controls.MetroGrid();
-            this.btnExport = new DMSkin.Controls.DMButton();
-            this.btnDelete = new DMSkin.Controls.DMButton();
-            this.btnUpdate = new DMSkin.Controls.DMButton();
-            this.btnCreate = new DMSkin.Controls.DMButton();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +46,10 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExport = new DMSkin.Controls.DMButton();
+            this.btnDelete = new DMSkin.Controls.DMButton();
+            this.btnUpdate = new DMSkin.Controls.DMButton();
+            this.btnCreate = new DMSkin.Controls.DMButton();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisitInfo)).BeginInit();
@@ -75,7 +75,7 @@
             this.metroTabPage1.Controls.Add(this.btnCreate);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 8;
+            this.metroTabPage1.HorizontalScrollbarSize = 6;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 39);
             this.metroTabPage1.Name = "metroTabPage1";
             this.metroTabPage1.Size = new System.Drawing.Size(787, 593);
@@ -148,78 +148,6 @@
             this.dgvVisitInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVisitInfo.Size = new System.Drawing.Size(791, 528);
             this.dgvVisitInfo.TabIndex = 25;
-            // 
-            // btnExport
-            // 
-            this.btnExport.BackColor = System.Drawing.Color.Transparent;
-            this.btnExport.DM_DisabledColor = System.Drawing.Color.Empty;
-            this.btnExport.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnExport.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
-            this.btnExport.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
-            this.btnExport.DM_Radius = 5;
-            this.btnExport.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnExport.ForeColor = System.Drawing.Color.White;
-            this.btnExport.Image = null;
-            this.btnExport.Location = new System.Drawing.Point(470, 14);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(125, 45);
-            this.btnExport.TabIndex = 24;
-            this.btnExport.Text = "导出";
-            this.btnExport.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.DM_DisabledColor = System.Drawing.Color.Empty;
-            this.btnDelete.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnDelete.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
-            this.btnDelete.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
-            this.btnDelete.DM_Radius = 5;
-            this.btnDelete.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Image = null;
-            this.btnDelete.Location = new System.Drawing.Point(315, 14);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(125, 45);
-            this.btnDelete.TabIndex = 23;
-            this.btnDelete.Text = "删除";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.btnUpdate.DM_DisabledColor = System.Drawing.Color.Empty;
-            this.btnUpdate.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnUpdate.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
-            this.btnUpdate.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
-            this.btnUpdate.DM_Radius = 5;
-            this.btnUpdate.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Image = null;
-            this.btnUpdate.Location = new System.Drawing.Point(160, 14);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(125, 45);
-            this.btnUpdate.TabIndex = 22;
-            this.btnUpdate.Text = "修改";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.BackColor = System.Drawing.Color.Transparent;
-            this.btnCreate.DM_DisabledColor = System.Drawing.Color.Empty;
-            this.btnCreate.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnCreate.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
-            this.btnCreate.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
-            this.btnCreate.DM_Radius = 5;
-            this.btnCreate.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Image = null;
-            this.btnCreate.Location = new System.Drawing.Point(5, 14);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(125, 45);
-            this.btnCreate.TabIndex = 21;
-            this.btnCreate.Text = "添加";
-            this.btnCreate.UseVisualStyleBackColor = false;
             // 
             // Column1
             // 
@@ -305,6 +233,78 @@
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
             // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.Transparent;
+            this.btnExport.DM_DisabledColor = System.Drawing.Color.Empty;
+            this.btnExport.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnExport.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
+            this.btnExport.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
+            this.btnExport.DM_Radius = 5;
+            this.btnExport.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnExport.ForeColor = System.Drawing.Color.White;
+            this.btnExport.Image = null;
+            this.btnExport.Location = new System.Drawing.Point(470, 14);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(125, 45);
+            this.btnExport.TabIndex = 24;
+            this.btnExport.Text = "导出";
+            this.btnExport.UseVisualStyleBackColor = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.DM_DisabledColor = System.Drawing.Color.Empty;
+            this.btnDelete.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnDelete.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
+            this.btnDelete.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
+            this.btnDelete.DM_Radius = 5;
+            this.btnDelete.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = null;
+            this.btnDelete.Location = new System.Drawing.Point(315, 14);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(125, 45);
+            this.btnDelete.TabIndex = 23;
+            this.btnDelete.Text = "删除";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpdate.DM_DisabledColor = System.Drawing.Color.Empty;
+            this.btnUpdate.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnUpdate.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
+            this.btnUpdate.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
+            this.btnUpdate.DM_Radius = 5;
+            this.btnUpdate.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Image = null;
+            this.btnUpdate.Location = new System.Drawing.Point(160, 14);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(125, 45);
+            this.btnUpdate.TabIndex = 22;
+            this.btnUpdate.Text = "修改";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.BackColor = System.Drawing.Color.Transparent;
+            this.btnCreate.DM_DisabledColor = System.Drawing.Color.Empty;
+            this.btnCreate.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnCreate.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
+            this.btnCreate.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
+            this.btnCreate.DM_Radius = 5;
+            this.btnCreate.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCreate.ForeColor = System.Drawing.Color.White;
+            this.btnCreate.Image = null;
+            this.btnCreate.Location = new System.Drawing.Point(5, 14);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(125, 45);
+            this.btnCreate.TabIndex = 21;
+            this.btnCreate.Text = "添加";
+            this.btnCreate.UseVisualStyleBackColor = false;
+            // 
             // frmVisit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -316,7 +316,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmVisit";
-            this.Text = "frmVisit";
             this.Load += new System.EventHandler(this.frmVisit_Load);
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
