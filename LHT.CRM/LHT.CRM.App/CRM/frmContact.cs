@@ -43,7 +43,8 @@ namespace LHT.CRM.App.CRM
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-
+            frmCreateContact fcc = new frmCreateContact();
+            fcc.ShowDialog();
         }
     }
 }

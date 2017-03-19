@@ -431,6 +431,8 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.metrotabcontrol);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCreateCustomer";
             this.ShowBorder = false;
             this.ShowDrawIcon = false;

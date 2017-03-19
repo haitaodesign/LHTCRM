@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CCWin;
 
 namespace LHT.CRM.App.CRM
 {
-    public partial class frmCreateContact : Form
+    public partial class frmCreateContact : Skin_VS
     {
         public frmCreateContact()
         {
