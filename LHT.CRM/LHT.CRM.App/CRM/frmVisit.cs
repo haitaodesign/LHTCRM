@@ -60,12 +60,17 @@ namespace LHT.CRM.App.CRM
                                 };
             this.dgvVisitInfo.DataSource = showvisitlist.ToList();
         }
+
         #endregion
 
         #region "事件"
 
         #endregion
 
-
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            frmCreateVisit fcv = new frmCreateVisit();
+            fcv.ShowDialog();
+        }
     }
 }

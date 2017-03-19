@@ -75,7 +75,7 @@
             this.metroTabPage1.Controls.Add(this.btnCreate);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 6;
+            this.metroTabPage1.HorizontalScrollbarSize = 4;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 39);
             this.metroTabPage1.Name = "metroTabPage1";
             this.metroTabPage1.Size = new System.Drawing.Size(787, 593);
@@ -304,6 +304,7 @@
             this.btnCreate.TabIndex = 21;
             this.btnCreate.Text = "添加";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // frmVisit
             // 
