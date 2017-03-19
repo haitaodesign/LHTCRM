@@ -21,6 +21,42 @@ namespace LHT.CRM.BLL.CRM
             return ccs.GetAll();
         }
 
+        /// <summary>
+        /// 根据客户名称返回客户Id
+        /// </summary>
+        /// <param name="cusname"></param>
+        /// <returns></returns>
+        public int GetCusId(string cusname)
+        {
+            try
+            {
+                int cusId = ccs.GetAll().Find(c => c.CusName == cusname).Id;
+                return cusId;
+            }
+            catch
+            {
+                return 0;
+            }
+            
+        }
+
+        /// <summary>
+        /// 根据Id返回客户名称
+        /// </summary>
+        /// <param name="cusId"></param>
+        /// <returns></returns>
+        public string GetCusName(int cusId)
+        {
+            string cusname = ccs.GetAll().Find(c => c.Id == cusId).CusName;
+            if (cusname != null)
+            {
+                return cusname;
+            }
+            else
+            {
+                return null;
+            }
+        }
 
 
         /// <summary>
@@ -41,7 +77,7 @@ namespace LHT.CRM.BLL.CRM
         public int AddCustomer(CRM_Customer customer)
         {
             ccs.Add(customer);
-            int result= ccs.SaveChanges();
+            int result = ccs.SaveChanges();
             if (result > 0)
             {
                 return 1;

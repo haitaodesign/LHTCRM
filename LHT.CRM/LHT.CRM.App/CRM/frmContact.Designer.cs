@@ -48,6 +48,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabControl1.SuspendLayout();
             this.tpContactInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactInfo)).BeginInit();
@@ -74,7 +75,7 @@
             this.tpContactInfo.Controls.Add(this.dgvContactInfo);
             this.tpContactInfo.HorizontalScrollbarBarColor = true;
             this.tpContactInfo.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.tpContactInfo.HorizontalScrollbarSize = 8;
+            this.tpContactInfo.HorizontalScrollbarSize = 4;
             this.tpContactInfo.Location = new System.Drawing.Point(4, 39);
             this.tpContactInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpContactInfo.Name = "tpContactInfo";
@@ -83,7 +84,7 @@
             this.tpContactInfo.Text = "联系人";
             this.tpContactInfo.VerticalScrollbarBarColor = true;
             this.tpContactInfo.VerticalScrollbarDM_HighlightOnWheel = false;
-            this.tpContactInfo.VerticalScrollbarSize = 9;
+            this.tpContactInfo.VerticalScrollbarSize = 7;
             // 
             // btnExport
             // 
@@ -120,6 +121,7 @@
             this.btnDelete.TabIndex = 19;
             this.btnDelete.Text = "删除";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -138,6 +140,7 @@
             this.btnUpdate.TabIndex = 18;
             this.btnUpdate.Text = "修改";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnCreate
             // 
@@ -192,7 +195,8 @@
             this.Column6,
             this.Column7,
             this.Column8,
-            this.Column9});
+            this.Column9,
+            this.Column10});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -241,6 +245,7 @@
             // 
             // Column3
             // 
+            this.Column3.DataPropertyName = "Gender";
             this.Column3.HeaderText = "性别";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
@@ -287,6 +292,13 @@
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "CusName";
+            this.Column10.HeaderText = "公司名称";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
             // frmContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -324,5 +336,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
     }
 }
