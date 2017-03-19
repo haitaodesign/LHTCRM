@@ -30,25 +30,25 @@
         {
             this.metroTabControl1 = new DMSkin.Metro.Controls.MetroTabControl();
             this.metroTabPage1 = new DMSkin.Metro.Controls.MetroTabPage();
-            this.metroTabPage2 = new DMSkin.Metro.Controls.MetroTabPage();
-            this.tbName = new DMSkin.Controls.MetroTextBox();
+            this.metroTextBox1 = new DMSkin.Controls.MetroTextBox();
+            this.metroTextBox4 = new DMSkin.Controls.MetroTextBox();
+            this.tbMobile = new DMSkin.Controls.MetroTextBox();
             this.metroLabel9 = new DMSkin.Metro.Controls.MetroLabel();
             this.metroLabel3 = new DMSkin.Metro.Controls.MetroLabel();
             this.metroLabel1 = new DMSkin.Metro.Controls.MetroLabel();
             this.metroLabel2 = new DMSkin.Metro.Controls.MetroLabel();
+            this.metroTabPage2 = new DMSkin.Metro.Controls.MetroTabPage();
+            this.tbJiGuan = new DMSkin.Controls.MetroTextBox();
             this.cbGender = new DMSkin.Metro.Controls.MetroComboBox();
             this.tbEmail = new DMSkin.Controls.MetroTextBox();
-            this.tbWX = new DMSkin.Controls.MetroTextBox();
             this.metroLabel4 = new DMSkin.Metro.Controls.MetroLabel();
             this.metroLabel5 = new DMSkin.Metro.Controls.MetroLabel();
             this.metroLabel6 = new DMSkin.Metro.Controls.MetroLabel();
             this.metroLabel7 = new DMSkin.Metro.Controls.MetroLabel();
-            this.tbMobile = new DMSkin.Controls.MetroTextBox();
-            this.metroTextBox4 = new DMSkin.Controls.MetroTextBox();
-            this.tbJiGuan = new DMSkin.Controls.MetroTextBox();
             this.btnCancel = new DMSkin.Controls.DMButton();
             this.btnEnter = new DMSkin.Controls.DMButton();
-            this.metroTextBox1 = new DMSkin.Controls.MetroTextBox();
+            this.metroTextBox2 = new DMSkin.Controls.MetroTextBox();
+            this.metroTextBox3 = new DMSkin.Controls.MetroTextBox();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -68,10 +68,10 @@
             // 
             // metroTabPage1
             // 
+            this.metroTabPage1.Controls.Add(this.metroTextBox3);
             this.metroTabPage1.Controls.Add(this.metroTextBox1);
             this.metroTabPage1.Controls.Add(this.metroTextBox4);
             this.metroTabPage1.Controls.Add(this.tbMobile);
-            this.metroTabPage1.Controls.Add(this.tbName);
             this.metroTabPage1.Controls.Add(this.metroLabel9);
             this.metroTabPage1.Controls.Add(this.metroLabel3);
             this.metroTabPage1.Controls.Add(this.metroLabel1);
@@ -88,40 +88,44 @@
             this.metroTabPage1.VerticalScrollbarDM_HighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
             // 
-            // metroTabPage2
+            // metroTextBox1
             // 
-            this.metroTabPage2.Controls.Add(this.tbJiGuan);
-            this.metroTabPage2.Controls.Add(this.cbGender);
-            this.metroTabPage2.Controls.Add(this.tbEmail);
-            this.metroTabPage2.Controls.Add(this.tbWX);
-            this.metroTabPage2.Controls.Add(this.metroLabel4);
-            this.metroTabPage2.Controls.Add(this.metroLabel5);
-            this.metroTabPage2.Controls.Add(this.metroLabel6);
-            this.metroTabPage2.Controls.Add(this.metroLabel7);
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 10;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 39);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(654, 400);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "基本信息";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.VerticalScrollbarDM_HighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 10;
+            this.metroTextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.metroTextBox1.IsPassWord = false;
+            this.metroTextBox1.Location = new System.Drawing.Point(198, 199);
+            this.metroTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextBox1.MaximumSize = new System.Drawing.Size(260, 38);
+            this.metroTextBox1.MinimumSize = new System.Drawing.Size(260, 38);
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.Size = new System.Drawing.Size(260, 38);
+            this.metroTextBox1.TabIndex = 32;
+            this.metroTextBox1.WaterText = "请输入联系人职位";
             // 
-            // tbName
+            // metroTextBox4
             // 
-            this.tbName.BackColor = System.Drawing.Color.Transparent;
-            this.tbName.IsPassWord = false;
-            this.tbName.Location = new System.Drawing.Point(198, 43);
-            this.tbName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbName.MaximumSize = new System.Drawing.Size(260, 38);
-            this.tbName.MinimumSize = new System.Drawing.Size(260, 38);
-            this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(260, 38);
-            this.tbName.TabIndex = 29;
-            this.tbName.WaterText = "请输入联系人姓名";
+            this.metroTextBox4.BackColor = System.Drawing.Color.Transparent;
+            this.metroTextBox4.IsPassWord = false;
+            this.metroTextBox4.Location = new System.Drawing.Point(198, 123);
+            this.metroTextBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextBox4.MaximumSize = new System.Drawing.Size(260, 38);
+            this.metroTextBox4.MinimumSize = new System.Drawing.Size(260, 38);
+            this.metroTextBox4.Name = "metroTextBox4";
+            this.metroTextBox4.Size = new System.Drawing.Size(260, 38);
+            this.metroTextBox4.TabIndex = 31;
+            this.metroTextBox4.WaterText = "请输入联系人部门";
+            // 
+            // tbMobile
+            // 
+            this.tbMobile.BackColor = System.Drawing.Color.Transparent;
+            this.tbMobile.IsPassWord = false;
+            this.tbMobile.Location = new System.Drawing.Point(198, 283);
+            this.tbMobile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbMobile.MaximumSize = new System.Drawing.Size(260, 38);
+            this.tbMobile.MinimumSize = new System.Drawing.Size(260, 38);
+            this.tbMobile.Name = "tbMobile";
+            this.tbMobile.Size = new System.Drawing.Size(260, 38);
+            this.tbMobile.TabIndex = 30;
+            this.tbMobile.WaterText = "请输入客户电话";
             // 
             // metroLabel9
             // 
@@ -163,6 +167,41 @@
             this.metroLabel2.TabIndex = 23;
             this.metroLabel2.Text = "姓名";
             // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.Controls.Add(this.metroTextBox2);
+            this.metroTabPage2.Controls.Add(this.tbJiGuan);
+            this.metroTabPage2.Controls.Add(this.cbGender);
+            this.metroTabPage2.Controls.Add(this.tbEmail);
+            this.metroTabPage2.Controls.Add(this.metroLabel4);
+            this.metroTabPage2.Controls.Add(this.metroLabel5);
+            this.metroTabPage2.Controls.Add(this.metroLabel6);
+            this.metroTabPage2.Controls.Add(this.metroLabel7);
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.HorizontalScrollbarDM_HighlightOnWheel = false;
+            this.metroTabPage2.HorizontalScrollbarSize = 10;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 39);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(654, 400);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "基本信息";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarDM_HighlightOnWheel = false;
+            this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // tbJiGuan
+            // 
+            this.tbJiGuan.BackColor = System.Drawing.Color.Transparent;
+            this.tbJiGuan.IsPassWord = false;
+            this.tbJiGuan.Location = new System.Drawing.Point(197, 128);
+            this.tbJiGuan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbJiGuan.MaximumSize = new System.Drawing.Size(260, 38);
+            this.tbJiGuan.MinimumSize = new System.Drawing.Size(260, 38);
+            this.tbJiGuan.Name = "tbJiGuan";
+            this.tbJiGuan.Size = new System.Drawing.Size(260, 38);
+            this.tbJiGuan.TabIndex = 39;
+            this.tbJiGuan.WaterText = "请输入联系人籍贯";
+            // 
             // cbGender
             // 
             this.cbGender.DM_UseSelectable = true;
@@ -188,19 +227,6 @@
             this.tbEmail.Size = new System.Drawing.Size(260, 38);
             this.tbEmail.TabIndex = 37;
             this.tbEmail.WaterText = "请输入联系人电子邮件";
-            // 
-            // tbWX
-            // 
-            this.tbWX.BackColor = System.Drawing.Color.Transparent;
-            this.tbWX.IsPassWord = false;
-            this.tbWX.Location = new System.Drawing.Point(197, 217);
-            this.tbWX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbWX.MaximumSize = new System.Drawing.Size(260, 38);
-            this.tbWX.MinimumSize = new System.Drawing.Size(260, 38);
-            this.tbWX.Name = "tbWX";
-            this.tbWX.Size = new System.Drawing.Size(260, 38);
-            this.tbWX.TabIndex = 36;
-            this.tbWX.WaterText = "请输入联系人微信号";
             // 
             // metroLabel4
             // 
@@ -242,45 +268,6 @@
             this.metroLabel7.TabIndex = 31;
             this.metroLabel7.Text = "性别";
             // 
-            // tbMobile
-            // 
-            this.tbMobile.BackColor = System.Drawing.Color.Transparent;
-            this.tbMobile.IsPassWord = false;
-            this.tbMobile.Location = new System.Drawing.Point(198, 283);
-            this.tbMobile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbMobile.MaximumSize = new System.Drawing.Size(260, 38);
-            this.tbMobile.MinimumSize = new System.Drawing.Size(260, 38);
-            this.tbMobile.Name = "tbMobile";
-            this.tbMobile.Size = new System.Drawing.Size(260, 38);
-            this.tbMobile.TabIndex = 30;
-            this.tbMobile.WaterText = "请输入客户电话";
-            // 
-            // metroTextBox4
-            // 
-            this.metroTextBox4.BackColor = System.Drawing.Color.Transparent;
-            this.metroTextBox4.IsPassWord = false;
-            this.metroTextBox4.Location = new System.Drawing.Point(198, 123);
-            this.metroTextBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroTextBox4.MaximumSize = new System.Drawing.Size(260, 38);
-            this.metroTextBox4.MinimumSize = new System.Drawing.Size(260, 38);
-            this.metroTextBox4.Name = "metroTextBox4";
-            this.metroTextBox4.Size = new System.Drawing.Size(260, 38);
-            this.metroTextBox4.TabIndex = 31;
-            this.metroTextBox4.WaterText = "请输入联系人部门";
-            // 
-            // tbJiGuan
-            // 
-            this.tbJiGuan.BackColor = System.Drawing.Color.Transparent;
-            this.tbJiGuan.IsPassWord = false;
-            this.tbJiGuan.Location = new System.Drawing.Point(197, 128);
-            this.tbJiGuan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbJiGuan.MaximumSize = new System.Drawing.Size(260, 38);
-            this.tbJiGuan.MinimumSize = new System.Drawing.Size(260, 38);
-            this.tbJiGuan.Name = "tbJiGuan";
-            this.tbJiGuan.Size = new System.Drawing.Size(260, 38);
-            this.tbJiGuan.TabIndex = 39;
-            this.tbJiGuan.WaterText = "请输入联系人籍贯";
-            // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Transparent;
@@ -316,19 +303,33 @@
             this.btnEnter.TabIndex = 22;
             this.btnEnter.Text = "确定";
             this.btnEnter.UseVisualStyleBackColor = false;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
-            // metroTextBox1
+            // metroTextBox2
             // 
-            this.metroTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.metroTextBox1.IsPassWord = false;
-            this.metroTextBox1.Location = new System.Drawing.Point(198, 199);
-            this.metroTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroTextBox1.MaximumSize = new System.Drawing.Size(260, 38);
-            this.metroTextBox1.MinimumSize = new System.Drawing.Size(260, 38);
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(260, 38);
-            this.metroTextBox1.TabIndex = 32;
-            this.metroTextBox1.WaterText = "请输入联系人职位";
+            this.metroTextBox2.BackColor = System.Drawing.Color.Transparent;
+            this.metroTextBox2.IsPassWord = false;
+            this.metroTextBox2.Location = new System.Drawing.Point(197, 211);
+            this.metroTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextBox2.MaximumSize = new System.Drawing.Size(260, 38);
+            this.metroTextBox2.MinimumSize = new System.Drawing.Size(260, 38);
+            this.metroTextBox2.Name = "metroTextBox2";
+            this.metroTextBox2.Size = new System.Drawing.Size(260, 38);
+            this.metroTextBox2.TabIndex = 40;
+            this.metroTextBox2.WaterText = "请输入联系人微信";
+            // 
+            // metroTextBox3
+            // 
+            this.metroTextBox3.BackColor = System.Drawing.Color.Transparent;
+            this.metroTextBox3.IsPassWord = false;
+            this.metroTextBox3.Location = new System.Drawing.Point(198, 51);
+            this.metroTextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextBox3.MaximumSize = new System.Drawing.Size(260, 38);
+            this.metroTextBox3.MinimumSize = new System.Drawing.Size(260, 38);
+            this.metroTextBox3.Name = "metroTextBox3";
+            this.metroTextBox3.Size = new System.Drawing.Size(260, 38);
+            this.metroTextBox3.TabIndex = 33;
+            this.metroTextBox3.WaterText = "请输入联系人姓名";
             // 
             // frmCreateContact
             // 
@@ -363,14 +364,12 @@
         private DMSkin.Metro.Controls.MetroTabControl metroTabControl1;
         private DMSkin.Metro.Controls.MetroTabPage metroTabPage1;
         private DMSkin.Metro.Controls.MetroTabPage metroTabPage2;
-        private DMSkin.Controls.MetroTextBox tbName;
         private DMSkin.Metro.Controls.MetroLabel metroLabel9;
         private DMSkin.Metro.Controls.MetroLabel metroLabel3;
         private DMSkin.Metro.Controls.MetroLabel metroLabel1;
         private DMSkin.Metro.Controls.MetroLabel metroLabel2;
         private DMSkin.Metro.Controls.MetroComboBox cbGender;
         private DMSkin.Controls.MetroTextBox tbEmail;
-        private DMSkin.Controls.MetroTextBox tbWX;
         private DMSkin.Metro.Controls.MetroLabel metroLabel4;
         private DMSkin.Metro.Controls.MetroLabel metroLabel5;
         private DMSkin.Metro.Controls.MetroLabel metroLabel6;
@@ -381,5 +380,7 @@
         private DMSkin.Controls.MetroTextBox metroTextBox1;
         private DMSkin.Controls.DMButton btnCancel;
         private DMSkin.Controls.DMButton btnEnter;
+        private DMSkin.Controls.MetroTextBox metroTextBox3;
+        private DMSkin.Controls.MetroTextBox metroTextBox2;
     }
 }
