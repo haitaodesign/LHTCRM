@@ -30,15 +30,14 @@
         {
             this.metroTabControl1 = new DMSkin.Metro.Controls.MetroTabControl();
             this.metroTabPage1 = new DMSkin.Metro.Controls.MetroTabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbContent = new System.Windows.Forms.TextBox();
             this.metroLabel8 = new DMSkin.Metro.Controls.MetroLabel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.metroLabel7 = new DMSkin.Metro.Controls.MetroLabel();
-            this.metroDateTime2 = new DMSkin.Metro.Controls.MetroDateTime();
-            this.metroDateTime1 = new DMSkin.Metro.Controls.MetroDateTime();
+            this.dtVCompleteDate = new DMSkin.Metro.Controls.MetroDateTime();
+            this.dtVPlanDate = new DMSkin.Metro.Controls.MetroDateTime();
             this.metroLabel6 = new DMSkin.Metro.Controls.MetroLabel();
             this.metroLabel5 = new DMSkin.Metro.Controls.MetroLabel();
-            this.tbVContent = new System.Windows.Forms.TextBox();
+            this.tbVTitle = new System.Windows.Forms.TextBox();
             this.metroLabel4 = new DMSkin.Metro.Controls.MetroLabel();
             this.metroTabPage2 = new DMSkin.Metro.Controls.MetroTabPage();
             this.metroLabel2 = new DMSkin.Metro.Controls.MetroLabel();
@@ -52,6 +51,7 @@
             this.btnCancel = new DMSkin.Controls.DMButton();
             this.btnEnter = new DMSkin.Controls.DMButton();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cbVType = new System.Windows.Forms.ComboBox();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -70,15 +70,15 @@
             // 
             // metroTabPage1
             // 
-            this.metroTabPage1.Controls.Add(this.textBox2);
+            this.metroTabPage1.Controls.Add(this.cbVType);
+            this.metroTabPage1.Controls.Add(this.tbContent);
             this.metroTabPage1.Controls.Add(this.metroLabel8);
-            this.metroTabPage1.Controls.Add(this.textBox1);
             this.metroTabPage1.Controls.Add(this.metroLabel7);
-            this.metroTabPage1.Controls.Add(this.metroDateTime2);
-            this.metroTabPage1.Controls.Add(this.metroDateTime1);
+            this.metroTabPage1.Controls.Add(this.dtVCompleteDate);
+            this.metroTabPage1.Controls.Add(this.dtVPlanDate);
             this.metroTabPage1.Controls.Add(this.metroLabel6);
             this.metroTabPage1.Controls.Add(this.metroLabel5);
-            this.metroTabPage1.Controls.Add(this.tbVContent);
+            this.metroTabPage1.Controls.Add(this.tbVTitle);
             this.metroTabPage1.Controls.Add(this.metroLabel4);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarDM_HighlightOnWheel = false;
@@ -92,13 +92,13 @@
             this.metroTabPage1.VerticalScrollbarDM_HighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
             // 
-            // textBox2
+            // tbContent
             // 
-            this.textBox2.Location = new System.Drawing.Point(146, 151);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(534, 84);
-            this.textBox2.TabIndex = 40;
+            this.tbContent.Location = new System.Drawing.Point(146, 151);
+            this.tbContent.Multiline = true;
+            this.tbContent.Name = "tbContent";
+            this.tbContent.Size = new System.Drawing.Size(534, 84);
+            this.tbContent.TabIndex = 40;
             // 
             // metroLabel8
             // 
@@ -110,13 +110,6 @@
             this.metroLabel8.TabIndex = 39;
             this.metroLabel8.Text = "拜访内容";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(475, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(205, 25);
-            this.textBox1.TabIndex = 38;
-            // 
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
@@ -127,21 +120,21 @@
             this.metroLabel7.TabIndex = 37;
             this.metroLabel7.Text = "拜访方式";
             // 
-            // metroDateTime2
+            // dtVCompleteDate
             // 
-            this.metroDateTime2.Location = new System.Drawing.Point(146, 105);
-            this.metroDateTime2.MinimumSize = new System.Drawing.Size(0, 30);
-            this.metroDateTime2.Name = "metroDateTime2";
-            this.metroDateTime2.Size = new System.Drawing.Size(200, 30);
-            this.metroDateTime2.TabIndex = 36;
+            this.dtVCompleteDate.Location = new System.Drawing.Point(146, 105);
+            this.dtVCompleteDate.MinimumSize = new System.Drawing.Size(0, 30);
+            this.dtVCompleteDate.Name = "dtVCompleteDate";
+            this.dtVCompleteDate.Size = new System.Drawing.Size(200, 30);
+            this.dtVCompleteDate.TabIndex = 36;
             // 
-            // metroDateTime1
+            // dtVPlanDate
             // 
-            this.metroDateTime1.Location = new System.Drawing.Point(146, 63);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 30);
-            this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(200, 30);
-            this.metroDateTime1.TabIndex = 35;
+            this.dtVPlanDate.Location = new System.Drawing.Point(146, 63);
+            this.dtVPlanDate.MinimumSize = new System.Drawing.Size(0, 30);
+            this.dtVPlanDate.Name = "dtVPlanDate";
+            this.dtVPlanDate.Size = new System.Drawing.Size(200, 30);
+            this.dtVPlanDate.TabIndex = 35;
             // 
             // metroLabel6
             // 
@@ -163,12 +156,12 @@
             this.metroLabel5.TabIndex = 33;
             this.metroLabel5.Text = "计划日期";
             // 
-            // tbVContent
+            // tbVTitle
             // 
-            this.tbVContent.Location = new System.Drawing.Point(146, 19);
-            this.tbVContent.Name = "tbVContent";
-            this.tbVContent.Size = new System.Drawing.Size(534, 25);
-            this.tbVContent.TabIndex = 32;
+            this.tbVTitle.Location = new System.Drawing.Point(146, 19);
+            this.tbVTitle.Name = "tbVTitle";
+            this.tbVTitle.Size = new System.Drawing.Size(534, 25);
+            this.tbVTitle.TabIndex = 32;
             // 
             // metroLabel4
             // 
@@ -312,6 +305,14 @@
             this.textBox3.Size = new System.Drawing.Size(636, 256);
             this.textBox3.TabIndex = 2;
             // 
+            // cbVType
+            // 
+            this.cbVType.FormattingEnabled = true;
+            this.cbVType.Location = new System.Drawing.Point(475, 69);
+            this.cbVType.Name = "cbVType";
+            this.cbVType.Size = new System.Drawing.Size(205, 23);
+            this.cbVType.TabIndex = 41;
+            // 
             // frmCreateVisit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -362,18 +363,18 @@
         private System.Windows.Forms.TextBox tbContactName;
         private System.Windows.Forms.Button btnSelectCustomer;
         private System.Windows.Forms.Button btnSelectContact;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbContent;
         private DMSkin.Metro.Controls.MetroLabel metroLabel8;
-        private System.Windows.Forms.TextBox textBox1;
         private DMSkin.Metro.Controls.MetroLabel metroLabel7;
-        private DMSkin.Metro.Controls.MetroDateTime metroDateTime2;
-        private DMSkin.Metro.Controls.MetroDateTime metroDateTime1;
+        private DMSkin.Metro.Controls.MetroDateTime dtVCompleteDate;
+        private DMSkin.Metro.Controls.MetroDateTime dtVPlanDate;
         private DMSkin.Metro.Controls.MetroLabel metroLabel6;
         private DMSkin.Metro.Controls.MetroLabel metroLabel5;
-        private System.Windows.Forms.TextBox tbVContent;
+        private System.Windows.Forms.TextBox tbVTitle;
         private DMSkin.Metro.Controls.MetroLabel metroLabel4;
         private DMSkin.Controls.DMButton btnCancel;
         private DMSkin.Controls.DMButton btnEnter;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox cbVType;
     }
 }
