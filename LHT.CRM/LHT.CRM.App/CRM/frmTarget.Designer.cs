@@ -34,16 +34,16 @@
             this.metroTabControl1 = new DMSkin.Metro.Controls.MetroTabControl();
             this.tpTarget = new DMSkin.Metro.Controls.MetroTabPage();
             this.dgvTargetInfo = new DMSkin.Metro.Controls.MetroGrid();
-            this.btnExport = new DMSkin.Controls.DMButton();
-            this.btnDelete = new DMSkin.Controls.DMButton();
-            this.btnUpdate = new DMSkin.Controls.DMButton();
-            this.btnCreate = new DMSkin.Controls.DMButton();
             this.Coulmns1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExport = new DMSkin.Controls.DMButton();
+            this.btnDelete = new DMSkin.Controls.DMButton();
+            this.btnUpdate = new DMSkin.Controls.DMButton();
+            this.btnCreate = new DMSkin.Controls.DMButton();
             this.metroTabControl1.SuspendLayout();
             this.tpTarget.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTargetInfo)).BeginInit();
@@ -70,7 +70,7 @@
             this.tpTarget.Controls.Add(this.btnCreate);
             this.tpTarget.HorizontalScrollbarBarColor = true;
             this.tpTarget.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.tpTarget.HorizontalScrollbarSize = 10;
+            this.tpTarget.HorizontalScrollbarSize = 8;
             this.tpTarget.Location = new System.Drawing.Point(4, 39);
             this.tpTarget.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpTarget.Name = "tpTarget";
@@ -137,6 +137,48 @@
             this.dgvTargetInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTargetInfo.Size = new System.Drawing.Size(699, 529);
             this.dgvTargetInfo.TabIndex = 16;
+            // 
+            // Coulmns1
+            // 
+            this.Coulmns1.DataPropertyName = "Period";
+            this.Coulmns1.HeaderText = "期间";
+            this.Coulmns1.Name = "Coulmns1";
+            this.Coulmns1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Target1";
+            this.Column2.HeaderText = "销售额";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Target2";
+            this.Column3.HeaderText = "新增客户数";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Target3";
+            this.Column4.HeaderText = "上门拜访数";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Target4";
+            this.Column5.HeaderText = "电话量";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "UserName";
+            this.Column6.HeaderText = "业务员";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // btnExport
             // 
@@ -209,48 +251,7 @@
             this.btnCreate.TabIndex = 12;
             this.btnCreate.Text = "添加";
             this.btnCreate.UseVisualStyleBackColor = false;
-            // 
-            // Coulmns1
-            // 
-            this.Coulmns1.DataPropertyName = "Period";
-            this.Coulmns1.HeaderText = "期间";
-            this.Coulmns1.Name = "Coulmns1";
-            this.Coulmns1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Target1";
-            this.Column2.HeaderText = "销售额";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Target2";
-            this.Column3.HeaderText = "新增客户数";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Target3";
-            this.Column4.HeaderText = "上门拜访数";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Target4";
-            this.Column5.HeaderText = "电话量";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "UserName";
-            this.Column6.HeaderText = "业务员";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // frmTarget
             // 

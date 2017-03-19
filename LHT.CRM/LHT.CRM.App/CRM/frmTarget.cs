@@ -39,8 +39,13 @@ namespace LHT.CRM.App.CRM
             this.dgvTargetInfo.DataSource = ctl.GetAll();
         }
 
+
         #endregion
 
-       
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            frmCreateTarget fct = new frmCreateTarget();
+            fct.ShowDialog();
+        }
     }
 }

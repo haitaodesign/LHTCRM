@@ -80,6 +80,12 @@
     <Compile Include="CRM\frmCreateCustomer.Designer.cs">
       <DependentUpon>frmCreateCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRM\frmCreateTarget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\frmCreateTarget.Designer.cs">
+      <DependentUpon>frmCreateTarget.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRM\frmCreateVisit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRM\frmCreateCustomer.resx">
       <DependentUpon>frmCreateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\frmCreateTarget.resx">
+      <DependentUpon>frmCreateTarget.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRM\frmCreateVisit.resx">
       <DependentUpon>frmCreateVisit.cs</DependentUpon>
