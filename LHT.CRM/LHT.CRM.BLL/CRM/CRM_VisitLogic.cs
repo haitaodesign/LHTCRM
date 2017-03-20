@@ -65,6 +65,15 @@ namespace LHT.CRM.BLL.CRM
             }
         }
 
+        /// <summary>
+        /// 根据拜访记录Id返回一条记录
+        /// </summary>
+        /// <param name="visitId"></param>
+        /// <returns></returns>
+        public CRM_Visit GetCRM_VisitModel(int visitId)
+        {
+            return cvs.GetAll().Find(v => v.Id == visitId);
+        }
 
     }
 }

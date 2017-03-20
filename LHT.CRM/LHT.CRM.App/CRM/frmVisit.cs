@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LHT.CRM.BLL.CRM;
 using LHT.CRM.BLL.SystemManagement;
+using LHT.CRM.Model;
 
 namespace LHT.CRM.App.CRM
 {
@@ -18,7 +19,6 @@ namespace LHT.CRM.App.CRM
         SystemUserLogic sul = new SystemUserLogic();
         CRM_CustomerLogic ccusl = new CRM_CustomerLogic();
         CRM_ContactLogic cconl = new CRM_ContactLogic();
-
         public frmVisit()
         {
             InitializeComponent();
@@ -33,6 +33,10 @@ namespace LHT.CRM.App.CRM
         }
 
         #region "方法"
+
+        /// <summary>
+        /// 加载拜访记录列表
+        /// </summary>
         public void LoadVistList()
         {
             var showvisitlist = from visit in cvs.GetAll()
@@ -44,6 +48,7 @@ namespace LHT.CRM.App.CRM
                                 on visit.ConId equals contact.Id
                                 select new
                                 {
+                                    Id = visit.Id,
                                     CusCode = customer.CusCode,
                                     CusName = customer.CusName,
                                     UserName = user.UserName,
@@ -61,15 +66,31 @@ namespace LHT.CRM.App.CRM
             this.dgvVisitInfo.DataSource = showvisitlist.ToList();
         }
 
+        /// <summary>
+        /// 获得修改拜访记录的Id
+        /// </summary>
+        /// <returns></returns>
+        public int GetCRM_VisitId()
+        {
+            return Convert.ToInt32(this.dgvVisitInfo.CurrentRow.Cells[0].Value);
+        }
+
         #endregion
 
         #region "事件"
-
-        #endregion
-
         private void btnCreate_Click(object sender, EventArgs e)
         {
             frmCreateVisit fcv = new frmCreateVisit();
+            fcv.ShowDialog();
+        }
+
+        #endregion
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            frmCreateVisit fcv = new frmCreateVisit();
+            fcv.Owner = this;
+            fcv.Text = "修改拜访记录";
             fcv.ShowDialog();
         }
     }
