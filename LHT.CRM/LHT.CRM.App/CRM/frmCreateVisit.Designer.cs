@@ -64,7 +64,7 @@
             this.metroTabControl1.DM_UseSelectable = true;
             this.metroTabControl1.Location = new System.Drawing.Point(8, 160);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(707, 299);
             this.metroTabControl1.TabIndex = 0;
             // 
@@ -200,10 +200,10 @@
             // tbVSuperiorSuggestion
             // 
             this.tbVSuperiorSuggestion.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tbVSuperiorSuggestion.Location = new System.Drawing.Point(0, 3);
+            this.tbVSuperiorSuggestion.Location = new System.Drawing.Point(0, 13);
             this.tbVSuperiorSuggestion.Multiline = true;
             this.tbVSuperiorSuggestion.Name = "tbVSuperiorSuggestion";
-            this.tbVSuperiorSuggestion.Size = new System.Drawing.Size(699, 253);
+            this.tbVSuperiorSuggestion.Size = new System.Drawing.Size(699, 243);
             this.tbVSuperiorSuggestion.TabIndex = 2;
             // 
             // metroLabel2
@@ -294,6 +294,7 @@
             this.btnCancel.TabIndex = 39;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnEnter
             // 
@@ -312,6 +313,7 @@
             this.btnEnter.TabIndex = 38;
             this.btnEnter.Text = "确定";
             this.btnEnter.UseVisualStyleBackColor = false;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // frmCreateVisit
             // 
@@ -340,6 +342,7 @@
             this.ShowDrawIcon = false;
             this.Text = "拜访记录";
             this.TitleColor = System.Drawing.Color.White;
+            this.Load += new System.EventHandler(this.frmCreateVisit_Load);
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();

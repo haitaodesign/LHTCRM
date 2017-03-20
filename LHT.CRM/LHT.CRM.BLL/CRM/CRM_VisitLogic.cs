@@ -11,7 +11,7 @@ namespace LHT.CRM.BLL.CRM
     public class CRM_VisitLogic
     {
         CRM_VisitService cvs = new CRM_VisitService();
-
+        CRM_Visit cv = new CRM_Visit();
         /// <summary>
         /// 返回客户拜访信息列表
         /// </summary>
@@ -20,5 +20,51 @@ namespace LHT.CRM.BLL.CRM
         {
             return cvs.GetAll();
         }
+
+
+        public int Add(CRM_Visit visit)
+        {
+            cvs.Add(visit);
+            int result = cvs.SaveChanges();
+            if (result > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+
+        public int Delete(int visitId)
+        {
+            cvs.Delete(visitId);
+            int result = cvs.SaveChanges();
+            if (result > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public int Update(CRM_Visit visit)
+        {
+            cvs.Update(visit);
+            int result = cvs.SaveChanges();
+            if (result > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+
     }
 }

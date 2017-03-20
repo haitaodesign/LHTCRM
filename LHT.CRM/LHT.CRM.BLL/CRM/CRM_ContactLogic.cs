@@ -77,5 +77,43 @@ namespace LHT.CRM.BLL.CRM
             }
         }
 
+        /// <summary>
+        /// 根据Id返回联系人姓名
+        /// </summary>
+        /// <param name="conId"></param>
+        /// <returns></returns>
+        public string GetConName(int conId)
+        {
+            string conname = ccs.GetAll().Find(c => c.Id == conId).Name;
+            if (conname != null)
+            {
+                return conname;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// 根据联系人姓名返回Id
+        /// </summary>
+        /// <param name="conname"></param>
+        /// <returns></returns>
+        public int GetConId(string conname)
+        {
+            try
+            {
+                int conId = ccs.GetAll().Find(c => c.Name == conname).Id;
+                return conId;
+            }
+            catch
+            {
+                return 0;
+            }
+
+        }
+
+
     }
 }
