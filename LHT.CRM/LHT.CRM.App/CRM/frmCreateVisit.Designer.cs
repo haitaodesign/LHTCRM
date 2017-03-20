@@ -30,6 +30,7 @@
         {
             this.metroTabControl1 = new DMSkin.Metro.Controls.MetroTabControl();
             this.metroTabPage1 = new DMSkin.Metro.Controls.MetroTabPage();
+            this.cbVType = new System.Windows.Forms.ComboBox();
             this.tbContent = new System.Windows.Forms.TextBox();
             this.metroLabel8 = new DMSkin.Metro.Controls.MetroLabel();
             this.metroLabel7 = new DMSkin.Metro.Controls.MetroLabel();
@@ -40,6 +41,7 @@
             this.tbVTitle = new System.Windows.Forms.TextBox();
             this.metroLabel4 = new DMSkin.Metro.Controls.MetroLabel();
             this.metroTabPage2 = new DMSkin.Metro.Controls.MetroTabPage();
+            this.tbVSuperiorSuggestion = new System.Windows.Forms.TextBox();
             this.metroLabel2 = new DMSkin.Metro.Controls.MetroLabel();
             this.tbCusCode = new System.Windows.Forms.TextBox();
             this.metroLabel1 = new DMSkin.Metro.Controls.MetroLabel();
@@ -50,8 +52,6 @@
             this.btnSelectContact = new System.Windows.Forms.Button();
             this.btnCancel = new DMSkin.Controls.DMButton();
             this.btnEnter = new DMSkin.Controls.DMButton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.cbVType = new System.Windows.Forms.ComboBox();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -91,6 +91,14 @@
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarDM_HighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
+            // cbVType
+            // 
+            this.cbVType.FormattingEnabled = true;
+            this.cbVType.Location = new System.Drawing.Point(475, 69);
+            this.cbVType.Name = "cbVType";
+            this.cbVType.Size = new System.Drawing.Size(205, 23);
+            this.cbVType.TabIndex = 41;
             // 
             // tbContent
             // 
@@ -176,18 +184,27 @@
             // 
             // metroTabPage2
             // 
-            this.metroTabPage2.Controls.Add(this.textBox3);
+            this.metroTabPage2.Controls.Add(this.tbVSuperiorSuggestion);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarDM_HighlightOnWheel = false;
             this.metroTabPage2.HorizontalScrollbarSize = 10;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 39);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(636, 256);
+            this.metroTabPage2.Size = new System.Drawing.Size(699, 256);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "批示内容";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarDM_HighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // tbVSuperiorSuggestion
+            // 
+            this.tbVSuperiorSuggestion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tbVSuperiorSuggestion.Location = new System.Drawing.Point(0, 3);
+            this.tbVSuperiorSuggestion.Multiline = true;
+            this.tbVSuperiorSuggestion.Name = "tbVSuperiorSuggestion";
+            this.tbVSuperiorSuggestion.Size = new System.Drawing.Size(699, 253);
+            this.tbVSuperiorSuggestion.TabIndex = 2;
             // 
             // metroLabel2
             // 
@@ -222,7 +239,7 @@
             this.tbCusName.Location = new System.Drawing.Point(451, 67);
             this.tbCusName.Multiline = true;
             this.tbCusName.Name = "tbCusName";
-            this.tbCusName.Size = new System.Drawing.Size(241, 25);
+            this.tbCusName.Size = new System.Drawing.Size(260, 25);
             this.tbCusName.TabIndex = 33;
             // 
             // metroLabel3
@@ -296,23 +313,6 @@
             this.btnEnter.Text = "确定";
             this.btnEnter.UseVisualStyleBackColor = false;
             // 
-            // textBox3
-            // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(0, 0);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(636, 256);
-            this.textBox3.TabIndex = 2;
-            // 
-            // cbVType
-            // 
-            this.cbVType.FormattingEnabled = true;
-            this.cbVType.Location = new System.Drawing.Point(475, 69);
-            this.cbVType.Name = "cbVType";
-            this.cbVType.Size = new System.Drawing.Size(205, 23);
-            this.cbVType.TabIndex = 41;
-            // 
             // frmCreateVisit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -374,7 +374,7 @@
         private DMSkin.Metro.Controls.MetroLabel metroLabel4;
         private DMSkin.Controls.DMButton btnCancel;
         private DMSkin.Controls.DMButton btnEnter;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbVSuperiorSuggestion;
         private System.Windows.Forms.ComboBox cbVType;
     }
 }

@@ -22,17 +22,40 @@ namespace LHT.CRM.DAL.ServiceRespository.CRM
 
         public void Add(CRM_Visit visit)
         {
-            throw new NotImplementedException();
+            if (visit != null)
+            {
+                _dbContext.CRM_Visit.Add(visit);
+            }
         }
 
         public void Delete(int visitId)
         {
-            throw new NotImplementedException();
+            var visit = _dbContext.CRM_Visit.Find(visitId);
+            if (visit != null)
+            {
+                _dbContext.CRM_Visit.Remove(visit);
+            }
         }
 
         public void Update(CRM_Visit visit)
         {
-            throw new NotImplementedException();
+            var updatevisit = _dbContext.CRM_Visit.Find(visit.Id);
+            if (updatevisit != null)
+            {
+                updatevisit.MId = visit.MId;
+                updatevisit.MDate = visit.MDate;
+                updatevisit.CusId = visit.CusId;
+                updatevisit.ConId = visit.ConId;
+                updatevisit.VTitle = visit.VTitle;
+                updatevisit.VContent = visit.VContent;
+                updatevisit.VType = visit.VType;
+                updatevisit.VPlanDate = visit.VCompleteDate;
+                updatevisit.VCompleteDate = visit.VCompleteDate;
+                updatevisit.VSuperiorDate = visit.VSuperiorDate;
+                updatevisit.VSuperiorSuggestion = visit.VSuperiorSuggestion;
+                updatevisit.VSuperiorId = visit.VSuperiorId;
+                updatevisit.VStatus = visit.VStatus;
+            }
         }
     }
 }
