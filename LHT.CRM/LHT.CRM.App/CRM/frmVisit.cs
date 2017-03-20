@@ -93,5 +93,11 @@ namespace LHT.CRM.App.CRM
             fcv.Text = "修改拜访记录";
             fcv.ShowDialog();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+           //如果当前状态为已审核，则业务员不能删除，只能由主管删除
+
+        }
     }
 }
