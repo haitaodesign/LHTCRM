@@ -70,7 +70,7 @@
             this.tpTarget.Controls.Add(this.btnCreate);
             this.tpTarget.HorizontalScrollbarBarColor = true;
             this.tpTarget.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.tpTarget.HorizontalScrollbarSize = 8;
+            this.tpTarget.HorizontalScrollbarSize = 6;
             this.tpTarget.Location = new System.Drawing.Point(4, 39);
             this.tpTarget.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpTarget.Name = "tpTarget";
@@ -233,6 +233,7 @@
             this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "修改";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnCreate
             // 

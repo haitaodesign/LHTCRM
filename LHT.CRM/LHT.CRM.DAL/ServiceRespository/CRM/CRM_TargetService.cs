@@ -16,12 +16,19 @@ namespace LHT.CRM.DAL.ServiceRespository.CRM
 
         public void Add(CRM_Target target)
         {
-            throw new NotImplementedException();
+            if (target != null)
+            {
+                _dbContext.CRM_Target.Add(target);
+            }
         }
 
         public void Delete(int targetId)
         {
-            throw new NotImplementedException();
+            var target = _dbContext.CRM_Target.Find(targetId);
+            if (target != null)
+            {
+                _dbContext.CRM_Target.Remove(target);
+            }
         }
 
         public List<CRM_Target> GetAll()
@@ -31,7 +38,18 @@ namespace LHT.CRM.DAL.ServiceRespository.CRM
 
         public void Update(CRM_Target target)
         {
-            throw new NotImplementedException();
+            var updatetarget = _dbContext.CRM_Target.Find(target.Id);
+            if (updatetarget != null)
+            {
+                updatetarget.MId = target.MId;
+                updatetarget.MDate = target.MDate;
+                updatetarget.Period = target.Period;
+                updatetarget.Target1 = target.Target1;
+                updatetarget.Target2 = target.Target2;
+                updatetarget.Target3 = target.Target3;
+                updatetarget.Target4 = target.Target4;
+                updatetarget.UserName = target.UserName;
+            }
         }
     }
 }

@@ -103,6 +103,7 @@
             this.metroLabel6.Size = new System.Drawing.Size(69, 25);
             this.metroLabel6.TabIndex = 30;
             this.metroLabel6.Text = "业务员";
+            this.metroLabel6.Visible = false;
             // 
             // tbTarget1
             // 
@@ -138,6 +139,7 @@
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.Size = new System.Drawing.Size(200, 25);
             this.tbUserName.TabIndex = 35;
+            this.tbUserName.Visible = false;
             // 
             // btnCancel
             // 
@@ -174,9 +176,12 @@
             this.btnEnter.TabIndex = 36;
             this.btnEnter.Text = "确定";
             this.btnEnter.UseVisualStyleBackColor = false;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // dtPeriod
             // 
+            this.dtPeriod.CustomFormat = "yyyy-MM";
+            this.dtPeriod.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtPeriod.Location = new System.Drawing.Point(272, 80);
             this.dtPeriod.MinimumSize = new System.Drawing.Size(0, 30);
             this.dtPeriod.Name = "dtPeriod";

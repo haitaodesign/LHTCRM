@@ -14,6 +14,7 @@ namespace LHT.CRM.BLL.CRM
         public List<CRM_Target> GetAll()
         {
             return cts.GetAll();
-        }   
+        }
+           
     }
 }

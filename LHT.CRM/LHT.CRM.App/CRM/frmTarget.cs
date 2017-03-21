@@ -47,5 +47,10 @@ namespace LHT.CRM.App.CRM
             frmCreateTarget fct = new frmCreateTarget();
             fct.ShowDialog();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
