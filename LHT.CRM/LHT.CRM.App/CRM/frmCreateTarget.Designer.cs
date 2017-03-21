@@ -215,8 +215,9 @@
             this.MinimizeBox = false;
             this.Name = "frmCreateTarget";
             this.ShowDrawIcon = false;
-            this.Text = "销售目标";
+            this.Text = "添加销售目标";
             this.TitleColor = System.Drawing.Color.White;
+            this.Load += new System.EventHandler(this.frmCreateTarget_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -35,16 +35,17 @@
             this.metroTabControl1 = new DMSkin.Metro.Controls.MetroTabControl();
             this.tpTarget = new DMSkin.Metro.Controls.MetroTabPage();
             this.dgvTargetInfo = new DMSkin.Metro.Controls.MetroGrid();
+            this.btnExport = new DMSkin.Controls.DMButton();
+            this.btnDelete = new DMSkin.Controls.DMButton();
+            this.btnUpdate = new DMSkin.Controls.DMButton();
+            this.btnCreate = new DMSkin.Controls.DMButton();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coulmns1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExport = new DMSkin.Controls.DMButton();
-            this.btnDelete = new DMSkin.Controls.DMButton();
-            this.btnUpdate = new DMSkin.Controls.DMButton();
-            this.btnCreate = new DMSkin.Controls.DMButton();
             this.metroTabControl1.SuspendLayout();
             this.tpTarget.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTargetInfo)).BeginInit();
@@ -106,6 +107,7 @@
             this.dgvTargetInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTargetInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTargetInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
             this.Coulmns1,
             this.Column2,
             this.Column3,
@@ -142,48 +144,6 @@
             this.dgvTargetInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTargetInfo.Size = new System.Drawing.Size(699, 529);
             this.dgvTargetInfo.TabIndex = 16;
-            // 
-            // Coulmns1
-            // 
-            this.Coulmns1.DataPropertyName = "Period";
-            this.Coulmns1.HeaderText = "期间";
-            this.Coulmns1.Name = "Coulmns1";
-            this.Coulmns1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Target1";
-            this.Column2.HeaderText = "销售额";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Target2";
-            this.Column3.HeaderText = "新增客户数";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Target3";
-            this.Column4.HeaderText = "上门拜访数";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Target4";
-            this.Column5.HeaderText = "电话量";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "UserName";
-            this.Column6.HeaderText = "业务员";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
             // 
             // btnExport
             // 
@@ -259,6 +219,56 @@
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Id";
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Coulmns1
+            // 
+            this.Coulmns1.DataPropertyName = "Period";
+            this.Coulmns1.HeaderText = "期间";
+            this.Coulmns1.Name = "Coulmns1";
+            this.Coulmns1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Target1";
+            this.Column2.HeaderText = "销售额";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Target2";
+            this.Column3.HeaderText = "新增客户数";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Target3";
+            this.Column4.HeaderText = "上门拜访数";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Target4";
+            this.Column5.HeaderText = "电话量";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "UserName";
+            this.Column6.HeaderText = "业务员";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
             // frmTarget
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -288,6 +298,7 @@
         private DMSkin.Controls.DMButton btnDelete;
         private DMSkin.Controls.DMButton btnUpdate;
         private DMSkin.Controls.DMButton btnCreate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coulmns1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

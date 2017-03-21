@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LHT.CRM.BLL.CRM;
+using LHT.CRM.Model;
 
 namespace LHT.CRM.App.CRM
 {
     public partial class frmTarget : Form
     {
         CRM_TargetLogic ctl = new CRM_TargetLogic();
+        CRM_Target ct = new CRM_Target();
         public frmTarget()
         {
             InitializeComponent();
@@ -27,7 +29,19 @@ namespace LHT.CRM.App.CRM
 
 
         #region "事件"
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            frmCreateTarget fct = new frmCreateTarget();
+            fct.ShowDialog();
+        }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            frmCreateTarget fctar = new frmCreateTarget();
+            fctar.Owner = this;
+            fctar.Text = "修改销售目标";
+            fctar.ShowDialog();
+        }
         #endregion
 
         #region "方法"
@@ -40,17 +54,19 @@ namespace LHT.CRM.App.CRM
         }
 
 
+        public CRM_Target GetCRM_TargetModel()
+        {
+            ct.Id = Convert.ToInt32(this.dgvTargetInfo.CurrentRow.Cells[0].Value);
+            ct.Period = this.dgvTargetInfo.CurrentRow.Cells[1].Value.ToString();
+            ct.Target1 =Convert.ToInt32(this.dgvTargetInfo.CurrentRow.Cells[2].Value);
+            ct.Target2 = Convert.ToUInt32(this.dgvTargetInfo.CurrentRow.Cells[3].Value);
+            ct.Target3 = Convert.ToUInt32(this.dgvTargetInfo.CurrentRow.Cells[4].Value);
+            ct.Target4 = Convert.ToUInt32(this.dgvTargetInfo.CurrentRow.Cells[5].Value);
+            return ct;
+        }
+
         #endregion
 
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-            frmCreateTarget fct = new frmCreateTarget();
-            fct.ShowDialog();
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
