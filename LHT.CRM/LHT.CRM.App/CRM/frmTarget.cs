@@ -65,8 +65,23 @@ namespace LHT.CRM.App.CRM
             return ct;
         }
 
+
         #endregion
 
-        
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            
+            int tarId =Convert.ToInt32(this.dgvTargetInfo.CurrentRow.Cells[0].Value);
+            if (tarId.ToString()!=null)
+            {
+                ctl.Delete(tarId);
+                MessageBox.Show("删除成功！");
+                LoadTargetList();
+            }
+            else
+            {
+                MessageBox.Show("删除失败！");
+            }
+        }
     }
 }
