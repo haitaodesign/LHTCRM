@@ -16,7 +16,7 @@ namespace LHT.CRM.App.CRM
     public partial class frmCreateTarget : Skin_VS
     {
         CRM_Target ct = new CRM_Target();
-
+        CRM_TargetLogic ctl = new CRM_TargetLogic();
         public frmCreateTarget()
         {
             InitializeComponent();
@@ -26,7 +26,17 @@ namespace LHT.CRM.App.CRM
         #region "事件"
         private void btnEnter_Click(object sender, EventArgs e)
         {
-
+            if (ct != null)
+            {
+                GetCRM_TargetModel();
+                ctl.Add(ct);
+                MessageBox.Show("添加成功");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("添加失败");
+            }
         }
         #endregion
 
