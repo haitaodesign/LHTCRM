@@ -96,7 +96,23 @@ namespace LHT.CRM.App.CRM
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-           //如果当前状态为已审核，则业务员不能删除，只能由主管删除
+            //如果当前状态为已审核，则业务员不能删除，只能由主管删除
+
+            //获取Id和记录状态
+
+            string status = this.dgvVisitInfo.CurrentRow.Cells[12].Value.ToString();
+            if (status == "False")
+            {
+                int Id =Convert.ToInt32(this.dgvVisitInfo.CurrentRow.Cells[0].Value);
+                cvs.Delete(Id);
+                MessageBox.Show("删除成功！");
+                LoadVistList();
+            }else
+            {
+                MessageBox.Show("已审核记录不能删除！");
+            }
+
+
 
         }
     }
