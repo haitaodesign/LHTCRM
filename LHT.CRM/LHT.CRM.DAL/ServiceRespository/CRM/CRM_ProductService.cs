@@ -15,12 +15,19 @@ namespace LHT.CRM.DAL.ServiceRespository.CRM
 
         public void Add(CRM_Product product)
         {
-            throw new NotImplementedException();
+            if (product != null)
+            {
+                _dbContext.CRM_Product.Add(product);
+            }
         }
 
         public void Delete(int productId)
         {
-            throw new NotImplementedException();
+            var product = _dbContext.CRM_Product.Find(productId);
+            if (product != null)
+            {
+                _dbContext.CRM_Product.Remove(product);
+            }
         }
 
         public List<CRM_Product> GetAll()
@@ -30,7 +37,17 @@ namespace LHT.CRM.DAL.ServiceRespository.CRM
 
         public void Update(CRM_Product product)
         {
-            throw new NotImplementedException();
+            var updateproduct = _dbContext.CRM_Product.Find(product.Id);
+            if (updateproduct != null)
+            {
+                updateproduct.MId = product.MId;
+                updateproduct.MDate = product.MDate;
+                updateproduct.Name = product.Name;
+                updateproduct.Category = product.Category;
+                updateproduct.Unit = product.Unit;
+                updateproduct.Quantity = product.Quantity;
+                updateproduct.Introduction = product.Introduction;
+            }
         }
     }
 }
