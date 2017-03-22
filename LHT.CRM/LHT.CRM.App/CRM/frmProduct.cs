@@ -50,8 +50,14 @@ namespace LHT.CRM.App.CRM
 
         public void LoadProductList()
         {
-            this.dgvProductInfo.DataSource = null;
             this.dgvProductInfo.DataSource = cpl.GetAll();
+        }
+
+        public void RefreshProductList()
+        {
+            this.dgvProductInfo.DataSource = null;
+            CRM_ProductLogic cpl2 = new CRM_ProductLogic();
+            this.dgvProductInfo.DataSource = cpl2.GetAll();
         }
 
         /// <summary>

@@ -73,12 +73,12 @@ namespace LHT.CRM.App.CRM
             {
                 GetUpdateProductModel();
                 cpl.Update(cp);
-                MessageBox.Show("添加成功！");
+                MessageBox.Show("修改成功！");
                 LoadProductList();
             }
             else
             {
-                MessageBox.Show("添加失败");
+                MessageBox.Show("修改失败");
             }
         }
 
@@ -89,7 +89,7 @@ namespace LHT.CRM.App.CRM
         {
             frmProduct fp = new frmProduct();
             fp = (frmProduct)this.Owner;
-            fp.LoadProductList();
+            fp.RefreshProductList();
             this.Close();
         }
 
