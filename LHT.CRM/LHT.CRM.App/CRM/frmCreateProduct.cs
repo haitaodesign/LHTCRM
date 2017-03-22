@@ -17,7 +17,7 @@ namespace LHT.CRM.App.CRM
     {
         CRM_Product cp = new CRM_Product();
         CRM_ProductLogic cpl = new CRM_ProductLogic();
-
+        int proId;
         public frmCreateProduct()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace LHT.CRM.App.CRM
                 AddProduct();
             }else if (this.Text == "修改产品信息")
             {
-
+                UpdateProduct();
             }
         }
         #endregion
@@ -67,6 +67,21 @@ namespace LHT.CRM.App.CRM
             }
         }
 
+        public void UpdateProduct()
+        {
+            if (tbProductName.Text != null)
+            {
+                GetUpdateProductModel();
+                cpl.Update(cp);
+                MessageBox.Show("添加成功！");
+                LoadProductList();
+            }
+            else
+            {
+                MessageBox.Show("添加失败");
+            }
+        }
+
         /// <summary>
         /// 刷新产品信息列表
         /// </summary>
@@ -78,8 +93,47 @@ namespace LHT.CRM.App.CRM
             this.Close();
         }
 
+        public void GetUpdateProductModel()
+        {
+            cp.Id = proId;
+            cp.MId = frmFuncLib.userId;
+            cp.MDate = DateTime.Now;
+            cp.Name = tbProductName.Text;
+            cp.Category = tbCateGory.Text;
+            cp.Unit = tbUnit.Text;
+            cp.Quantity = Convert.ToInt32(tbQuantity.Text);
+            cp.Introduction = tbIntroduction.Text;
+        }
+
+        /// <summary>
+        /// 点击修改加载修改信息
+        /// </summary>
+        public void LoadUpdateProduct()
+        {
+            frmProduct fp;
+            fp = (frmProduct)this.Owner;
+            proId = fp.GetUpdateCRM_ProductId();
+            cp = cpl.GetCRM_ProductModel(proId);
+            tbProductName.Text = cp.Name;
+            tbCateGory.Text = cp.Category;
+            tbUnit.Text = cp.Unit;
+            tbQuantity.Text = cp.Quantity.ToString();
+            tbIntroduction.Text = cp.Introduction;
+        }
+
         #endregion
 
-        
+        private void frmCreateProduct_Load(object sender, EventArgs e)
+        {
+            if (this.Text == "修改产品信息")
+            {
+                LoadUpdateProduct();
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

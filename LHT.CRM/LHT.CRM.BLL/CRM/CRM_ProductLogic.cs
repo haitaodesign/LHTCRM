@@ -62,6 +62,14 @@ namespace LHT.CRM.BLL.CRM
             }
         }
 
-
+        /// <summary>
+        /// 根据Id返回一个产品实体
+        /// </summary>
+        /// <param name="proId"></param>
+        /// <returns></returns>
+        public CRM_Product GetCRM_ProductModel(int proId)
+        {
+            return cpl.GetAll().Find(p => p.Id == proId);
+        }
     }
 }

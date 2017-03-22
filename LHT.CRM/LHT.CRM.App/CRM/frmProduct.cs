@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LHT.CRM.BLL.CRM;
+using LHT.CRM.Model;
 
 namespace LHT.CRM.App.CRM
 {
     public partial class frmProduct : Form
     {
         CRM_ProductLogic cpl = new CRM_ProductLogic();
+        CRM_Product cp = new CRM_Product();
         public frmProduct()
         {
             InitializeComponent();
@@ -27,7 +29,20 @@ namespace LHT.CRM.App.CRM
 
 
         #region "事件"
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            frmCreateProduct fcp = new frmCreateProduct();
+            fcp.Owner = this;
+            fcp.ShowDialog();
+        }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            frmCreateProduct fcp = new frmCreateProduct();
+            fcp.Owner = this;
+            fcp.Text = "修改产品信息";
+            fcp.ShowDialog();
+        }
         #endregion
 
 
@@ -39,13 +54,17 @@ namespace LHT.CRM.App.CRM
             this.dgvProductInfo.DataSource = cpl.GetAll();
         }
 
+        /// <summary>
+        /// 获得需要修改的产品信息
+        /// </summary>
+        /// <returns></returns>
+        public int GetUpdateCRM_ProductId()
+        {
+            return Convert.ToInt32(this.dgvProductInfo.CurrentRow.Cells[0].Value);
+        }
+
         #endregion
 
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-            frmCreateProduct fcp = new frmCreateProduct();
-            fcp.Owner = this;
-            fcp.ShowDialog();
-        }
+
     }
 }

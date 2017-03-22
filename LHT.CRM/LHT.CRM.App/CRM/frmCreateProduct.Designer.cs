@@ -59,6 +59,7 @@
             this.btnCancel.TabIndex = 51;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnEnter
             // 
@@ -192,6 +193,7 @@
             this.ShowDrawIcon = false;
             this.Text = "添加产品信息";
             this.TitleColor = System.Drawing.Color.White;
+            this.Load += new System.EventHandler(this.frmCreateProduct_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
