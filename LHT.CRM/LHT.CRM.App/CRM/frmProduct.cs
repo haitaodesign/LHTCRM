@@ -69,8 +69,23 @@ namespace LHT.CRM.App.CRM
             return Convert.ToInt32(this.dgvProductInfo.CurrentRow.Cells[0].Value);
         }
 
+
         #endregion
 
-
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int deleteId = GetUpdateCRM_ProductId();
+            int result=cpl.Delete(deleteId);
+            if (result > 0)
+            {
+                MessageBox.Show("删除成功！");
+                RefreshProductList();
+            }
+            else
+            {
+                MessageBox.Show("删除失败！");
+            }
+            
+        }
     }
 }
