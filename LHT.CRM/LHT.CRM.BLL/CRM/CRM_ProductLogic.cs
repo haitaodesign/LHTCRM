@@ -20,5 +20,48 @@ namespace LHT.CRM.BLL.CRM
         {
             return cpl.GetAll();
         }
+
+        public int Add(CRM_Product product)
+        {
+            cpl.Add(product);
+            int result = cpl.SaveChanges();
+            if (result > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        public int Delete(int productId)
+        {
+            cpl.Delete(productId);
+            int result = cpl.SaveChanges();
+            if (result > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public int Update(CRM_Product product)
+        {
+            cpl.Update(product);
+            int result = cpl.SaveChanges();
+            if (result > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+
     }
 }
