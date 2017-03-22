@@ -75,6 +75,38 @@ namespace LHT.CRM.App.CRM
             return Convert.ToInt32(this.dgvVisitInfo.CurrentRow.Cells[0].Value);
         }
 
+        public void RefreshVisitList()
+        {
+            CRM_VisitLogic cvs = new CRM_VisitLogic();
+            SystemUserLogic sul = new SystemUserLogic();
+            CRM_CustomerLogic ccusl = new CRM_CustomerLogic();
+            CRM_ContactLogic cconl = new CRM_ContactLogic();
+            var showvisitlist = from visit in cvs.GetAll()
+                                join customer in ccusl.GetAll()
+                                on visit.CusId equals customer.Id
+                                join user in sul.GetAllUsers()
+                                on visit.VSuperiorId equals user.Id
+                                join contact in cconl.GetAll()
+                                on visit.ConId equals contact.Id
+                                select new
+                                {
+                                    Id = visit.Id,
+                                    CusCode = customer.CusCode,
+                                    CusName = customer.CusName,
+                                    UserName = user.UserName,
+                                    ContactName = contact.Name,
+                                    VTitle = visit.VTitle,
+                                    VContent = visit.VContent,
+                                    VType = visit.VType,
+                                    VPlanDate = visit.VPlanDate,
+                                    VCompleteDate = visit.VCompleteDate,
+                                    VSuperiorDate = visit.VSuperiorDate,
+                                    VSuperiorSuggestion = visit.VSuperiorSuggestion,
+                                    VStatus = visit.VStatus
+
+                                };
+            this.dgvVisitInfo.DataSource = showvisitlist.ToList();
+        }
         #endregion
 
         #region "事件"
@@ -83,9 +115,6 @@ namespace LHT.CRM.App.CRM
             frmCreateVisit fcv = new frmCreateVisit();
             fcv.ShowDialog();
         }
-
-        #endregion
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             frmCreateVisit fcv = new frmCreateVisit();
@@ -103,11 +132,12 @@ namespace LHT.CRM.App.CRM
             string status = this.dgvVisitInfo.CurrentRow.Cells[12].Value.ToString();
             if (status == "False")
             {
-                int Id =Convert.ToInt32(this.dgvVisitInfo.CurrentRow.Cells[0].Value);
+                int Id = Convert.ToInt32(this.dgvVisitInfo.CurrentRow.Cells[0].Value);
                 cvs.Delete(Id);
                 MessageBox.Show("删除成功！");
                 LoadVistList();
-            }else
+            }
+            else
             {
                 MessageBox.Show("已审核记录不能删除！");
             }
@@ -115,5 +145,8 @@ namespace LHT.CRM.App.CRM
 
 
         }
+        #endregion
+
+
     }
 }

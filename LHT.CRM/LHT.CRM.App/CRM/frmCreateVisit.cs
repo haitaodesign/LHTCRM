@@ -46,6 +46,7 @@ namespace LHT.CRM.App.CRM
                 {
                     cvl.Add(cv);
                     MessageBox.Show("添加成功！");
+                    RefreshVisitList();
                     this.Close();
                 }
                 else
@@ -62,6 +63,7 @@ namespace LHT.CRM.App.CRM
                     {
                         cvl.Update(cv);
                         MessageBox.Show("修改成功！");
+                        RefreshVisitList();
                         this.Close();
                     }
                     else
@@ -136,6 +138,13 @@ namespace LHT.CRM.App.CRM
             cv.VType = cbVType.Text;
             cv.VPlanDate = Convert.ToDateTime(dtVPlanDate.Text);
             cv.VCompleteDate = Convert.ToDateTime(dtVCompleteDate.Text);
+        }
+
+        public void RefreshVisitList()
+        {
+            frmVisit fv = new frmVisit();
+            fv = (frmVisit)this.Owner;
+            fv.RefreshVisitList();
         }
 
         #endregion

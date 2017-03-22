@@ -19,6 +19,7 @@ namespace LHT.CRM.DAL
         public LHTCRMEntities()
             : base("name=LHTCRMEntities")
         {
+            this.Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
