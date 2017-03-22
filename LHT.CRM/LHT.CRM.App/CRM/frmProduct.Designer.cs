@@ -69,7 +69,7 @@
             this.tpProductInfo.Controls.Add(this.btnCreate);
             this.tpProductInfo.HorizontalScrollbarBarColor = true;
             this.tpProductInfo.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.tpProductInfo.HorizontalScrollbarSize = 6;
+            this.tpProductInfo.HorizontalScrollbarSize = 4;
             this.tpProductInfo.Location = new System.Drawing.Point(4, 39);
             this.tpProductInfo.Name = "tpProductInfo";
             this.tpProductInfo.Size = new System.Drawing.Size(769, 546);
@@ -250,6 +250,7 @@
             this.btnCreate.TabIndex = 25;
             this.btnCreate.Text = "添加";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // frmProduct
             // 

@@ -35,9 +35,17 @@ namespace LHT.CRM.App.CRM
 
         public void LoadProductList()
         {
+            this.dgvProductInfo.DataSource = null;
             this.dgvProductInfo.DataSource = cpl.GetAll();
         }
 
         #endregion
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            frmCreateProduct fcp = new frmCreateProduct();
+            fcp.Owner = this;
+            fcp.ShowDialog();
+        }
     }
 }

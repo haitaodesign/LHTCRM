@@ -77,6 +77,7 @@
             this.btnEnter.TabIndex = 50;
             this.btnEnter.Text = "确定";
             this.btnEnter.UseVisualStyleBackColor = false;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // tbIntroduction
             // 
