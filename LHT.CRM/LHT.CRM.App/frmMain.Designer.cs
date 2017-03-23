@@ -32,14 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.skinPictureBox2 = new CCWin.SkinControl.SkinPictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.metroLabel1 = new DMSkin.Metro.Controls.MetroLabel();
-            this.pbSettings = new CCWin.SkinControl.SkinPictureBox();
-            this.skinPictureBox4 = new CCWin.SkinControl.SkinPictureBox();
-            this.skinPictureBox1 = new CCWin.SkinControl.SkinPictureBox();
-            this.lbNav = new CCWin.SkinControl.SkinListBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMenuTitle = new DMSkin.Metro.Controls.MetroLabel();
@@ -52,20 +44,27 @@
             this.tsmiSystemSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.退出登录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tpSettings = new DMSkin.Metro.Components.MetroToolTip();
+            this.pbSettings = new CCWin.SkinControl.SkinPictureBox();
+            this.lblUserName = new DMSkin.Metro.Controls.MetroLabel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.metroLabel2 = new DMSkin.Metro.Controls.MetroLabel();
+            this.lbNav = new CCWin.SkinControl.SkinListBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.skinLine1 = new CCWin.SkinControl.SkinLine();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox2)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSettings)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.cmSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSettings)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -97,8 +96,8 @@
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel1, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.skinPictureBox1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.lbNav, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.panel4, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -109,136 +108,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 140F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(240, 721);
             this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.skinPictureBox2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pbSettings, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.skinPictureBox4, 1, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 581);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(240, 140);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // skinPictureBox2
-            // 
-            this.skinPictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.skinPictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("skinPictureBox2.Image")));
-            this.skinPictureBox2.Location = new System.Drawing.Point(10, 10);
-            this.skinPictureBox2.Margin = new System.Windows.Forms.Padding(10);
-            this.skinPictureBox2.Name = "skinPictureBox2";
-            this.skinPictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.skinPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.skinPictureBox2.TabIndex = 0;
-            this.skinPictureBox2.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.metroLabel1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(73, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(164, 62);
-            this.panel2.TabIndex = 1;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroLabel1.DM_FontSize = DMSkin.Metro.MetroLabelSize.Tall;
-            this.metroLabel1.DM_UseCustomBackColor = true;
-            this.metroLabel1.Location = new System.Drawing.Point(12, 19);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(69, 25);
-            this.metroLabel1.Style = DMSkin.Metro.MetroColorStyle.Yellow;
-            this.metroLabel1.TabIndex = 1;
-            this.metroLabel1.Text = "李海涛";
-            // 
-            // pbSettings
-            // 
-            this.pbSettings.BackColor = System.Drawing.Color.Transparent;
-            this.pbSettings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbSettings.Image = ((System.Drawing.Image)(resources.GetObject("pbSettings.Image")));
-            this.pbSettings.Location = new System.Drawing.Point(10, 80);
-            this.pbSettings.Margin = new System.Windows.Forms.Padding(10);
-            this.pbSettings.Name = "pbSettings";
-            this.pbSettings.Size = new System.Drawing.Size(50, 50);
-            this.pbSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbSettings.TabIndex = 2;
-            this.pbSettings.TabStop = false;
-            this.pbSettings.Click += new System.EventHandler(this.pbSettings_Click);
-            this.pbSettings.MouseHover += new System.EventHandler(this.skinPictureBox3_MouseHover);
-            // 
-            // skinPictureBox4
-            // 
-            this.skinPictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.skinPictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("skinPictureBox4.Image")));
-            this.skinPictureBox4.Location = new System.Drawing.Point(80, 80);
-            this.skinPictureBox4.Margin = new System.Windows.Forms.Padding(10);
-            this.skinPictureBox4.Name = "skinPictureBox4";
-            this.skinPictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.skinPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.skinPictureBox4.TabIndex = 3;
-            this.skinPictureBox4.TabStop = false;
-            // 
-            // skinPictureBox1
-            // 
-            this.skinPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.skinPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("skinPictureBox1.Image")));
-            this.skinPictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.skinPictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.skinPictureBox1.Name = "skinPictureBox1";
-            this.skinPictureBox1.Size = new System.Drawing.Size(240, 80);
-            this.skinPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.skinPictureBox1.TabIndex = 0;
-            this.skinPictureBox1.TabStop = false;
-            // 
-            // lbNav
-            // 
-            this.lbNav.Back = null;
-            this.lbNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.lbNav.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbNav.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbNav.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbNav.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.lbNav.Font = new System.Drawing.Font("微软雅黑 Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbNav.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbNav.FormattingEnabled = true;
-            this.lbNav.ItemBorderVisble = false;
-            this.lbNav.ItemGlassVisble = false;
-            this.lbNav.ItemHeight = 40;
-            this.lbNav.ItemRadius = 4;
-            this.lbNav.Items.AddRange(new CCWin.SkinControl.SkinListBoxItem[] {
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items1"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items2"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items3"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items4"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items5")))});
-            this.lbNav.Location = new System.Drawing.Point(0, 80);
-            this.lbNav.Margin = new System.Windows.Forms.Padding(0);
-            this.lbNav.MouseColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(235)))));
-            this.lbNav.Name = "lbNav";
-            this.lbNav.RowBackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.lbNav.RowBackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.lbNav.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(215)))));
-            this.lbNav.Size = new System.Drawing.Size(240, 501);
-            this.lbNav.TabIndex = 0;
-            this.lbNav.Tag = "";
-            this.lbNav.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbNav_MouseClick);
             // 
             // tableLayoutPanel2
             // 
@@ -347,6 +216,140 @@
             this.tpSettings.StyleManager = null;
             this.tpSettings.Theme = DMSkin.Metro.MetroThemeStyle.Default;
             // 
+            // pbSettings
+            // 
+            this.pbSettings.BackColor = System.Drawing.Color.Transparent;
+            this.pbSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbSettings.Image = ((System.Drawing.Image)(resources.GetObject("pbSettings.Image")));
+            this.pbSettings.Location = new System.Drawing.Point(10, 80);
+            this.pbSettings.Margin = new System.Windows.Forms.Padding(10);
+            this.pbSettings.Name = "pbSettings";
+            this.pbSettings.Size = new System.Drawing.Size(66, 50);
+            this.pbSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbSettings.TabIndex = 2;
+            this.pbSettings.TabStop = false;
+            this.pbSettings.Click += new System.EventHandler(this.pbSettings_Click);
+            this.pbSettings.MouseHover += new System.EventHandler(this.skinPictureBox3_MouseHover);
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblUserName.DM_FontSize = DMSkin.Metro.MetroLabelSize.Tall;
+            this.lblUserName.DM_UseCustomBackColor = true;
+            this.lblUserName.Location = new System.Drawing.Point(86, 19);
+            this.lblUserName.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(69, 25);
+            this.lblUserName.Style = DMSkin.Metro.MetroColorStyle.Yellow;
+            this.lblUserName.TabIndex = 1;
+            this.lblUserName.Text = "李海涛";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
+            this.tableLayoutPanel1.Controls.Add(this.pbSettings, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 581);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(240, 140);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.skinLine1);
+            this.panel2.Controls.Add(this.metroLabel2);
+            this.panel2.Controls.Add(this.lblUserName);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(234, 64);
+            this.panel2.TabIndex = 3;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroLabel2.DM_FontSize = DMSkin.Metro.MetroLabelSize.Tall;
+            this.metroLabel2.DM_UseCustomBackColor = true;
+            this.metroLabel2.Location = new System.Drawing.Point(7, 19);
+            this.metroLabel2.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(69, 25);
+            this.metroLabel2.Style = DMSkin.Metro.MetroColorStyle.Yellow;
+            this.metroLabel2.TabIndex = 2;
+            this.metroLabel2.Text = "用户：";
+            // 
+            // lbNav
+            // 
+            this.lbNav.Back = null;
+            this.lbNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.lbNav.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbNav.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbNav.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbNav.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.lbNav.Font = new System.Drawing.Font("微软雅黑 Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbNav.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbNav.FormattingEnabled = true;
+            this.lbNav.ItemBorderVisble = false;
+            this.lbNav.ItemGlassVisble = false;
+            this.lbNav.ItemHeight = 40;
+            this.lbNav.ItemRadius = 4;
+            this.lbNav.Items.AddRange(new CCWin.SkinControl.SkinListBoxItem[] {
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items"))),
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items1"))),
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items2"))),
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items3"))),
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items4"))),
+            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("lbNav.Items5")))});
+            this.lbNav.Location = new System.Drawing.Point(0, 80);
+            this.lbNav.Margin = new System.Windows.Forms.Padding(0);
+            this.lbNav.MouseColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(235)))));
+            this.lbNav.Name = "lbNav";
+            this.lbNav.RowBackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.lbNav.RowBackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.lbNav.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(215)))));
+            this.lbNav.Size = new System.Drawing.Size(240, 501);
+            this.lbNav.TabIndex = 0;
+            this.lbNav.Tag = "";
+            this.lbNav.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbNav_MouseClick);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(234, 74);
+            this.panel4.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(34, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CRMLOGO";
+            // 
+            // skinLine1
+            // 
+            this.skinLine1.BackColor = System.Drawing.Color.Transparent;
+            this.skinLine1.LineColor = System.Drawing.Color.Black;
+            this.skinLine1.LineHeight = 1;
+            this.skinLine1.Location = new System.Drawing.Point(-17, 3);
+            this.skinLine1.Name = "skinLine1";
+            this.skinLine1.Size = new System.Drawing.Size(271, 12);
+            this.skinLine1.TabIndex = 0;
+            this.skinLine1.Text = "skinLine1";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 35F);
@@ -377,16 +380,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox2)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSettings)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.cmSettings.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbSettings)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -394,14 +396,6 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private CCWin.SkinControl.SkinListBox lbNav;
-        private CCWin.SkinControl.SkinPictureBox skinPictureBox1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private CCWin.SkinControl.SkinPictureBox skinPictureBox2;
-        private DMSkin.Metro.Controls.MetroLabel metroLabel1;
-        private System.Windows.Forms.Panel panel2;
-        private CCWin.SkinControl.SkinPictureBox pbSettings;
-        private CCWin.SkinControl.SkinPictureBox skinPictureBox4;
         private DMSkin.Metro.Controls.MetroContextMenu cmSettings;
         private System.Windows.Forms.ToolStripMenuItem 上次登录信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lOGO设置ToolStripMenuItem;
@@ -415,6 +409,15 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private DMSkin.Metro.Controls.MetroLabel lblMenuTitle;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private CCWin.SkinControl.SkinPictureBox pbSettings;
+        private DMSkin.Metro.Controls.MetroLabel lblUserName;
+        private System.Windows.Forms.Panel panel2;
+        private DMSkin.Metro.Controls.MetroLabel metroLabel2;
+        private CCWin.SkinControl.SkinListBox lbNav;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label1;
+        private CCWin.SkinControl.SkinLine skinLine1;
     }
 }
 

@@ -235,6 +235,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\timg.png" />
     <Content Include="images\产品.png" />
     <Content Include="images\客户.png" />
     <Content Include="images\拜访.png" />

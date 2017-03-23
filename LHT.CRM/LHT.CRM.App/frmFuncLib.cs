@@ -14,9 +14,9 @@ namespace LHT.CRM.App
         //主界面显示用户名
         public static string userName;
         //获取该用户的数据权限
-        public static int userId=8;
+        public static int userId;
         //判断该用户的角色拥有的模块功能权限
-        public static string roleName="主管";
+        public static string roleName;
         //检索该角色拥有的模块权限
         public static int roleId;
         #endregion

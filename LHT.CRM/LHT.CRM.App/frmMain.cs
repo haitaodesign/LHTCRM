@@ -19,6 +19,7 @@ namespace LHT.CRM.App
         private void frmMain_Load(object sender, EventArgs e)
         {
             //首先加载个人桌面
+            lblUserName.Text = frmFuncLib.userName;
 
 
         }
@@ -138,5 +139,6 @@ namespace LHT.CRM.App
         }
         #endregion
 
+        
     }
 }
