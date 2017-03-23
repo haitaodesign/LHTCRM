@@ -147,9 +147,9 @@ namespace LHT.CRM.App.Settings
         public void DisplayUserList()
         {
             //设置属性对应的字段
-
+            SystemUserLogic sul2 = new SystemUserLogic();
             //填充数据
-            dgvUserSetting.DataSource = sul.GetAllUsers();
+            dgvUserSetting.DataSource = sul2.GetAllUsers();
         }
 
         /// <summary>
@@ -253,8 +253,29 @@ namespace LHT.CRM.App.Settings
         }
 
 
+
         #endregion
 
-        
+        private void btndeleteuser_Click(object sender, EventArgs e)
+        {
+            //获取当前选择记录id
+            int userId = Convert.ToInt32(this.dgvUserSetting.CurrentRow.Cells[0].Value);
+            SystemLogin login = sll.GetLoginModel(this.dgvUserSetting.CurrentRow.Cells[9].Value.ToString());
+            int reuslt= sul.Delete(userId);
+            if (reuslt == 1)
+            {
+                //删除账号
+                if (login != null)
+                {
+                    sll.Delete(login.Id);
+                    MessageBox.Show("删除成功！");
+                    RefreshUserList();
+                }
+            }
+            else
+            {
+                MessageBox.Show("删除失败！");
+            }
+        }
     }
 }

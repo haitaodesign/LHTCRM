@@ -114,5 +114,20 @@ namespace LHT.CRM.BLL.SystemManagement
             return DBConnection.OpenDB();
         }
 
+
+        public int Delete(int loginId)
+        {
+            sls.Delete(loginId);
+            int result = sls.SaveChanges();
+            if (result > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
     }
 }

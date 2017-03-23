@@ -209,6 +209,7 @@ namespace LHT.CRM.App.Settings
                     {
                         sll.Update(sl);
                         MessageBox.Show("修改成功！", "提示", MessageBoxButtons.OK);
+                        RefreshUserList();
                         this.Close();
                     }
                 }
@@ -239,6 +240,14 @@ namespace LHT.CRM.App.Settings
             su.RoleId = GetRoleId(cbRoleName.Text.Trim());
             su.LoginName = tbLoginName.Text.Trim();
             return su;
+        }
+
+
+        public void RefreshUserList()
+        {
+            frmSystemSetting fss;
+            fss = (frmSystemSetting)this.Owner;
+            fss.RefreshUserList();
         }
         #endregion
 
