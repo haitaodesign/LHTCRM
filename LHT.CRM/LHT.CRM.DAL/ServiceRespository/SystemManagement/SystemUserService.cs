@@ -32,12 +32,28 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
 
         public void Delete(int userId)
         {
-            throw new NotImplementedException();
+            var user = _dbContext.SystemUsers.Find(userId);
+            if (user != null)
+            {
+                _dbContext.SystemUsers.Remove(user);
+            }
         }
 
         public void Update(SystemUser user)
         {
-            throw new NotImplementedException();
+            var updateuser = _dbContext.SystemUsers.Find(user.Id);
+            if (updateuser != null)
+            {
+                updateuser.UserName = user.UserName;
+                updateuser.Sex = user.Sex;
+                updateuser.Age = user.Age;
+                updateuser.Phone = user.Phone;
+                updateuser.Email = user.Email;
+                updateuser.QQ = user.QQ;
+                updateuser.RoleId = user.RoleId;
+                updateuser.RoleName = user.RoleName;
+                updateuser.LoginName = user.LoginName;
+            }
         }
     }
 }

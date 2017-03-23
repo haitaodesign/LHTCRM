@@ -129,6 +129,14 @@ namespace LHT.CRM.App.Settings
         {
             CreateUserWindow();
         }
+
+        private void btnupdateuser_Click(object sender, EventArgs e)
+        {
+            frmCreateUser fcu = new frmCreateUser();
+            fcu.Text = "修改用户信息";
+            fcu.Owner = this;
+            fcu.ShowDialog();
+        }
         #endregion
 
 
@@ -172,6 +180,25 @@ namespace LHT.CRM.App.Settings
             dgvAccountSetting.DataSource = sll.GetAllLogin();
         }
 
+        /// <summary>
+        /// 获取选择中的用户信息，用于修改
+        /// </summary>
+        /// <returns></returns>
+        public SystemUser GetSystemUserModel()
+        {
+            SystemUser su = new SystemUser();
+            su.Id = Convert.ToInt32(this.dgvUserSetting.CurrentRow.Cells[0].Value);
+            su.UserName = this.dgvUserSetting.CurrentRow.Cells[1].Value.ToString();
+            su.Sex = this.dgvUserSetting.CurrentRow.Cells[2].Value.ToString();
+            su.Age = Convert.ToInt32(this.dgvUserSetting.CurrentRow.Cells[3].Value);
+            su.Phone = this.dgvUserSetting.CurrentRow.Cells[4].Value.ToString();
+            su.Email = this.dgvUserSetting.CurrentRow.Cells[5].Value.ToString();
+            su.QQ = this.dgvUserSetting.CurrentRow.Cells[6].Value.ToString();
+            su.RoleName= this.dgvUserSetting.CurrentRow.Cells[7].Value.ToString();
+            su.RoleId= Convert.ToInt32(this.dgvUserSetting.CurrentRow.Cells[8].Value);
+            su.LoginName= this.dgvUserSetting.CurrentRow.Cells[9].Value.ToString();
+            return su;
+        }
 
         #endregion
 
@@ -228,9 +255,6 @@ namespace LHT.CRM.App.Settings
 
         #endregion
 
-        private void btnupdateuser_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

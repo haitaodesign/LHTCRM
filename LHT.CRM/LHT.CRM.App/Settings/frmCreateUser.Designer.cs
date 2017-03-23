@@ -191,8 +191,7 @@
             this.cbRoleName.FormattingEnabled = true;
             this.cbRoleName.ItemHeight = 24;
             this.cbRoleName.Items.AddRange(new object[] {
-            "请选择用户角色",
-            "达到"});
+            "请选择用户角色"});
             this.cbRoleName.Location = new System.Drawing.Point(253, 529);
             this.cbRoleName.Name = "cbRoleName";
             this.cbRoleName.Size = new System.Drawing.Size(260, 30);

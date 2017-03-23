@@ -8,7 +8,7 @@ using LHT.CRM.DAL.ServiceRespository.SystemManagement;
 
 namespace LHT.CRM.BLL.SystemManagement
 {
-    
+
     public class SystemUserLogic
     {
         SystemUserService sus = new SystemUserService();
@@ -76,6 +76,35 @@ namespace LHT.CRM.BLL.SystemManagement
         {
             list = sus.GetAll();
             return list.Find(u => u.Id == Id);
+        }
+
+
+        public int Update(SystemUser user)
+        {
+            sus.Update(user);
+            int result = sus.SaveChanges();
+            if (result == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public int Delete(int userId)
+        {
+            sus.Delete(userId);
+            int result = sus.SaveChanges();
+            if (result == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }
