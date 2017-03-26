@@ -27,7 +27,6 @@ namespace LHT.CRM.Model
         public string Phone { get; set; }
         public string Email { get; set; }
         public string QQ { get; set; }
-        public string Picture { get; set; }
         public Nullable<int> RoleId { get; set; }
         public string RoleName { get; set; }
         public string LoginName { get; set; }
