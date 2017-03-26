@@ -66,7 +66,7 @@ namespace LHT.CRM.App
         /// 判断用户是否具某个模块的权限
         /// </summary>
         /// <returns></returns>
-        public bool IsOpenModules(string modulename)
+        public static bool IsOpenModules(string modulename)
         {
             //通过RoleId获取授权的模块列表,返回的应该是一个数组
             //通过modulename遍历数据是否与模块名匹配，不配返回false

@@ -72,8 +72,16 @@ namespace LHT.CRM.App
         private void tsmiSystemSettings_Click(object sender, EventArgs e)
         {
             //向splitContainer1.Panel2添加系统设置窗体
-            frmSystemSetting fss = new frmSystemSetting();
-            AddForm(fss, "系统设置");
+            if (frmFuncLib.IsOpenModules("系统设置"))
+            {
+                frmSystemSetting fss = new frmSystemSetting();
+                AddForm(fss, "系统设置");
+            }
+            else
+            {
+                MessageBox.Show("您没有权限操作此模块，请联系管理员开通！");
+            }
+            
         }
 
 
@@ -87,28 +95,29 @@ namespace LHT.CRM.App
             //获取当前点击的获得的值
 
             var selectNavTxt = lbNav.SelectedItem.ToString();
+            bool isopen = frmFuncLib.IsOpenModules(selectNavTxt);
 
-            if (selectNavTxt == "客户")
+            if (selectNavTxt == "客户" && isopen)
             {
                 frmCustomer fc = new frmCustomer();
                 AddForm(fc, "客户管理");
             }
-            else if (selectNavTxt == "联系人")
+            else if (selectNavTxt == "联系人" && isopen)
             {
                 frmContact fcc= new frmContact();
                 AddForm(fcc, "联系人管理");
             }
-            else if (selectNavTxt == "拜访")
+            else if (selectNavTxt == "拜访" && isopen)
             {
                 frmVisit fv = new frmVisit();
                 AddForm(fv, "拜访管理");
             }
-            else if (selectNavTxt == "销售")
+            else if (selectNavTxt == "销售" && isopen)
             {
                 frmTarget ft = new frmTarget();
                 AddForm(ft, "销售管理");
             }
-            else if (selectNavTxt == "产品")
+            else if (selectNavTxt == "产品" && isopen)
             {
                 frmProduct fp = new frmProduct();
                 AddForm(fp, "产品管理");
@@ -118,6 +127,9 @@ namespace LHT.CRM.App
                 lblMenuTitle.Text = "个人桌面";
                 panel3.Controls.Clear();
                 //个人桌面待定
+            }else
+            {
+                MessageBox.Show("您没有权限操作此模块，请联系管理员开通！");
             }
 
 
