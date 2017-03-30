@@ -23,7 +23,7 @@ namespace LHT.CRM.App
 
 
         }
-        
+
 
 
         #region "主界面事件"
@@ -48,7 +48,7 @@ namespace LHT.CRM.App
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             //先询问是否关闭,根据选择结果执行相应的代码
-            
+
             Application.Exit();
         }
 
@@ -81,7 +81,7 @@ namespace LHT.CRM.App
             {
                 MessageBox.Show("您没有权限操作此模块，请联系管理员开通！");
             }
-            
+
         }
 
 
@@ -104,7 +104,7 @@ namespace LHT.CRM.App
             }
             else if (selectNavTxt == "联系人" && isopen)
             {
-                frmContact fcc= new frmContact();
+                frmContact fcc = new frmContact();
                 AddForm(fcc, "联系人管理");
             }
             else if (selectNavTxt == "拜访" && isopen)
@@ -127,7 +127,8 @@ namespace LHT.CRM.App
                 lblMenuTitle.Text = "个人桌面";
                 panel3.Controls.Clear();
                 //个人桌面待定
-            }else
+            }
+            else
             {
                 MessageBox.Show("您没有权限操作此模块，请联系管理员开通！");
             }
@@ -139,7 +140,7 @@ namespace LHT.CRM.App
 
 
         #region "方法"
-        public void AddForm(Form frm,string title)
+        public void AddForm(Form frm, string title)
         {
             lblMenuTitle.Text = title;
             panel3.Controls.Clear();
@@ -151,6 +152,6 @@ namespace LHT.CRM.App
         }
         #endregion
 
-        
+
     }
 }

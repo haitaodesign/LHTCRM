@@ -10,12 +10,8 @@ namespace LHT.CRM.DAL.ServiceRespository.SystemManagement
 {
     public class SystemUserService : LHTCRMBaseRespository<LHTCRMEntities>, ISystemUser
     {
-        public SystemUserService(LHTCRMEntities context) : base(context)
-        {
-        }
-        public SystemUserService():base(new LHTCRMEntities())
-        {
-        }
+        public SystemUserService(LHTCRMEntities context) : base(context){}
+        public SystemUserService():base(new LHTCRMEntities()){}
 
         public List<SystemUser> GetAll()
         {

@@ -22,8 +22,6 @@ namespace LHT.CRM.BLL.SystemManagement
             return sus.GetAll();
         }
 
-
-
         /// <summary>
         /// 添加一个用户
         /// </summary>
@@ -53,8 +51,6 @@ namespace LHT.CRM.BLL.SystemManagement
             list = sus.GetAll();
             return list.Find(u => u.LoginName == loginname).Id;
         }
-
-
         /// <summary>
         /// 根据业务员名字返回Id
         /// </summary>
@@ -65,8 +61,6 @@ namespace LHT.CRM.BLL.SystemManagement
             list = sus.GetAll();
             return list.Find(u => u.UserName == username).Id;
         }
-
-
         /// <summary>
         /// 根据Id返回一个用户对象
         /// </summary>
@@ -78,7 +72,11 @@ namespace LHT.CRM.BLL.SystemManagement
             return list.Find(u => u.Id == Id);
         }
 
-
+        /// <summary>
+        /// 修改用户信息
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public int Update(SystemUser user)
         {
             sus.Update(user);
@@ -92,7 +90,11 @@ namespace LHT.CRM.BLL.SystemManagement
                 return 0;
             }
         }
-
+        /// <summary>
+        /// 删除一个用户
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         public int Delete(int userId)
         {
             sus.Delete(userId);
