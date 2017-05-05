@@ -47,7 +47,6 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExport = new DMSkin.Controls.DMButton();
             this.btnDelete = new DMSkin.Controls.DMButton();
             this.btnUpdate = new DMSkin.Controls.DMButton();
             this.btnCreate = new DMSkin.Controls.DMButton();
@@ -70,7 +69,6 @@
             // metroTabPage1
             // 
             this.metroTabPage1.Controls.Add(this.dgvVisitInfo);
-            this.metroTabPage1.Controls.Add(this.btnExport);
             this.metroTabPage1.Controls.Add(this.btnDelete);
             this.metroTabPage1.Controls.Add(this.btnUpdate);
             this.metroTabPage1.Controls.Add(this.btnCreate);
@@ -243,24 +241,6 @@
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
             // 
-            // btnExport
-            // 
-            this.btnExport.BackColor = System.Drawing.Color.Transparent;
-            this.btnExport.DM_DisabledColor = System.Drawing.Color.Empty;
-            this.btnExport.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnExport.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
-            this.btnExport.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
-            this.btnExport.DM_Radius = 5;
-            this.btnExport.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnExport.ForeColor = System.Drawing.Color.White;
-            this.btnExport.Image = null;
-            this.btnExport.Location = new System.Drawing.Point(470, 14);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(125, 45);
-            this.btnExport.TabIndex = 24;
-            this.btnExport.Text = "导出";
-            this.btnExport.UseVisualStyleBackColor = false;
-            // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Transparent;
@@ -342,7 +322,6 @@
         private DMSkin.Metro.Controls.MetroTabControl metroTabControl1;
         private DMSkin.Metro.Controls.MetroTabPage metroTabPage1;
         private DMSkin.Metro.Controls.MetroGrid dgvVisitInfo;
-        private DMSkin.Controls.DMButton btnExport;
         private DMSkin.Controls.DMButton btnDelete;
         private DMSkin.Controls.DMButton btnUpdate;
         private DMSkin.Controls.DMButton btnCreate;

@@ -135,7 +135,15 @@ namespace LHT.CRM.App
 
 
         }
-
+        /// <summary>
+        /// 菜单右键退出登陆
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void 退出登录ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         #endregion
 
 
@@ -150,8 +158,15 @@ namespace LHT.CRM.App
             panel3.Controls.Add(frm);
             frm.Show();
         }
+
+
         #endregion
 
+        private void 个人设置ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        
     }
 }

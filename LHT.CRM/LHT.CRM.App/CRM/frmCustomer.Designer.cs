@@ -34,7 +34,6 @@
             this.metroTabControl1 = new DMSkin.Metro.Controls.MetroTabControl();
             this.metroTabPage1 = new DMSkin.Metro.Controls.MetroTabPage();
             this.btnShowAll = new DMSkin.Controls.DMButton();
-            this.btnExport = new DMSkin.Controls.DMButton();
             this.btnDelete = new DMSkin.Controls.DMButton();
             this.btnUpdate = new DMSkin.Controls.DMButton();
             this.btnCreate = new DMSkin.Controls.DMButton();
@@ -104,24 +103,6 @@
             this.btnShowAll.Text = "显示全部";
             this.btnShowAll.UseVisualStyleBackColor = false;
             this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
-            // 
-            // btnExport
-            // 
-            this.btnExport.BackColor = System.Drawing.Color.Transparent;
-            this.btnExport.DM_DisabledColor = System.Drawing.Color.Empty;
-            this.btnExport.DM_DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnExport.DM_MoveColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
-            this.btnExport.DM_NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(163)))), ((int)(((byte)(220)))));
-            this.btnExport.DM_Radius = 5;
-            this.btnExport.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnExport.ForeColor = System.Drawing.Color.White;
-            this.btnExport.Image = null;
-            this.btnExport.Location = new System.Drawing.Point(463, 54);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(125, 45);
-            this.btnExport.TabIndex = 11;
-            this.btnExport.Text = "导出";
-            this.btnExport.UseVisualStyleBackColor = false;
             // 
             // btnDelete
             // 
@@ -344,7 +325,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(795, 636);
-            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnCreate);
@@ -368,7 +348,6 @@
         private DMSkin.Metro.Controls.MetroTabControl metroTabControl1;
         private DMSkin.Metro.Controls.MetroTabPage metroTabPage1;
         private DMSkin.Controls.DMButton btnShowAll;
-        private DMSkin.Controls.DMButton btnExport;
         private DMSkin.Controls.DMButton btnDelete;
         private DMSkin.Controls.DMButton btnUpdate;
         private DMSkin.Controls.DMButton btnCreate;
